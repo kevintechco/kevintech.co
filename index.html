@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <title>KevinTech&Co | Réparation iPhone & Smartphone Sacy-le-Grand</title>
+    <meta name="description" content="KevinTech&Co : Expert réparation iPhone et Smartphone à Sacy-le-Grand (Oise). Pièces d'origine Apple et garantie casse.">
+    <title>KevinTech&Co | Réparation iPhone & Smartphone Sacy-le-Grand (60)</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -31,7 +32,7 @@
         .logo-text { font-size: 1.3rem; font-weight: 800; text-transform: uppercase; color: white; text-decoration: none; cursor: pointer; }
         .logo-text span { color: var(--accent); }
 
-        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 5px; }
 
         nav ul { list-style: none; display: flex; gap: 20px; }
         nav ul li a { color: var(--text-dim); text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
@@ -44,52 +45,56 @@
 
         /* CAROUSEL */
         .carousel-wrapper { position: relative; overflow: hidden; border-radius: 24px; border: 1px solid #1a1a1a; margin-bottom: 30px; background: #000; }
-        #carouselSlides img { min-width: 100%; height: 500px; object-fit: cover; }
+        #carouselSlides img { min-width: 100%; height: 500px; object-fit: cover; display: block; }
 
-        /* GRID SERVICES */
+        /* GRID EXPERTISES */
         .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px; }
-        .service-card { background: var(--card-bg); border-radius: 28px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s ease; min-height: 280px; }
-        .service-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); }
-        .service-card h3 { font-size: 1.6rem; margin: 15px 0; font-weight: 800; }
-        .service-card i { font-size: 2.5rem; margin-bottom: 10px; }
-        .brand-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .service-card { background: var(--card-bg); border-radius: 28px; padding: 35px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px; }
+        .service-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); background: #0f0f0f; }
+        .service-card h3 { font-size: 1.5rem; margin: 15px 0 10px; font-weight: 800; }
+        .service-card i { font-size: 2.2rem; }
+        .brand-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+
         .card-apple { border-top: 6px solid var(--apple-blue); } .card-apple i { color: var(--apple-blue); }
         .card-casse { border-top: 6px solid var(--accent); } .card-casse i { color: var(--accent); }
         .card-android { border-top: 6px solid var(--android-green); } .card-android i { color: var(--android-green); }
-        .card-hydro { border-top: 6px solid #ffffff; }
+        .card-hydro { border-top: 6px solid #ffffff; } .card-audio { border-top: 6px solid #FF9F00; } .card-home { border-top: 6px solid #8E44AD; }
 
         /* GAMMES */
         .gammes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px; }
-        .gamme-card { background: var(--card-bg); padding: 25px; border-radius: 20px; border-top: 5px solid var(--text-dim); }
-        .gamme-card p { font-size: 0.85rem; color: var(--text-dim); margin-top: 5px; }
+        .gamme-card { background: var(--card-bg); padding: 25px; border-radius: 20px; border-top: 5px solid var(--text-dim); border-left: 1px solid rgba(255,255,255,0.05); }
+        .gamme-card h3 { font-weight: 800; margin-bottom: 5px; }
+        .gamme-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.4; }
 
-        /* TARIFS ANIMÉS */
+        /* TARIFS */
         .table-container { background: var(--card-bg); border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); overflow: hidden; margin-top: 20px; }
         .price-table { width: 100%; border-collapse: collapse; }
+        .price-table tr { transition: 0.3s; }
         .price-table tr:hover { background: rgba(255,255,255,0.03); }
-        .price-table td, .price-table th { padding: 20px 25px; text-align: left; border-bottom: 1px solid #1a1a1a; }
-        .price-val { color: var(--accent); font-weight: 800; font-size: 1.2rem; text-align: right; display: block; }
+        .price-table td { padding: 20px 25px; border-bottom: 1px solid #1a1a1a; font-weight: 600; }
+        .price-val { color: var(--accent); font-weight: 800; text-align: right; display: block; font-size: 1.2rem; transition: 0.3s; }
 
-        /* MAPS IFRAME */
-        .map-container { margin-top: 30px; border-radius: 24px; overflow: hidden; border: 1px solid #333; height: 350px; }
-        .map-container iframe { width: 100%; height: 100%; }
+        /* MAPS */
+        .map-wrapper { margin-top: 30px; border-radius: 24px; overflow: hidden; border: 1px solid #333; height: 400px; width: 100%; }
+        .map-wrapper iframe { width: 100% !important; height: 100% !important; border: 0; }
 
-        /* FOOTER & MODALS */
-        footer { padding: 40px 5%; background: #050505; border-top: 1px solid #1a1a1a; text-align: center; }
-        .socials { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
-        .social-btn { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.5rem; }
+        /* FOOTER */
+        footer { padding: 40px 5% 60px; background: #050505; border-top: 1px solid #1a1a1a; text-align: center; margin-top: auto; }
+        .socials { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .social-btn { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.5rem; transition: 0.3s; }
         
+        /* MODALS */
         .modal { display: none; position: fixed; z-index: 5000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); }
-        .modal-content { background: #111; margin: 5% auto; padding: 40px; border-radius: 20px; width: 90%; max-width: 800px; position: relative; border: 1px solid #333; overflow-y: auto; max-height: 80vh; text-align: left; color: #eee; }
-        .modal-content h3 { margin-bottom: 20px; color: var(--accent); }
-        .modal-content p { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.6; }
-        .close-modal { position: absolute; right: 20px; top: 15px; font-size: 1.5rem; cursor: pointer; }
+        .modal-content { background: #111; margin: 5% auto; padding: 40px; border-radius: 20px; width: 90%; max-width: 800px; position: relative; border: 1px solid #333; overflow-y: auto; max-height: 85vh; text-align: left; }
+        .modal-content h3 { color: var(--accent); margin-bottom: 20px; font-weight: 800; }
+        .modal-content p { margin-bottom: 15px; font-size: 0.9rem; line-height: 1.6; color: #ccc; }
+        .close-modal { position: absolute; right: 20px; top: 15px; font-size: 1.8rem; cursor: pointer; color: var(--text-dim); }
 
         @media (max-width: 768px) {
             #carouselSlides img { height: 300px; }
             .services-grid, .gammes-grid { grid-template-columns: 1fr; }
             .menu-toggle { display: block; }
-            nav ul { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: rgba(0,0,0,0.98); padding: 30px; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: rgba(0,0,0,0.98); padding: 30px; border-bottom: 1px solid #333; }
             nav ul.mobile-active { display: flex; }
         }
     </style>
@@ -98,7 +103,7 @@
 
     <header>
         <div onclick="showSection('accueil')" class="logo-text">KEVINTECH<span>&</span>CO</div>
-        <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
         <nav id="mainNav">
             <ul>
                 <li><a onclick="showSection('accueil')">Accueil</a></li>
@@ -120,7 +125,7 @@
                     <img src="IMG_0018.jpg" alt="High-tech">
                 </div>
             </div>
-            <p style="text-align: center; font-size: 1.2rem; font-weight: 700; color: var(--text-dim);">Spécialiste en réparation et protections de précision à Sacy-le-Grand.</p>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: 700; color: var(--text-dim);">Spécialiste qualifié en réparation de précision à Sacy-le-Grand.</p>
         </section>
 
         <section id="services" class="content-section">
@@ -134,13 +139,21 @@
                     <div><i class="fas fa-shield-alt"></i><span class="brand-label" style="color: var(--accent);">Exclusivité iPhone</span>
                     <h3>Garantie Casse (6 mois)</h3><p>Bris accidentel ? La pièce est offerte. Seul le forfait main-d'œuvre de 70€ est à régler.</p></div>
                 </div>
+                <div class="service-card card-audio">
+                    <div><i class="fas fa-microphone-alt" style="color:#FF9F00"></i><span class="brand-label" style="color:#FF9F00">Audio & Son</span>
+                    <h3>Haut-Parleur & Micro</h3><p>Votre haut-parleur ou micro ne fonctionnent plus ? Nous réglons le problème en quelques minutes.</p></div>
+                </div>
                 <div class="service-card card-android">
                     <div><i class="fab fa-android"></i><span class="brand-label" style="color: var(--android-green);">Univers Android</span>
-                    <h3>Samsung & Multimarques</h3><p>Composants <strong>Service Pack d'origine</strong> constructeur prioritaires.</p></div>
+                    <h3>Samsung & Multimarques</h3><p>Utilisation de composants <strong>Service Pack d'origine</strong> constructeur pour une qualité maximale.</p></div>
                 </div>
                 <div class="service-card card-hydro">
                     <div><i class="fas fa-layer-group"></i><span class="brand-label">Protection Ultime</span>
-                    <h3>Pack Sérénité Hydrogel</h3><p>25€ / an pour 3 poses incluses sur le même appareil (Smartphone, Tablette, PC).</p></div>
+                    <h3>Pack Sérénité Hydrogel</h3><p>Bouclier auto-régénérant : 25€ / an pour 3 poses incluses sur le même appareil.</p></div>
+                </div>
+                <div class="service-card card-home">
+                    <div><i class="fas fa-fingerprint" style="color:#8E44AD"></i><span class="brand-label" style="color:#8E44AD">Composants</span>
+                    <h3>Bouton Home</h3><p>Remplacement de bouton home. Si le bouton de votre appareil ne marche plus, apportez-le nous !</p></div>
                 </div>
             </div>
         </section>
@@ -149,8 +162,8 @@
             <h2>Nos 4 Gammes d'Écrans</h2>
             <div class="gammes-grid">
                 <div class="gamme-card" style="border-top-color: #4A5568;"><h3>Économie</h3><p>Rapport qualité/prix imbattable pour un usage quotidien.</p></div>
-                <div class="gamme-card" style="border-top-color: var(--accent);"><h3>RJ FHD</h3><p>Qualité Incell Haute Définition, éclat d'origine garanti.</p></div>
-                <div class="gamme-card" style="border-top-color: var(--apple-blue);"><h3>Reconditionné</h3><p>Écran d'origine recyclé pour une fidélité parfaite.</p></div>
+                <div class="gamme-card" style="border-top-color: var(--accent);"><h3>RJ FHD</h3><p>Qualité Incell Haute Définition. Éclat d'origine garanti et réactivité tactile optimale.</p></div>
+                <div class="gamme-card" style="border-top-color: var(--apple-blue);"><h3>Reconditionné</h3><p>Écran d'origine recyclé (vitre changée). Conserve la dalle authentique.</p></div>
                 <div class="gamme-card" style="border-top-color: #ffd700;"><h3>Service Pack</h3><p>Le sommet : pièce neuve sortie d'usine constructeur.</p></div>
             </div>
         </section>
@@ -160,23 +173,24 @@
             <div class="table-container">
                 <table class="price-table">
                     <tbody>
-                        <tr><td>Écran Smartphone</td><td class="price-val">Dès 69€</td></tr>
-                        <tr><td>Batterie Haute Capacité</td><td class="price-val">Dès 49€</td></tr>
-                        <tr><td>Connecteur de charge</td><td class="price-val">Dès 50€</td></tr>
-                        <tr><td>Vitre arrière (iPhone)</td><td class="price-val">Dès 70€</td></tr>
-                        <tr><td>Diagnostic (si refusé)</td><td class="price-val">20€</td></tr>
+                        <tr><td>Écran Smartphone</td><td><span class="price-val">Dès 69€</span></td></tr>
+                        <tr><td>Batterie Haute Capacité</td><td><span class="price-val">Dès 49€</span></td></tr>
+                        <tr><td>Connecteur de charge</td><td><span class="price-val">Dès 50€</span></td></tr>
+                        <tr><td>Vitre arrière (iPhone)</td><td><span class="price-val">Dès 70€</span></td></tr>
+                        <tr><td>Pack Sérénité Hydrogel</td><td><span class="price-val">25€ / an</span></td></tr>
+                        <tr><td>Diagnostic (si refusé)</td><td><span class="price-val">20€</span></td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
         <section id="contact" class="content-section">
-            <h2 style="text-align: center; margin-bottom: 20px;">Contact & Localisation</h2>
-            <div style="text-align: center; background: var(--card-bg); padding: 30px; border-radius: 24px; border: 1px solid #1a1a1a;">
-                <a href="tel:0771668364" style="color:var(--accent); font-size: 1.8rem; font-weight: 800; text-decoration: none;">07 71 66 83 64</a>
-                <p style="margin: 15px 0;">187 rue des Gaillards, 60700 Sacy-le-Grand</p>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20790.46876068898!2d2.5070116!3d49.3557712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e7cbab25af0c51%3A0x743699085bff216!2sKevinTech%26Co!5e0!3m2!1sfr!2sfr!4v1769366821114!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h2 style="text-align: center; margin-bottom: 30px;">Contact & Localisation</h2>
+            <div style="text-align: center; background: var(--card-bg); padding: 40px 20px; border-radius: 30px; border: 1px solid #1a1a1a;">
+                <a href="tel:0771668364" style="color:var(--accent); font-size: 2rem; font-weight: 800; text-decoration: none; display: block; margin-bottom: 10px;">07 71 66 83 64</a>
+                <p style="font-size: 1.1rem; color: var(--text-dim);">187 rue des Gaillards, 60700 Sacy-le-Grand (Oise)</p>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20790.46876068898!2d2.5070116!3d49.3557712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e7cbab25af0c51%3A0x743699085bff216!2sKevinTech%26Co!5e0!3m2!1sfr!2sfr!4v1769366821114!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -190,10 +204,10 @@
             <a href="https://www.pagesjaunes.fr/pros/64604579" target="_blank" class="social-btn" style="background: var(--pj-color); color:black; font-weight:900;">PJ</a>
             <a href="https://wa.me/33771668364" target="_blank" class="social-btn" style="background: var(--wa-color); color:white;"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <p>© 2026 KEVINTECH&CO | Sacy-le-Grand</p>
-        <div style="margin-top:10px">
-            <a onclick="openModal('Legal')" style="color:var(--text-dim); text-decoration:underline; font-size:0.8rem; cursor:pointer; margin:0 10px;">Mentions Légales</a>
-            <a onclick="openModal('Cgs')" style="color:var(--text-dim); text-decoration:underline; font-size:0.8rem; cursor:pointer; margin:0 10px;">CGS</a>
+        <p>© 2026 KEVINTECH&CO | Sacy-le-Grand (Oise)</p>
+        <div style="margin-top:15px">
+            <a onclick="openModal('Legal')" style="color:var(--text-dim); cursor:pointer; text-decoration: underline; font-size: 0.8rem; margin: 0 10px;">Mentions Légales</a>
+            <a onclick="openModal('Cgs')" style="color:var(--text-dim); cursor:pointer; text-decoration: underline; font-size: 0.8rem; margin: 0 10px;">CGS</a>
         </div>
     </footer>
 
@@ -201,21 +215,25 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('Legal')">×</span>
             <h3>MENTIONS LÉGALES</h3>
-            <p><strong>Éditeur :</strong> KEVINTECH&CO (Micro-entreprise).<br><strong>SIRET :</strong> 940 964 414 00012.<br><strong>Siège :</strong> 187 rue des Gallard, 60700 Sacy-le-Grand.<br><strong>Directeur :</strong> M. Leclercq.<br><strong>Hébergeur :</strong> GitHub Inc.</p>
+            <p><strong>Éditeur :</strong> KEVINTECH&CO (Micro-entreprise).<br>
+            <strong>Siège :</strong> 187 rue des Gaillards, 60700 Sacy-le-Grand (Oise).<br>
+            <strong>SIRET :</strong> 940 964 414 00012.<br>
+            <strong>Directeur :</strong> M. Leclercq.<br>
+            <strong>Hébergeur :</strong> GitHub Inc.</p>
         </div>
     </div>
 
     <div id="modalCgs" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('Cgs')">×</span>
-            <h3>CONDITION GÉNÉRALES DE SERVICES (CGS)</h3>
-            <p><strong>Article 1 - Diagnostics :</strong> Un forfait diagnostic de 20 € est facturé si l'appareil n'est pas réparable ou si le devis proposé est refusé.</p>
-            <p><strong>Article 2 - Garantie Casse iPhone :</strong> Garantie exclusive de 6 mois. En cas de bris accidentel de l'écran, la pièce est offerte. Seul le forfait main-d'œuvre de 70 € reste à la charge du client.</p>
-            <p><strong>Article 3 - Garantie des pièces :</strong> Aucune garantie en cas de dommage physique (fissure), traces d'oxydation, ou intervention par un tiers.</p>
-            <p><strong>Article 4 - Responsabilité des données :</strong> KEVINTECH&CO décline toute responsabilité en cas de perte de données. Le client doit effectuer une sauvegarde avant intervention.</p>
-            <p><strong>Article 5 - Matériel abandonné :</strong> Tout appareil non récupéré sous 90 jours sera considéré comme abandonné.</p>
-            <p><strong>Article 6 - Clause spécifique Android :</strong> Utilisation de pièces compatibles informée et acceptée par le client.</p>
-            <p><strong>Article 7 - Étanchéité :</strong> Toute ouverture entraîne la perte définitive de la garantie étanchéité IP67/IP68 constructeur.</p>
+            <h3>CONDITIONS GÉNÉRALES DE SERVICES (CGS)</h3>
+            <p><strong>Article 1 - Diagnostics :</strong> Un forfait diagnostic de 20 € est facturé si l'appareil n'est pas réparable ou si le devis est refusé.</p>
+            <p><strong>Article 2 - Garantie Casse iPhone :</strong> Garantie de 6 mois sur les écrans compatibles. En cas de bris, la pièce est offerte, seule la main-d'œuvre (70€) est due.</p>
+            <p><strong>Article 3 - Garantie des pièces :</strong> Exclut les dommages physiques, l'oxydation ou l'ouverture par un tiers.</p>
+            <p><strong>Article 4 - Responsabilité des données :</strong> KEVINTECH&CO décline toute responsabilité en cas de perte de données.</p>
+            <p><strong>Article 5 - Matériel abandonné :</strong> Tout appareil non récupéré sous 90 jours sera recyclé ou détruit.</p>
+            <p><strong>Article 6 - Clause Android :</strong> Information préalable sur l'usage de pièces compatibles acceptée par le client.</p>
+            <p><strong>Article 7 - Étanchéité :</strong> L'ouverture de l'appareil annule définitivement la garantie étanchéité constructeur (IP67/68).</p>
         </div>
     </div>
 
@@ -223,7 +241,8 @@
         function toggleMenu() { document.querySelector('#mainNav ul').classList.toggle('mobile-active'); }
         function showSection(id) {
             document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
+            const target = document.getElementById(id);
+            if(target) target.classList.add('active');
             document.querySelector('#mainNav ul').classList.remove('mobile-active');
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
