@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#000000">
-    <meta name="description" content="KevinTech&Co : R�paration iPhone & smartphones � Sacy-le-Grand (Oise). Expert Apple & Android.">
-    <title>KevinTech&Co | R�paration iPhone & Smartphone Sacy-le-Grand (60)</title>
+    <meta name="description" content="KevinTech&Co : Réparation iPhone & smartphones à Sacy-le-Grand (Oise). Expert Apple & Android.">
+    <title>KevinTech&Co | Réparation iPhone & Smartphone Sacy-le-Grand (60)</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
         min-height:100vh;
     }
 
-    /* HEADER - DESIGN �CART� (Logo Gauche / Menu Droite) */
+    /* HEADER */
     header {
         background:rgba(0,0,0,0.95);
         padding:20px 5%;
@@ -45,7 +45,7 @@
         top:0;
         z-index:1000;
         display:flex;
-        justify-content: space-between; /* S�pare les �l�ments au max */
+        justify-content: space-between;
         align-items:center;
         width: 100%;
         border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -73,7 +73,6 @@
         cursor:pointer;
     }
 
-    /* MENU COLL� � DROITE */
     nav { margin-left: auto; }
 
     nav ul {
@@ -116,7 +115,7 @@
 
     @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
 
-    /* HERO - STYLE MASSIF */
+    /* HERO */
     .hero {
         display:grid;
         grid-template-columns:1.15fr 1fr;
@@ -182,7 +181,6 @@
     .btn-primary { background:var(--accent); color:white; }
     .btn-primary:hover { box-shadow:0 10px 30px rgba(230,57,70,0.4); transform:translateY(-2px); }
     
-    /* BOUTON WHATSAPP VERT FLUO */
     .btn-whatsapp { 
         background:var(--wa-color); 
         color:white; 
@@ -196,7 +194,7 @@
 
     .hero-note { font-size:0.85rem; color:var(--text-dim); margin-top:10px; }
 
-    /* CARROUSEL IMAGES */
+    /* CARROUSEL */
     .hero-right { display:flex; flex-direction:column; gap:25px; }
 
     .carousel-wrapper { 
@@ -209,7 +207,7 @@
     #carouselSlides { display:flex; transition:0.8s ease; }
     #carouselSlides img { width:100%; height:400px; object-fit:cover; flex-shrink:0; }
 
-    /* BLOC AVIS CLIENTS */
+    /* AVIS */
     #google-reviews {
         background: #111;
         padding:30px;
@@ -220,10 +218,7 @@
         min-height: 180px;
     }
     #google-reviews strong { display:block; margin-bottom:12px; font-size: 1.2rem; color: var(--accent); }
-    
-    /* Animation de fondu pour les avis */
     #review-content { transition: opacity 0.5s ease-in-out; }
-    
     #review-text { font-style:italic; color:#fff; min-height:50px; font-size: 1.05rem; line-height: 1.5; }
     #review-author { font-weight:700; margin-top:10px; color: var(--text-dim); }
 
@@ -235,7 +230,6 @@
         font-weight:800;
     }
 
-    /* GRIDS */
     .services-grid, .gammes-grid {
         display:grid;
         grid-template-columns:repeat(2,1fr);
@@ -357,7 +351,7 @@
         <ul>
             <li><a onclick="showSection('accueil')">Accueil</a></li>
             <li><a onclick="showSection('services')">Expertises</a></li>
-            <li><a onclick="showSection('gammes')">�crans</a></li>
+            <li><a onclick="showSection('gammes')">Écrans</a></li>
             <li><a onclick="showSection('tarifs')">Tarifs</a></li>
             <li><a onclick="showSection('contact')">Contact</a></li>
         </ul>
@@ -365,7 +359,7 @@
 </header>
 
 <main>
-    <h1 style="position:absolute;left:-9999px">R�paration smartphone Sacy-le-Grand</h1>
+    <h1 style="position:absolute;left:-9999px">Réparation smartphone Sacy-le-Grand</h1>
 
     <section id="accueil" class="content-section active">
         <div class="hero">
@@ -373,37 +367,34 @@
                 <div class="hero-badge">
                     <i class="fas fa-location-dot"></i> Sacy-le-Grand (Oise)
                 </div>
-                <h2 class="hero-title">R�paration iPhone & smartphones<br> en 25 minutes*</h2>
+                <h2 class="hero-title">Réparation iPhone & smartphones<br> en 25 minutes*</h2>
                 <p class="hero-subtitle">
-                    Atelier sp�cialis� en r�parations express, pi�ces Apple d'origine (GAPP) et protections Hydrogel premium. Le service pro � c�t� de chez vous.
+                    Atelier spécialisé en réparations express, pièces Apple d'origine (GAPP) et protections Hydrogel premium. Le service pro à côté de chez vous.
                 </p>
                 <div class="hero-highlights">
                     <span><i class="fas fa-bolt"></i>Service rapide</span>
                     <span><i class="fas fa-shield-heart"></i>Garantie 6 mois</span>
-                    <span><i class="fas fa-check-circle"></i>Pi�ces Apple GAPP</span>
+                    <span><i class="fas fa-check-circle"></i>Pièces Apple GAPP</span>
                 </div>
                 
                 <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:15px; width:100%;">
                     <a href="tel:0771668364" class="btn btn-primary"><i class="fas fa-phone"></i> Appeler</a>
                     <a href="https://wa.me/33771668364" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
-                <p class="hero-note">*Temps moyen pour un �cran ou une batterie si la pi�ce est en stock.</p>
+                <p class="hero-note">*Temps moyen pour un écran ou une batterie si la pièce est en stock.</p>
             </div>
 
             <div class="hero-right">
                 <div class="carousel-wrapper">
                     <div id="carouselSlides">
-                        
-                        
                         <img src="IMG_0003.jpg" alt="Hydrogel">
                         <img src="IMG_0014.jpg" alt="Outils">
                         <img src="IMG_0623.jpg" alt="Batterie">
-                        <img src="reparation-ecran-apple-origine-oise.jpg.jpg" alt="R�paration �cran">
+                        <img src="reparation-ecran-apple-origine-oise.jpg" alt="Réparation écran">
                         <img src="IMG_99C3E9F7-EC3A-4DE7-91F2-5487D80F4980.jpg" alt="iPhone 13 Bleu">
-                        <img src="reparation-ecran-apple-origine-oise.jpg (3).jpg" alt="R�paration">
-                        <img src="IMG_7098.jpg" alt="iPhone cass�">
+                        <img src="IMG_7098.jpg" alt="iPhone cassé">
                         <img src="IMG_07770.jpg" alt="Dos iPhone">
-                        <img src="IMG_0620.jpg" alt="R�paration dos">
+                        <img src="IMG_0620.jpg" alt="Réparation dos">
                     </div>
                 </div>
                 <div id="google-reviews">
@@ -412,7 +403,7 @@
                         <p id="review-text"></p>
                         <p id="review-author"></p>
                     </div>
-                    <a href="https://maps.app.goo.gl/GzxkMWRDt9WcxVBD7" target="_blank" style="display:inline-block; margin-top:15px; color:white; text-decoration:underline; font-weight:700;">
+                    <a href="#" target="_blank" style="display:inline-block; margin-top:15px; color:white; text-decoration:underline; font-weight:700;">
                         Voir tous les avis
                     </a>
                 </div>
@@ -426,60 +417,48 @@
             <div class="service-card" style="border-top:4px solid var(--apple-blue);">
                 <i class="fab fa-apple" style="color:var(--apple-blue); font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:var(--apple-blue);">Programme GAPP</span>
-                <h3>Pi�ces d'origine Apple</h3>
-                <p>Gr�ce au programme GAPP, nous installons des composants certifi�s. iOS et True Tone pr�serv�s.</p>
+                <h3>Pièces d'origine Apple</h3>
+                <p>Grâce au programme GAPP, nous installons des composants certifiés. iOS et True Tone préservés.</p>
             </div>
             <div class="service-card" style="border-top:4px solid var(--accent);">
                 <i class="fas fa-shield-alt" style="color:var(--accent); font-size:2.5rem; margin-bottom:15px;"></i><br>
-                <span class="brand-label" style="color:var(--accent);">Exclusivit� iPhone</span>
+                <span class="brand-label" style="color:var(--accent);">Exclusivité iPhone</span>
                 <h3>Garantie casse 6 mois</h3>
-                <p>Si l'�cran se casse � nouveau sous 6 mois, la pi�ce est offerte. Seule la main-d'Suvre (70�) est due.</p>
+                <p>Si l'écran se casse à nouveau sous 6 mois, la pièce est offerte. Seule la main-d'œuvre (70€) est due.</p>
             </div>
             <div class="service-card" style="border-top:4px solid #FF9F00;">
                 <i class="fas fa-microphone-alt" style="color:#FF9F00; font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:#FF9F00;">Audio & son</span>
                 <h3>Haut-parleurs & micros</h3>
-                <p>Nettoyage ou remplacement des modules audio. Id�al si lon vous entend mal ou si le son est faible.</p>
+                <p>Nettoyage ou remplacement des modules audio. Idéal si l'on vous entend mal ou si le son est faible.</p>
             </div>
             <div class="service-card" style="border-top:4px solid var(--android-green);">
                 <i class="fab fa-android" style="color:var(--android-green); font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:var(--android-green);">Multimarques</span>
                 <h3>Samsung & Android</h3>
-                <p>�crans, batteries et connecteurs sur Samsung, Xiaomi, Oppo. Service Pack disponible.</p>
-            </div>
-            <div class="service-card" style="border-top:4px solid #ffffff;">
-                <i class="fas fa-layer-group" style="font-size:2.5rem; margin-bottom:15px;"></i><br>
-                <span class="brand-label">Protection</span>
-                <h3>Pack S�r�nit� Hydrogel</h3>
-                <p>Formule � 25 � / an avec jusqu'� 3 poses de film Hydrogel sur le m�me appareil.</p>
-            </div>
-            <div class="service-card" style="border-top:4px solid #8E44AD;">
-                <i class="fas fa-fingerprint" style="color:#8E44AD; font-size:2.5rem; margin-bottom:15px;"></i><br>
-                <span class="brand-label" style="color:#8E44AD;">Composants</span>
-                <h3>Boutons & connectiques</h3>
-                <p>Bouton home, volume, power, nappes... on remplace les pi�ces fatigu�es.</p>
+                <p>Écrans, batteries et connecteurs sur Samsung, Xiaomi, Oppo. Service Pack disponible.</p>
             </div>
         </div>
     </section>
 
     <section id="gammes" class="content-section">
-        <h2 class="section-title">Gammes d'�crans</h2>
+        <h2 class="section-title">Gammes d'écrans</h2>
         <div class="gammes-grid">
             <div class="gamme-card" style="border-top:4px solid #4A5568;">
-                <h3>�conomie</h3>
-                <p>Le meilleur compromis prix / usage. Affichage correct, tactile fluide : parfait pour un t�l�phone du quotidien.</p>
+                <h3>Économie</h3>
+                <p>Le meilleur compromis prix / usage. Affichage correct, tactile fluide : parfait pour un téléphone du quotidien.</p>
             </div>
             <div class="gamme-card" style="border-top:4px solid var(--accent);">
                 <h3>RJ FHD</h3>
-                <p>�cran Incell Full HD avec couleurs vives et belle luminosit�. Id�al si vous tenez au confort visuel.</p>
+                <p>Écran Incell Full HD avec couleurs vives et belle luminosité. Idéal si vous tenez au confort visuel.</p>
             </div>
             <div class="gamme-card" style="border-top:4px solid var(--apple-blue);">
-                <h3>Reconditionn�</h3>
-                <p>V�ritables �crans d'origine Apple recycl�s. Fid�lit� d'affichage et toucher identiques au neuf.</p>
+                <h3>Reconditionné</h3>
+                <p>Véritables écrans d'origine Apple recyclés. Fidélité d'affichage et toucher identiques au neuf.</p>
             </div>
             <div class="gamme-card" style="border-top:4px solid #ffd700;">
                 <h3>Service Pack</h3>
-                <p>Pi�ces neuves d'origine constructeur, telles que livr�es aux centres agr��s (Apple, Samsung...).</p>
+                <p>Pièces neuves d'origine constructeur, telles que livrées aux centres agréés (Apple, Samsung...).</p>
             </div>
         </div>
     </section>
@@ -489,18 +468,18 @@
         <div class="table-container">
             <table class="price-table">
                 <tbody>
-                    <tr><td>�cran smartphone (selon mod�le)</td><td class="price-val">D�s 69 �</td></tr>
-                    <tr><td>Batterie haute capacit�</td><td class="price-val">D�s 49 �</td></tr>
-                    <tr><td>Connecteur de charge</td><td class="price-val">D�s 50 �</td></tr>
-                    <tr><td>Vitre arri�re (iPhone)</td><td class="price-val">D�s 70 �</td></tr>
-                    <tr><td>Diagnostic (si devis refus�)</td><td class="price-val">20 �</td></tr>
+                    <tr><td>Écran smartphone (selon modèle)</td><td class="price-val">Dès 69 €</td></tr>
+                    <tr><td>Batterie haute capacité</td><td class="price-val">Dès 49 €</td></tr>
+                    <tr><td>Connecteur de charge</td><td class="price-val">Dès 50 €</td></tr>
+                    <tr><td>Vitre arrière (iPhone)</td><td class="price-val">Dès 70 €</td></tr>
+                    <tr><td>Diagnostic (si devis refusé)</td><td class="price-val">20 €</td></tr>
                 </tbody>
             </table>
         </div>
     </section>
 
     <section id="contact" class="content-section">
-        <h2 class="section-title">Contact & acc�s</h2>
+        <h2 class="section-title">Contact & accès</h2>
         <div class="contact-card">
             <a href="tel:0771668364" style="color:var(--accent); font-size:2.5rem; font-weight:800; text-decoration:none;">
                 07 71 66 83 64
@@ -512,7 +491,7 @@
                 Atelier sur rendez-vous uniquement. Merci d'appeler avant de venir.
             </p>
             <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20790.46876068898!2d2.5070116!3d49.3557712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e7cbab25af0c51%3A0x743699085bff216!2sKevinTech%26Co!5e0!3m2!1sfr!2sfr!4v1769366821114!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.636402452285!2d2.5407!3d49.3516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDIxJzA1LjgiTiAywrAzMiczNi41IkU!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -522,42 +501,35 @@
     <div class="socials">
         <a href="https://facebook.com/kevintech.co/" target="_blank" class="social-btn" style="background:var(--fb-color); color:white;"><i class="fab fa-facebook-f"></i></a>
         <a href="https://instagram.com/kevintech.co" target="_blank" class="social-btn" style="background:linear-gradient(45deg, #f09433 0%, #bc1888 100%); color:white;"><i class="fab fa-instagram"></i></a>
-        <a href="https://snapchat.com/t/jFbrg6YP" target="_blank" class="social-btn" style="background:#FFFC00; color:black;"><i class="fab fa-snapchat"></i></a>
-        <a href="https://www.pagesjaunes.fr/pros/64604579" target="_blank" class="social-btn" style="background:var(--pj-color); color:black; font-weight:900;">PJ</a>
         <a href="https://wa.me/33771668364" target="_blank" class="social-btn" style="background:var(--wa-color); color:white;"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <p>� 2026 KEVINTECH&CO � Sacy-le-Grand (Oise)</p>
+    <p>© 2026 KEVINTECH&CO à Sacy-le-Grand (Oise)</p>
     <div style="margin-top:20px;">
-        <a style="color:var(--text-dim); font-size:0.9rem; text-decoration:underline; cursor:pointer; margin:0 15px;" onclick="openModal('Legal')">Mentions l�gales</a>
-        <a style="color:var(--text-dim); font-size:0.9rem; text-decoration:underline; cursor:pointer; margin:0 15px;" onclick="openModal('Cgs')">Conditions g�n�rales de service</a>
+        <a style="color:var(--text-dim); font-size:0.9rem; text-decoration:underline; cursor:pointer; margin:0 15px;" onclick="openModal('Legal')">Mentions légales</a>
+        <a style="color:var(--text-dim); font-size:0.9rem; text-decoration:underline; cursor:pointer; margin:0 15px;" onclick="openModal('Cgs')">Conditions générales de service</a>
     </div>
 </footer>
 
 <div id="modalLegal" class="modal">
     <div class="modal-content">
-        <span class="close-modal" onclick="closeModal('Legal')">�</span>
-        <h3>Mentions l�gales</h3>
-        <p><strong>�diteur :</strong> KEVINTECH&CO (micro-entreprise).</p>
-        <p><strong>Si�ge :</strong> 187 rue des Gaillards, 60700 Sacy-le-Grand (Oise).</p>
+        <span class="close-modal" onclick="closeModal('Legal')">×</span>
+        <h3>Mentions légales</h3>
+        <p><strong>Éditeur :</strong> KEVINTECH&CO (micro-entreprise).</p>
+        <p><strong>Siège :</strong> 187 rue des Gaillards, 60700 Sacy-le-Grand (Oise).</p>
         <p><strong>SIRET :</strong> 940 964 414 00012.</p>
         <p><strong>Directeur de publication :</strong> M. Leclercq.</p>
         <p><strong>TVA :</strong> Non applicable, art. 293 B du CGI.</p>
-        <br>
-        <p><strong>H�bergeur :</strong> GitHub Inc.</p>
-        <p><strong>Adresse :</strong> 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA.</p>
     </div>
 </div>
 
 <div id="modalCgs" class="modal">
     <div class="modal-content">
-        <span class="close-modal" onclick="closeModal('Cgs')">�</span>
-        <h3>Conditions g�n�rales de service (CGS)</h3>
-        <p><strong>Article 1  Diagnostic :</strong> Un forfait diagnostic de 20 � est factur� si l'appareil n'est pas r�parable ou si le devis propos� est refus� par le client.</p>
-        <p><strong>Article 2  Garantie casse iPhone :</strong> Garantie exclusive de 6 mois sur les gammes �conomie, RJ FHD et Reconditionn�. En cas de bris accidentel de l'�cran, la pi�ce est offerte. Seule la main-d'Suvre de 70 � reste � la charge du client.</p>
-        <p><strong>Article 3  Garantie des pi�ces :</strong> Les composants b�n�ficient de la garantie l�gale de conformit�. Aucune garantie ne sera appliqu�e en cas de dommage physique, doxydation ou dintervention dun tiers.</p>
-        <p><strong>Article 4  Donn�es :</strong> Le client est responsable de la sauvegarde de ses donn�es. KEVINTECH&CO ne pourra �tre tenu responsable dune perte de donn�es.</p>
-        <p><strong>Article 5  Mat�riel non r�cup�r� :</strong> Tout appareil non r�cup�r� 90 jours apr�s notification de fin de r�paration pourra �tre consid�r� comme abandonn� et recycl�.</p>
-        <p><strong>Article 6  Sp�cificit� Android :</strong> Pour les pi�ces compatibles (hors Service Pack), le client reconna�t �tre inform� de la diff�rence de qualit� et accepte les conditions de garantie sp�cifiques.</p>
+        <span class="close-modal" onclick="closeModal('Cgs')">×</span>
+        <h3>Conditions générales de service (CGS)</h3>
+        <p><strong>Article 1 - Diagnostic :</strong> Un forfait diagnostic de 20 € est facturé si l'appareil n'est pas réparable ou si le devis proposé est refusé par le client.</p>
+        <p><strong>Article 2 - Garantie casse iPhone :</strong> Garantie exclusive de 6 mois sur les gammes économie, RJ FHD et Reconditionné. En cas de bris accidentel de l'écran, la pièce est offerte. Seule la main-d'œuvre de 70 € reste à la charge du client.</p>
+        <p><strong>Article 3 - Garantie des pièces :</strong> Les composants bénéficient de la garantie légale de conformité. Aucune garantie ne sera appliquée en cas de dommage physique, d'oxydation ou d'intervention d'un tiers.</p>
+        <p><strong>Article 4 - Données :</strong> Le client est responsable de la sauvegarde de ses données. KEVINTECH&CO ne pourra être tenu responsable d'une perte de données.</p>
     </div>
 </div>
 
@@ -584,11 +556,11 @@ setInterval(()=>{
     slides.style.transform=`translateX(-${slideIdx*100}%)`;
 },5000);
 
-// AVIS D�FILANTS
+// AVIS DÉFILANTS
 const reviews=[
-    {text:"Super rapide et soign� !",author:"Thomas"},
-    {text:"Travail de qualit� et prix honn�tes.",author:"Marie"},
-    {text:"Pose Hydrogel parfaite, t�l�phone comme neuf.",author:"Nicolas"},
+    {text:"Super rapide et soigné !",author:"Thomas"},
+    {text:"Travail de qualité et prix honnêtes.",author:"Marie"},
+    {text:"Pose Hydrogel parfaite, téléphone comme neuf.",author:"Nicolas"},
     {text:"Le meilleur de Sacy, je recommande !",author:"Julie"}
 ];
 function displayReview(){
@@ -597,17 +569,15 @@ function displayReview(){
     const t=document.getElementById('review-text');
     const a=document.getElementById('review-author');
     
-    // Petit effet de fondu manuel
-    container.style.opacity = 0;
+    if(container) container.style.opacity = 0;
     setTimeout(() => {
         if(t&&a){ t.innerText='"'+r.text+'"'; a.innerText=r.author; }
-        container.style.opacity = 1;
+        if(container) container.style.opacity = 1;
     }, 500);
 }
 displayReview();
-setInterval(displayReview,4000); // Change tous les 4 secondes
+setInterval(displayReview,4000);
 
-// MODALES
 function openModal(type){
     const m=document.getElementById('modal'+type);
     if(m) m.style.display='block';
