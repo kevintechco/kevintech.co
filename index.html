@@ -37,7 +37,7 @@
         min-height:100vh;
     }
 
-    /* HEADER - DESIGN OPTIMISÉ TACTILE */
+    /* HEADER */
     header {
         background:rgba(0,0,0,0.95);
         padding:15px 5%;
@@ -104,6 +104,7 @@
 
     /* CONTENT */
     main {
+        flex: 1;
         max-width:1300px;
         width:100%;
         margin:0 auto;
@@ -154,6 +155,17 @@
     .hero-title { font-size:4rem; font-weight:800; line-height:1.1; }
     .hero-subtitle { max-width:600px; font-size:1.2rem; color:var(--text-dim); line-height: 1.6; }
 
+    /* BANNIERE GARANTIE CASSE */
+    .promo-banner {
+        background: linear-gradient(135deg, rgba(230, 57, 70, 0.1), rgba(230, 57, 70, 0.3));
+        border-left: 5px solid var(--accent);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .promo-banner h3 { color: var(--accent); font-size: 1.3rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .promo-banner p { font-size: 1.05rem; color: var(--text-main); line-height: 1.5; }
+
     .hero-highlights {
         display:flex;
         flex-wrap:wrap;
@@ -164,7 +176,6 @@
     .hero-highlights span { display:flex; align-items:center; gap:8px; color:white; font-weight: 600; }
     .hero-highlights i { color:var(--accent); }
 
-    /* BOUTONS TACTILES */
     .btn {
         padding:18px 32px;
         border-radius:999px;
@@ -177,7 +188,7 @@
         text-decoration:none;
         font-size: 1.1rem;
         transition: 0.3s;
-        min-height: 55px; /* Optimisé tactile */
+        min-height: 55px;
     }
     .btn-primary { background:var(--accent); color:white; }
     .btn-whatsapp { background:var(--wa-color); color:white; }
@@ -193,7 +204,7 @@
         border:1px solid #222; 
         background:#000; 
     }
-    #carouselSlides { display:flex; transition:0.8s ease; }
+    #carouselSlides { display:flex; transition:0.8s ease; will-change: transform; }
     #carouselSlides img { width:100%; height:400px; object-fit:cover; flex-shrink:0; }
 
     /* AVIS */
@@ -207,7 +218,7 @@
     #review-text { font-style:italic; color:#fff; min-height:50px; font-size: 1.05rem; line-height: 1.5; }
     #review-author { font-weight:700; margin-top:10px; color: var(--text-dim); }
 
-    /* SERVICES */
+    /* SERVICES & GAMMES */
     .services-grid, .gammes-grid {
         display:grid;
         grid-template-columns:repeat(2,1fr);
@@ -242,7 +253,7 @@
     }
     .price-val { text-align:right; color:var(--accent); font-weight:800; }
 
-    /* FOOTER TACTILE */
+    /* FOOTER */
     footer {
         background:#050505;
         border-top:1px solid #111;
@@ -273,7 +284,6 @@
         padding: 0 15px;
     }
 
-    /* MODALES */
     .modal {
         display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); backdrop-filter:blur(15px); z-index:5000;
     }
@@ -283,7 +293,6 @@
     }
     .close-modal { float:right; font-size:2.5rem; cursor:pointer; color:#fff; width:48px; height:48px; display:flex; justify-content:center; align-items:center; }
 
-    /* RESPONSIVE */
     @media(max-width:1024px){
         .menu-toggle { display:flex; }
         nav ul {
@@ -323,6 +332,12 @@
                     <i class="fas fa-location-dot" style="color:var(--accent)"></i> Sacy-le-Grand (Oise)
                 </div>
                 <h2 class="hero-title">Réparation iPhone & smartphones<br> en 25 minutes*</h2>
+                
+                <div class="promo-banner">
+                    <h3><i class="fas fa-shield-alt"></i> EXCLUSIVITÉ OISE : ÉCRAN GARANTI 100% CASSE !</h3>
+                    <p>Pendant 6 mois, si vous recassez votre nouvel écran (gammes Éco, Soft OLED, Reconditionné), <strong>la nouvelle pièce est OFFERTE</strong>. Vous ne payez que la main-d'œuvre. Fini la peur de faire tomber son téléphone !</p>
+                </div>
+
                 <p class="hero-subtitle">
                     Atelier spécialisé en réparations express, pièces Apple d'origine (GAPP) et protections Hydrogel premium. Le service pro à côté de chez vous.
                 </p>
@@ -342,24 +357,24 @@
             <div class="hero-right">
                 <div class="carousel-wrapper">
                     <div id="carouselSlides">
-                        <img src="IMG_0003.jpg" alt="Hydrogel">
-                        <img src="IMG_0014.jpg" alt="Outils">
-                        <img src="IMG_0623.jpg" alt="Batterie">
-                        <img src="reparation-ecran-apple-origine-oise.jpg" alt="Réparation écran">
-                        <img src="IMG_99C3E9F7-EC3A-4DE7-91F2-5487D80F4980.jpg" alt="iPhone 13 Bleu">
-                        <img src="IMG_7098.jpg" alt="iPhone cassé">
-                        <img src="IMG_07770.jpg" alt="Dos iPhone">
-                        <img src="IMG_0620.jpg" alt="Réparation dos">
+                        <img src="IMG_0003.jpg" alt="Hydrogel" loading="lazy">
+                        <img src="IMG_0014.jpg" alt="Outils" loading="lazy">
+                        <img src="IMG_0623.jpg" alt="Batterie" loading="lazy">
+                        <img src="reparation-ecran-apple-origine-oise.jpg" alt="Réparation écran" loading="lazy">
+                        <img src="IMG_99C3E9F7-EC3A-4DE7-91F2-5487D80F4980.jpg" alt="iPhone 13 Bleu" loading="lazy">
+                        <img src="IMG_7098.jpg" alt="iPhone cassé" loading="lazy">
+                        <img src="IMG_07770.jpg" alt="Dos iPhone" loading="lazy">
+                        <img src="IMG_0620.jpg" alt="Réparation dos" loading="lazy">
                     </div>
                 </div>
                 <div id="google-reviews">
-                    <strong><i class="fas fa-star" style="color:#FFCC00"></i> Avis clients</strong>
+                    <strong><i class="fas fa-star" style="color:#FFCC00"></i> Avis clients 5/5</strong>
                     <div id="review-content">
                         <p id="review-text"></p>
                         <p id="review-author"></p>
                     </div>
                     <a href="https://www.pagesjaunes.fr/pros/64604579" target="_blank" style="display:inline-block; margin-top:15px; color:white; min-height:48px; display:flex; align-items:center;">
-                        Voir tous les avis
+                        Voir tous les avis sur Google & PJ
                     </a>
                 </div>
             </div>
@@ -379,7 +394,7 @@
                 <i class="fas fa-shield-alt" style="color:var(--accent); font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:var(--accent);">Exclusivité iPhone</span>
                 <h3>Garantie casse 6 mois</h3>
-                <p>Si l'écran se casse à nouveau sous 6 mois, la pièce est offerte. Seule la main-d'œuvre (70€) est due.</p>
+                <p>Jusqu'à 3 remplacements si l'écran se casse à nouveau. La pièce est offerte, seule la main-d'œuvre (70€) est due.</p>
             </div>
             <div class="service-card" style="border-top:4px solid #FF9F00;">
                 <i class="fas fa-microphone-alt" style="color:#FF9F00; font-size:2.5rem; margin-bottom:15px;"></i><br>
@@ -402,18 +417,22 @@
             <div class="gamme-card" style="border-top:4px solid #4A5568;">
                 <h3>Économie</h3>
                 <p>Le meilleur compromis prix / usage. Affichage correct, tactile fluide : parfait pour un téléphone du quotidien.</p>
+                <strong style="color: var(--accent); display: block; margin-top: 10px;"><i class="fas fa-check"></i> Garantie Casse 6 mois incluse</strong>
             </div>
             <div class="gamme-card" style="border-top:4px solid var(--accent);">
-                <h3>RJ FHD</h3>
-                <p>Écran Incell Full HD avec couleurs vives et belle luminosité. Idéal si vous tenez au confort visuel.</p>
+                <h3>Soft OLED</h3>
+                <p>Écran de haute qualité avec couleurs vives, noirs profonds et tactile ultra fluide. Idéal pour le confort visuel.</p>
+                <strong style="color: var(--accent); display: block; margin-top: 10px;"><i class="fas fa-check"></i> Garantie Casse 6 mois incluse</strong>
             </div>
             <div class="gamme-card" style="border-top:4px solid var(--apple-blue);">
                 <h3>Reconditionné</h3>
                 <p>Véritables écrans d'origine Apple recyclés. Fidélité d'affichage et toucher identiques au neuf.</p>
+                <strong style="color: var(--accent); display: block; margin-top: 10px;"><i class="fas fa-check"></i> Garantie Casse 6 mois incluse</strong>
             </div>
             <div class="gamme-card" style="border-top:4px solid #ffd700;">
                 <h3>Service Pack</h3>
-                <p>Pièces neuves d'origine constructeur, telles que livrées aux centres agréés (Apple, Samsung...).</p>
+                <p>Pièces neuves 100% d'origine constructeur, telles que livrées aux centres agréés (Apple, Samsung...).</p>
+                <small style="color: #666; display: block; margin-top: 10px;">*Non éligible à la Garantie Casse</small>
             </div>
         </div>
     </section>
@@ -440,9 +459,14 @@
                 07 71 66 83 64
             </a>
             <p class="contact-address">187 rue des Gaillards, 60700 Sacy-le-Grand (Oise)</p>
-            <p style="margin-top:10px; font-size:1rem; color:var(--text-dim);">Atelier sur rendez-vous uniquement.</p>
-            <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.6366304626155!2d2.5458145!3d49.3589999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6375000000001%3A0x86134b223d6a695d!2sKevinTech%26Co!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 1.1rem; color: #fff; font-weight: bold; margin-bottom: 5px;"><i class="far fa-clock"></i> Ouvert du Lundi au Samedi de 9h à 18h30</p>
+                <p style="font-size: 1.2rem; color: var(--accent); font-weight: 800;">Appelez-moi juste avant de passer !</p>
+            </div>
+
+            <div class="map-wrapper" style="width: 100%; height: 500px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); margin-top: 30px; display: block;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.241513222851!2d2.5489722765324393!3d49.32388707140226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e64906f2f0f001%3A0x6a1074e548238b6a!2s187%20Rue%20des%20Gaillards%2C%2060700%20Sacy-le-Grand!5e0!3m2!1sfr!2sfr!4v1709400000000!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -479,9 +503,10 @@
         <span class="close-modal" onclick="closeModal('Cgs')">×</span>
         <h3>Conditions générales de service (CGS)</h3>
         <p><strong>Article 1 - Diagnostic :</strong> Un forfait diagnostic de 20 € est facturé si l'appareil n'est pas réparable ou si le devis proposé est refusé.</p>
-        <p><strong>Article 2 - Garantie casse iPhone :</strong> Garantie exclusive de 6 mois sur les écrans. En cas de bris, la pièce est offerte, seule la main-d'œuvre de 70 € est due.</p>
-        <p><strong>Article 3 - Garantie des pièces :</strong> Garantie légale de conformité. Exclut l'oxydation et les chocs.</p>
-        <p><strong>Article 4 - Données :</strong> Le client est responsable de la sauvegarde de ses données.</p>
+        <p><strong>Article 2 - Garantie Casse 6 mois :</strong> Valable uniquement sur les écrans des gammes Éco, Soft OLED et Reconditionné (hors Service Pack / Pièces Originales). En cas de bris ou casse, la nouvelle pièce est offerte, seule la main-d'œuvre de 70 € reste à la charge du client. L'offre est strictement limitée à <strong>3 remplacements maximum</strong> par appareil. La garantie est immédiatement annulée si l'appareil est ouvert par un tiers après notre intervention.</p>
+        <p><strong>Article 3 - Vices cachés et Étanchéité :</strong> KEVINTECH&CO ne saurait être tenu responsable des pannes sous-jacentes liées au choc initial (ex: défaut de Face ID, carte mère, appareil photo) non déclarées ou découvertes lors de l'ouverture du téléphone. L'ouverture de l'appareil annule de fait sa certification d'étanchéité d'usine (IP68).</p>
+        <p><strong>Article 4 - Données personnelles :</strong> Le client est l'unique responsable de la sauvegarde de ses données (photos, contacts, mots de passe) avant le dépôt de l'appareil. L'atelier décline toute responsabilité en cas de perte partielle ou totale de données.</p>
+        <p><strong>Article 5 - Abandon de matériel :</strong> Tout appareil déposé et non réclamé ou non payé dans un délai de 6 mois après la date de dépôt sera considéré comme définitivement abandonné. Il sera alors détruit ou recyclé par nos soins sans aucun recours possible.</p>
     </div>
 </div>
 
@@ -508,12 +533,17 @@ setInterval(()=>{
     slides.style.transform=`translateX(-${slideIdx*100}%)`;
 },5000);
 
+// VRAIS AVIS CLIENTS
 const reviews=[
-    {text:"Super rapide et soigné !",author:"Thomas"},
-    {text:"Travail de qualité et prix honnêtes.",author:"Marie"},
-    {text:"Pose Hydrogel parfaite, téléphone comme neuf.",author:"Nicolas"},
-    {text:"Le meilleur de Sacy, je recommande !",author:"Julie"}
+    {text:"Très réactif, essaye de trouver une solution avant de changer une pièce. Je recommande vivement.",author:"Laurence (Samsung A32)"},
+    {text:"Mon écran d’iPhone a été changé en 30 minutes. Travail irréprochable, je recommande les yeux fermés.",author:"Ophélie Sch"},
+    {text:"Changement de batterie et film hydrogel anti-espion faits en 25 minutes. Travail soigné !",author:"Melanie Leclercq"},
+    {text:"Changement de la vitre arrière de mon iPhone : travail soigné, rapide et prix correct. Un grand merci !",author:"Alice Ancelin"},
+    {text:"Changement d’écran sur iPhone 14 Pro Max, le travail a été fait avec soin, aucun problème depuis.",author:"Matis Pillot"},
+    {text:"Remplacement de châssis sur mon S10+ suite à une chute, j'ai de nouveau un téléphone comme neuf !",author:"Thibault Dos Santos"},
+    {text:"A l'écoute et réactif, j'ai mené mon 16 Pro Max ! Je recommande.",author:"Nico Zico"}
 ];
+
 function displayReview(){
     const r=reviews[Math.floor(Math.random()*reviews.length)];
     const container = document.getElementById('review-content');
@@ -526,7 +556,7 @@ function displayReview(){
     }, 500);
 }
 displayReview();
-setInterval(displayReview,4000);
+setInterval(displayReview,5000);
 
 function openModal(type){
     const m=document.getElementById('modal'+type);
