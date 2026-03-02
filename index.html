@@ -10,6 +10,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "KevinTech&Co",
+      "image": "https://kevintechco.github.io/kevintech.co/IMG_0003.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "187 rue des Gaillards",
+        "addressLocality": "Sacy-le-Grand",
+        "postalCode": "60700",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.3512, 
+        "longitude": 2.5409
+      },
+      "url": "https://kevintechco.github.io/kevintech.co/",
+      "telephone": "+33771668364",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:30"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "50"
+      }
+    }
+    </script>
+
     <style>
     :root {
         --bg: #050505;
@@ -70,12 +106,13 @@
     }
 
     nav ul { list-style:none; display:flex; gap:10px; }
-    nav ul li a {
+    nav ul li button {
+        background: none; border: none;
         color:var(--text-dim); font-size:0.85rem; text-transform:uppercase; font-weight:700; cursor:pointer;
         text-decoration:none; transition: 0.3s; padding: 10px 15px; border-radius: 8px;
-        min-height: 48px; display: flex; align-items: center;
+        min-height: 48px; display: flex; align-items: center; font-family: inherit;
     }
-    nav ul li a:hover { color:white; background: var(--glass); }
+    nav ul li button:hover { color:white; background: var(--glass); }
 
     main { flex: 1; max-width:1200px; width:100%; margin:0 auto; padding:0 5% 60px; }
 
@@ -187,11 +224,11 @@
     <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
     <nav id="mainNav">
         <ul>
-            <li><a onclick="showSection('accueil')">Accueil</a></li>
-            <li><a onclick="showSection('services')">Expertises</a></li>
-            <li><a onclick="showSection('gammes')">Écrans</a></li>
-            <li><a onclick="showSection('tarifs')">Tarifs</a></li>
-            <li><a onclick="showSection('contact')">Contact</a></li>
+            <li><button onclick="showSection('accueil')">Accueil</button></li>
+            <li><button onclick="showSection('services')">Expertises</button></li>
+            <li><button onclick="showSection('gammes')">Écrans</button></li>
+            <li><button onclick="showSection('tarifs')">Tarifs</button></li>
+            <li><button onclick="showSection('contact')">Contact</button></li>
         </ul>
     </nav>
 </header>
@@ -235,19 +272,19 @@
             <div class="hero-right">
                 <div class="carousel-wrapper">
                     <div id="carouselSlides" style="display:flex; transition:0.8s ease; will-change: transform;">
-                        <img src="IMG_0003.jpg" alt="1">
-                        <img src="IMG_0014.jpg" alt="2">
-                        <img src="IMG_0623.jpg" alt="3">
-                        <img src="reparation-ecran-apple-origine-oise.jpg" alt="4">
-                        <img src="IMG_99C3E9F7-EC3A-4DE7-91F2-5487D80F4980.jpg" alt="5">
-                        <img src="IMG_7098.jpg" alt="6">
-                        <img src="IMG_07770.jpg" alt="7">
-                        <img src="IMG_0620.jpg" alt="8">
+                        <img src="IMG_0003.jpg" alt="Réparation smartphone" loading="lazy">
+                        <img src="IMG_0014.jpg" alt="Atelier de réparation" loading="lazy">
+                        <img src="IMG_0623.jpg" alt="Outils de précision" loading="lazy">
+                        <img src="reparation-ecran-apple-origine-oise.jpg" alt="Écran Apple origine" loading="lazy">
+                        <img src="IMG_99C3E9F7-EC3A-4DE7-91F2-5487D80F4980.jpg" alt="Technicien iPhone" loading="lazy">
+                        <img src="IMG_7098.jpg" alt="Batterie iPhone" loading="lazy">
+                        <img src="IMG_07770.jpg" alt="Composants smartphone" loading="lazy">
+                        <img src="IMG_0620.jpg" alt="Micro-soudure" loading="lazy">
                     </div>
                 </div>
                 <div id="google-reviews">
                     <strong><i class="fas fa-star" style="color:var(--pj-color)"></i> AVIS CLIENTS 5/5</strong>
-                    <div id="review-content" style="margin-top: 15px;">
+                    <div id="review-content" style="margin-top: 15px; transition: opacity 0.5s;">
                         <p id="review-text"></p>
                         <p id="review-author" style="font-weight:800; color:var(--text-dim)"></p>
                     </div>
@@ -342,8 +379,8 @@
 
             <div style="width: 100%; height: 500px; border-radius: 25px; overflow: hidden; border: 1px solid var(--glass-border);">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2590.220165507421!2d2.6318355768846394!3d49.42371906079978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e7d6928e83344b%3A0xc39111394f4a3838!2s187%20Rue%20des%20Gaillards%2C%2060700%20Sacy-le-Grand!5e0!3m2!1sfr!2sfr!4v1709400000000!5m2!1sfr!2sfr" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.533261719213!2d2.53831!3d49.3512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6490000000000%3A0x0!2s187%20Rue%20des%20Gaillards%2C%2060700%20Sacy-le-Grand!5e0!3m2!1sfr!2sfr!4v123456789" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
         </div>
@@ -359,8 +396,8 @@
     </div>
     <p>© 2026 KEVINTECH&CO | Sacy-le-Grand (60)</p>
     <div style="margin-top:20px; display:flex; justify-content:center; gap:20px">
-        <a style="color:var(--text-dim); text-decoration:underline; cursor:pointer" onclick="openModal('Legal')">Mentions légales</a>
-        <a style="color:var(--text-dim); text-decoration:underline; cursor:pointer" onclick="openModal('Cgs')">Garantie & CGS</a>
+        <button style="background:none; border:none; color:var(--text-dim); text-decoration:underline; cursor:pointer; font-family:inherit" onclick="openModal('Legal')">Mentions légales</button>
+        <button style="background:none; border:none; color:var(--text-dim); text-decoration:underline; cursor:pointer; font-family:inherit" onclick="openModal('Cgs')">Garantie & CGS</button>
     </div>
 </footer>
 
