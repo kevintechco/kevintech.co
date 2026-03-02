@@ -157,14 +157,15 @@
     }
     .social-btn:hover { transform: scale(1.1); filter: brightness(1.1); }
 
-    /* COULEURS OFFICIELLES RÉSEAUX */
     .fb-color { background: var(--fb-color); }
     .inst-color { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
     .wa-color { background: var(--wa-color); }
     .pj-color { background: var(--pj-color); color: black !important; font-weight: 900; }
 
     .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); backdrop-filter:blur(15px); z-index:5000; }
-    .modal-content { background:#111; margin:10% auto; padding:40px; border-radius:30px; width:90%; max-width:700px; border:1px solid var(--glass-border); color: white; }
+    .modal-content { background:#111; margin:5% auto; padding:40px; border-radius:30px; width:90%; max-width:700px; border:1px solid var(--glass-border); color: white; }
+    .modal-content h3 { margin-bottom: 20px; color: var(--accent); }
+    .modal-content p { margin-bottom: 15px; line-height: 1.6; font-size: 0.95rem; color: #ddd; }
     .close-modal { float:right; font-size:2.5rem; cursor:pointer; color:#fff; width:48px; height:48px; display:flex; justify-content:center; align-items:center; }
 
     @media(max-width:1024px){
@@ -218,7 +219,6 @@
                 <div class="hero-highlights">
                     <span><i class="fas fa-tools"></i>+100 réparations</span>
                     <span><i class="fas fa-clock"></i>Écran : 25-30 min</span>
-                    <span><i class="fas fa-compress-arrows-alt"></i>Mise sous presse 1h+</span>
                 </div>
 
                 <div style="display:flex; flex-wrap:wrap; gap:15px; margin-top:30px; justify-content: center;">
@@ -341,7 +341,10 @@
             </div>
 
             <div style="width: 100%; height: 500px; border-radius: 25px; overflow: hidden; border: 1px solid var(--glass-border);">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.1121041935817!2d2.6277!3d49.3516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e636f3c0000001%3a0x0!2zMTg3IFJ1ZSBkZXMgR2FpbGxhcmRzLCA2MDcwMCBTYWN5LWxlLUdyYW5kLCBGcmFuY2U!5e0!3m2!1sfr!2sfr!4v1710000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2590.220165507421!2d2.6318355768846394!3d49.42371906079978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e7d6928e83344b%3A0xc39111394f4a3838!2s187%20Rue%20des%20Gaillards%2C%2060700%20Sacy-le-Grand!5e0!3m2!1sfr!2sfr!4v1709400000000!5m2!1sfr!2sfr" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -357,7 +360,7 @@
     <p>© 2026 KEVINTECH&CO | Sacy-le-Grand (60)</p>
     <div style="margin-top:20px; display:flex; justify-content:center; gap:20px">
         <a style="color:var(--text-dim); text-decoration:underline; cursor:pointer" onclick="openModal('Legal')">Mentions légales</a>
-        <a style="color:var(--text-dim); text-decoration:underline; cursor:pointer" onclick="openModal('Cgs')">Conditions générales</a>
+        <a style="color:var(--text-dim); text-decoration:underline; cursor:pointer" onclick="openModal('Cgs')">Garantie & CGS</a>
     </div>
 </footer>
 
@@ -366,21 +369,20 @@
         <span class="close-modal" onclick="closeModal('Legal')">×</span>
         <h3>Mentions légales</h3>
         <p><strong>Éditeur :</strong> KEVINTECH&CO (micro-entreprise).</p>
-        <p><strong>Siège :</strong> 187 rue des Gaillards, 60700 Sacy-le-Grand (Oise).</p>
+        <p><strong>Siège social :</strong> 187 rue des Gaillards, 60700 Sacy-le-Grand (Oise).</p>
         <p><strong>SIRET :</strong> 940 964 414 00012.</p>
         <p><strong>Directeur de publication :</strong> M. Leclercq.</p>
-        <p><strong>TVA :</strong> Non applicable, art. 293 B du CGI.</p>
     </div>
 </div>
 
 <div id="modalCgs" class="modal">
     <div class="modal-content">
         <span class="close-modal" onclick="closeModal('Cgs')">×</span>
-        <h3>Conditions générales & Garantie</h3>
-        <p><strong>Article 1 - Diagnostic :</strong> Un forfait diagnostic de 20 € est facturé si l'appareil n'est pas réparable ou si le devis proposé est refusé.</p>
-        <p><strong>Article 2 - Garantie Casse 6 mois :</strong> Exclusivement sur iPhone (dès l'iPhone X). Max 3 remplacements. Seule la participation forfaitaire de 70 € reste à la charge du client (hors modèles entrée de gamme).</p>
-        <p><strong>Article 3 - Vices cachés :</strong> KEVINTECH&CO ne saurait être tenu responsable des pannes sous-jacentes liées au choc initial (Face ID, carte mère...) non déclarées.</p>
-        <p><strong>Article 4 - Données :</strong> Le client est l'unique responsable de la sauvegarde de ses données avant le dépôt de l'appareil.</p>
+        <h3>⚖️ Conditions Générales & Garantie</h3>
+        <p><strong>Article 1 - Expertise :</strong> Forfait fixe de 20 € si l'appareil est non réparable ou si le devis est refusé.</p>
+        <p><strong>Article 2 - Garantie Casse 6 Mois :</strong> Exclusivement iPhone dès l'iPhone X. Pièce offerte, participation forfaitaire de 70 € due. Limité à 3 remplacements.</p>
+        <p><strong>Article 3 - Responsabilité :</strong> KEVINTECH&CO décline toute responsabilité pour les vices cachés ou pannes résultant du choc initial.</p>
+        <p><strong>Article 4 - Données :</strong> Le client est l'unique responsable de la sauvegarde de ses données avant intervention.</p>
     </div>
 </div>
 
@@ -388,10 +390,12 @@
 function toggleMenu(){ document.querySelector('#mainNav ul').classList.toggle('mobile-active'); }
 function showSection(id){
     document.querySelectorAll('.content-section').forEach(s=>s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+    const target = document.getElementById(id);
+    if(target) target.classList.add('active');
     document.querySelector('#mainNav ul').classList.remove('mobile-active');
     window.scrollTo({top:0,behavior:'smooth'});
 }
+
 let slideIdx=0;
 setInterval(()=>{
     const slides=document.getElementById('carouselSlides');
@@ -402,11 +406,11 @@ setInterval(()=>{
 
 const reviews=[
     {text:"Très réactif, trouve une solution avant de changer une pièce. Je recommande vivement.",author:"Laurence (Samsung A32)"},
-    {text:"Mon écran d’iPhone a été changé en 30 minutes. Travail irréprochable.",author:"Ophélie Sch"},
-    {text:"Changement de batterie fait en 25 minutes. Travail soigné !",author:"Melanie Leclercq"},
+    {text:"Mon écran d’iPhone a été changé en 30 minutes. Travail irréprochable, je recommande les yeux fermés.",author:"Ophélie Sch"},
+    {text:"Changement de batterie et film hydrogel anti-espion faits en 25 minutes. Travail soigné !",author:"Melanie Leclercq"},
     {text:"A l'écoute et réactif sur mon 16 Pro Max ! Je recommande.",author:"Nico Zico"},
-    {text:"Changement de la vitre arrière de mon iPhone : travail soigné, rapide et prix correct.",author:"Alice Ancelin"},
-    {text:"Remplacement de châssis sur mon S10+ suite à une chute, de nouveau un téléphone comme neuf !",author:"Thibault Dos Santos"},
+    {text:"Changement de la vitre arrière de mon iPhone : travail soigné, rapide et prix correct. Un grand merci !",author:"Alice Ancelin"},
+    {text:"Remplacement de châssis sur mon S10+ suite à une chute, j'ai de nouveau un téléphone comme neuf !",author:"Thibault Dos Santos"},
     {text:"Très pro, je recommande fortement , cable management PC au top !",author:"Shakkur"}
 ];
 
