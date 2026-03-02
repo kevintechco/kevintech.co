@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#000000">
-    <meta name="description" content="KevinTech&Co : Réparation iPhone & smartphones à Sacy-le-Grand (Oise). Expert Apple & Android.">
+    <meta name="description" content="KevinTech&Co : Réparation iPhone & smartphones à Sacy-le-Grand (Oise). Expert +100 réparations. Garantie casse 6 mois exclusive iPhone dès l'iPhone X.">
     <title>KevinTech&Co | Réparation iPhone & Smartphone Sacy-le-Grand (60)</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
     <style>
-    /* VARIABLES */
     :root {
-        --bg: #000;
-        --card-bg: #0A0A0A;
+        --bg: #050505;
+        --card-bg: rgba(20, 20, 20, 0.7);
         --accent: #E63946;
         --apple-blue: #0071e3;
         --android-green: #3DDC84;
-        --text-main: #fff;
-        --text-dim: #d1d1d6;
+        --text-main: #ffffff;
+        --text-dim: #a1a1a6;
         --wa-color: #25D336; 
         --pj-color: #FFCC00;
         --fb-color: #1877F2;
+        --glass: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.1);
     }
 
     * { margin:0; padding:0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    
     body {
         display:flex;
         flex-direction:column;
-        background:var(--bg);
+        background: var(--bg);
+        background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 100%);
         color:var(--text-main);
         font-family:'Plus Jakarta Sans',sans-serif;
         overflow-x:hidden;
         min-height:100vh;
     }
 
-    /* HEADER */
     header {
-        background:rgba(0,0,0,0.95);
+        background:rgba(0,0,0,0.8);
         padding:15px 5%;
         position:sticky;
         top:0;
@@ -48,261 +50,132 @@
         justify-content: space-between;
         align-items:center;
         width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--glass-border);
+        backdrop-filter: blur(20px);
     }
 
     .logo-text {
-        font-size:1.5rem;
+        font-size:1.4rem;
         font-weight:800;
-        text-transform:uppercase;
+        letter-spacing: -1px;
         color:white;
-        background:none;
-        border:none;
-        cursor:pointer;
         text-decoration: none;
-        min-height: 48px;
-        display: flex;
-        align-items: center;
+        background: none; border: none; cursor: pointer;
+        min-height: 48px; display: flex; align-items: center;
     }
     .logo-text span { color:var(--accent); }
 
     .menu-toggle {
-        display:none;
-        background:none;
-        border:none;
-        color:white;
-        font-size:1.8rem;
-        cursor:pointer;
-        width: 48px;
-        height: 48px;
-        align-items: center;
-        justify-content: center;
+        display:none; background:none; border:none; color:white; font-size:1.8rem; cursor:pointer; width: 48px; height: 48px;
     }
 
-    nav ul {
-        list-style:none;
-        display:flex;
-        gap:15px;
-    }
+    nav ul { list-style:none; display:flex; gap:10px; }
     nav ul li a {
-        color:var(--text-dim);
-        font-size:0.9rem;
-        text-transform:uppercase;
-        font-weight:700;
-        cursor:pointer;
-        text-decoration:none;
-        transition: 0.3s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 48px;
-        min-height: 48px;
-        padding: 0 15px;
+        color:var(--text-dim); font-size:0.85rem; text-transform:uppercase; font-weight:700; cursor:pointer;
+        text-decoration:none; transition: 0.3s; padding: 10px 15px; border-radius: 8px;
+        min-height: 48px; display: flex; align-items: center;
     }
-    nav ul li a:hover { color:var(--accent); }
+    nav ul li a:hover { color:white; background: var(--glass); }
 
-    /* CONTENT */
-    main {
-        flex: 1;
-        max-width:1300px;
-        width:100%;
-        margin:0 auto;
-        padding:0 5% 40px;
-    }
+    main { flex: 1; max-width:1200px; width:100%; margin:0 auto; padding:0 5% 60px; }
 
-    .content-section {
-        display:none;
-        opacity:0;
-        transform:translateY(30px);
-        padding-top:60px;
-    }
-    .content-section.active {
-        display:block;
-        opacity:1;
-        transform:translateY(0);
-        animation:fadeIn .8s forwards;
-    }
-
+    .content-section { display:none; opacity:0; transform:translateY(20px); padding-top:60px; }
+    .content-section.active { display:block; animation:fadeIn .6s forwards; }
     @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
 
-    /* HERO */
-    .hero {
-        display:grid;
-        grid-template-columns:1.15fr 1fr;
-        gap:60px;
-        margin:80px 0;
-        align-items:center;
-        min-height: 70vh;
-    }
-    .hero-left { display:flex; flex-direction:column; gap:25px; }
+    .hero { display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; margin:60px 0; align-items:center; }
     
     .hero-badge {
-        display:inline-flex;
-        align-items:center;
-        gap:10px;
-        padding:10px 22px;
-        border-radius:999px;
-        background:rgba(255,255,255,0.08);
-        border:1px solid rgba(255,255,255,0.2);
-        font-size:0.95rem;
-        letter-spacing:0.1em;
-        text-transform:uppercase;
-        color:var(--text-dim);
-        width: fit-content;
+        display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:999px;
+        background: var(--glass); border:1px solid var(--glass-border); font-size:0.8rem;
+        text-transform:uppercase; color:var(--accent); font-weight: 800; width: fit-content;
     }
     
-    .hero-title { font-size:4rem; font-weight:800; line-height:1.1; }
-    .hero-subtitle { max-width:600px; font-size:1.2rem; color:var(--text-dim); line-height: 1.6; }
+    .hero-title { font-size:3.5rem; font-weight:800; line-height:1.1; margin: 15px 0; letter-spacing: -2px; }
+    
+    .bonus-list { list-style:none; margin: 20px 0; }
+    .bonus-list li { display:flex; align-items:center; gap:10px; color:var(--android-green); font-weight:700; margin-bottom:10px; font-size: 1.1rem; }
 
-    /* BANNIERE GARANTIE CASSE */
     .promo-banner {
-        background: linear-gradient(135deg, rgba(230, 57, 70, 0.1), rgba(230, 57, 70, 0.3));
-        border-left: 5px solid var(--accent);
-        padding: 20px;
-        border-radius: 10px;
-        margin-top: 10px;
+        background: linear-gradient(135deg, rgba(230, 57, 70, 0.15), rgba(0, 0, 0, 0.4));
+        border: 1px solid var(--accent); padding: 25px; border-radius: 20px; margin: 25px 0;
     }
-    .promo-banner h3 { color: var(--accent); font-size: 1.3rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-    .promo-banner p { font-size: 1.05rem; color: var(--text-main); line-height: 1.5; }
+    .promo-banner h3 { color: var(--accent); font-size: 1.4rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .promo-banner p { font-size: 1.1rem; line-height: 1.4; font-weight: 600; color: #fff; }
 
-    .hero-highlights {
-        display:flex;
-        flex-wrap:wrap;
-        gap:15px 30px;
-        font-size:1.1rem;
-        margin-top: 10px;
+    .hero-highlights { display:flex; flex-wrap:wrap; gap:15px; margin-top: 20px; }
+    .hero-highlights span { 
+        background: var(--glass); border: 1px solid var(--glass-border);
+        padding: 10px 18px; border-radius: 12px; font-size: 0.95rem; font-weight: 600;
     }
-    .hero-highlights span { display:flex; align-items:center; gap:8px; color:white; font-weight: 600; }
-    .hero-highlights i { color:var(--accent); }
+    .hero-highlights i { color:var(--accent); margin-right: 5px; }
 
     .btn {
-        padding:18px 32px;
-        border-radius:999px;
-        display:inline-flex;
-        align-items:center;
-        justify-content: center;
-        gap:10px;
-        cursor:pointer;
-        font-weight:800;
-        text-decoration:none;
-        font-size: 1.1rem;
-        transition: 0.3s;
+        padding:18px 35px; border-radius:15px; display:inline-flex; align-items:center; justify-content: center;
+        gap:12px; cursor:pointer; font-weight:800; text-decoration:none; font-size: 1.1rem; transition: 0.3s;
         min-height: 55px;
     }
-    .btn-primary { background:var(--accent); color:white; }
-    .btn-whatsapp { background:var(--wa-color); color:white; }
-    .btn:hover { transform:translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .btn-primary { background: white; color: black; }
+    .btn-whatsapp { background: var(--wa-color); color:white; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 54, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 54, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 54, 0); } }
 
-    .hero-note { font-size:0.85rem; color:var(--text-dim); margin-top:10px; }
+    .hero-note { font-size:0.9rem; color:var(--text-dim); margin-top:20px; line-height:1.5; }
 
-    /* CARROUSEL */
-    .hero-right { display:flex; flex-direction:column; gap:25px; }
-    .carousel-wrapper { 
-        border-radius:35px; 
-        overflow:hidden; 
-        border:1px solid #222; 
-        background:#000; 
-    }
-    #carouselSlides { display:flex; transition:0.8s ease; will-change: transform; }
-    #carouselSlides img { width:100%; height:400px; object-fit:cover; flex-shrink:0; }
+    .carousel-wrapper { border-radius:35px; overflow:hidden; border:1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    #carouselSlides img { width:100%; height:450px; object-fit:cover; flex-shrink: 0; }
 
-    /* AVIS */
-    #google-reviews {
-        background: #111;
-        padding:30px;
-        border-radius:30px;
-        border:1px solid rgba(255,255,255,0.15);
-    }
-    #review-content { transition: opacity 0.5s ease-in-out; }
-    #review-text { font-style:italic; color:#fff; min-height:50px; font-size: 1.05rem; line-height: 1.5; }
-    #review-author { font-weight:700; margin-top:10px; color: var(--text-dim); }
+    #google-reviews { background: var(--glass); padding:30px; border-radius:25px; border:1px solid var(--glass-border); margin-top: 20px; }
+    #review-text { font-style:italic; font-size: 1.1rem; color: white; margin-bottom: 10px; line-height: 1.5; }
 
-    /* SERVICES & GAMMES */
-    .services-grid, .gammes-grid {
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        gap:30px;
-    }
-    .service-card, .gamme-card {
-        background:var(--card-bg);
-        padding:45px;
-        border-radius:30px;
-        border:1px solid rgba(255,255,255,0.05);
-        transition:.3s;
-    }
-    .service-card h3, .gamme-card h3 { font-size:1.5rem; margin-bottom:15px; }
-    .service-card p, .gamme-card p { font-size:1rem; color:var(--text-dim); line-height: 1.6; }
+    .services-grid, .gammes-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:25px; }
     
-    .brand-label {
-        font-size:0.8rem;
-        font-weight:800;
-        text-transform:uppercase;
-        display:inline-block;
-        margin:6px 0 16px;
+    .service-card, .gamme-card {
+        background: var(--card-bg); padding:40px; border-radius:30px; border:1px solid var(--glass-border);
+        transition:.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); backdrop-filter: blur(10px);
     }
+    .service-card:hover, .gamme-card:hover { 
+        transform: translateY(-10px) scale(1.02); 
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    
+    .card-apple:hover { border-color: var(--apple-blue); }
+    .card-iphone-excl:hover { border-color: var(--accent); }
+    .card-audio:hover { border-color: #FF9F00; }
+    .card-android:hover { border-color: var(--android-green); }
 
-    /* TARIFS */
-    .table-container { background:var(--card-bg); border-radius:25px; overflow:hidden; }
-    .price-table { width:100%; border-collapse:collapse; }
-    .price-table td {
-        padding:22px 30px;
-        border-bottom:1px solid #1a1a1a;
-        font-size:1.1rem;
-        font-weight:600;
-    }
-    .price-val { text-align:right; color:var(--accent); font-weight:800; }
+    .service-card h3, .gamme-card h3 { font-size:1.6rem; margin-bottom:15px; letter-spacing: -1px; }
 
-    /* FOOTER */
-    footer {
-        background:#050505;
-        border-top:1px solid #111;
-        padding:40px 5% 60px;
-        text-align:center;
-    }
-    .socials { display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin-bottom:30px; }
+    .price-table { width:100%; border-collapse:collapse; background: var(--glass); border-radius: 25px; overflow: hidden; }
+    .price-table td { padding:25px; border-bottom:1px solid var(--glass-border); font-weight:600; font-size: 1.1rem; color: white;}
+    .price-val { color:var(--accent); font-weight:800; text-align: right; }
+
+    footer { background:black; padding:60px 5%; text-align:center; border-top: 1px solid var(--glass-border); }
+    .socials { display:flex; justify-content:center; gap:15px; margin-bottom:30px; }
     .social-btn {
-        width:52px; height:52px; border-radius:15px; display:flex; align-items:center; justify-content:center;
-        text-decoration:none; font-size:1.6rem; transition:.3s;
+        width:55px; height:55px; border-radius:18px; display:flex; align-items:center; justify-content:center;
+        text-decoration:none; font-size:1.6rem; transition:.3s; color: white;
     }
-    .footer-links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 20px;
-    }
-    .footer-link {
-        color: var(--text-dim);
-        font-size: 0.9rem;
-        text-decoration: underline;
-        cursor: pointer;
-        min-height: 48px;
-        min-width: 48px;
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-    }
+    .social-btn:hover { transform: scale(1.1); filter: brightness(1.1); }
 
-    .modal {
-        display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); backdrop-filter:blur(15px); z-index:5000;
-    }
-    .modal-content {
-        background:#111; margin:5% auto; padding:40px; border-radius:30px; width:90%; max-width:800px;
-        border:1px solid #333; max-height:85vh; overflow-y:auto;
-    }
+    /* COULEURS OFFICIELLES RÉSEAUX */
+    .fb-color { background: var(--fb-color); }
+    .inst-color { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .wa-color { background: var(--wa-color); }
+    .pj-color { background: var(--pj-color); color: black !important; font-weight: 900; }
+
+    .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); backdrop-filter:blur(15px); z-index:5000; }
+    .modal-content { background:#111; margin:10% auto; padding:40px; border-radius:30px; width:90%; max-width:700px; border:1px solid var(--glass-border); color: white; }
     .close-modal { float:right; font-size:2.5rem; cursor:pointer; color:#fff; width:48px; height:48px; display:flex; justify-content:center; align-items:center; }
 
     @media(max-width:1024px){
         .menu-toggle { display:flex; }
-        nav ul {
-            display:none; flex-direction:column; position:absolute; top:78px; left:0; width:100%;
-            background:#000; padding:20px; border-bottom:1px solid #222; gap: 5px;
-        }
+        nav ul { display:none; flex-direction:column; position:absolute; top:78px; left:0; width:100%; background:#000; padding:20px; border-bottom:1px solid #222; }
         nav ul.mobile-active{ display:flex; }
         .hero { grid-template-columns:1fr; text-align:center; margin:40px 0; }
         .hero-title { font-size:2.8rem; }
         .services-grid, .gammes-grid { grid-template-columns:1fr; }
+        .hero-left { align-items: center; }
+        #carouselSlides img { height: 320px; }
     }
     </style>
 </head>
@@ -328,52 +201,57 @@
     <section id="accueil" class="content-section active">
         <div class="hero">
             <div class="hero-left">
-                <div class="hero-badge">
-                    <i class="fas fa-location-dot" style="color:var(--accent)"></i> Sacy-le-Grand (Oise)
-                </div>
-                <h2 class="hero-title">Réparation iPhone & smartphones<br> en 25 minutes*</h2>
+                <div class="hero-badge"><i class="fas fa-location-dot"></i> SACY-LE-GRAND (60)</div>
+                <h2 class="hero-title">Réparation rapide & maîtrisée</h2>
                 
+                <ul class="bonus-list">
+                    <li><i class="fas fa-check-circle"></i> +100 réparations réalisées</li>
+                    <li><i class="fas fa-check-circle"></i> Atelier local indépendant</li>
+                    <li><i class="fas fa-check-circle"></i> Devis rapide par téléphone ou WhatsApp</li>
+                </ul>
+
                 <div class="promo-banner">
-                    <h3><i class="fas fa-shield-alt"></i> EXCLUSIVITÉ OISE : ÉCRAN GARANTI 100% CASSE !</h3>
-                    <p>Pendant 6 mois, si vous recassez votre nouvel écran (gammes Éco, Soft OLED, Reconditionné), <strong>la nouvelle pièce est OFFERTE</strong>. Vous ne payez que la main-d'œuvre. Fini la peur de faire tomber son téléphone !</p>
+                    <h3>💥 EXCLUSIF IPHONE (Dès l'iPhone X)</h3>
+                    <p>Vous recassez votre écran ? La pièce est offerte pendant 6 mois. Vous ne payez que la participation forfaitaire (70€).</p>
                 </div>
 
-                <p class="hero-subtitle">
-                    Atelier spécialisé en réparations express, pièces Apple d'origine (GAPP) et protections Hydrogel premium. Le service pro à côté de chez vous.
-                </p>
                 <div class="hero-highlights">
-                    <span><i class="fas fa-bolt"></i>Service rapide</span>
-                    <span><i class="fas fa-shield-heart"></i>Garantie 6 mois</span>
-                    <span><i class="fas fa-check-circle"></i>Pièces Apple GAPP</span>
+                    <span><i class="fas fa-tools"></i>+100 réparations</span>
+                    <span><i class="fas fa-clock"></i>Écran : 25-30 min</span>
+                    <span><i class="fas fa-compress-arrows-alt"></i>Mise sous presse 1h+</span>
                 </div>
-                
-                <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:15px; width:100%;">
+
+                <div style="display:flex; flex-wrap:wrap; gap:15px; margin-top:30px; justify-content: center;">
                     <a href="tel:0771668364" class="btn btn-primary"><i class="fas fa-phone"></i> Appeler</a>
                     <a href="https://wa.me/33771668364" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
-                <p class="hero-note">*Temps moyen pour un écran ou une batterie si la pièce est en stock.</p>
+                
+                <p class="hero-note">
+                    Remplacement express si pièce en stock.<br>
+                    Délai moyen : 24 à 48h selon disponibilité des pièces.
+                </p>
             </div>
 
             <div class="hero-right">
                 <div class="carousel-wrapper">
-                    <div id="carouselSlides">
-                        <img src="IMG_0003.jpg" alt="Hydrogel" loading="lazy">
-                        <img src="IMG_0014.jpg" alt="Outils" loading="lazy">
-                        <img src="IMG_0623.jpg" alt="Batterie" loading="lazy">
-                        <img src="reparation-ecran-apple-origine-oise.jpg" alt="Réparation écran" loading="lazy">
-                        <img src="IMG_99C3E9F7-EC3A-4DE7-91F2-5487D80F4980.jpg" alt="iPhone 13 Bleu" loading="lazy">
-                        <img src="IMG_7098.jpg" alt="iPhone cassé" loading="lazy">
-                        <img src="IMG_07770.jpg" alt="Dos iPhone" loading="lazy">
-                        <img src="IMG_0620.jpg" alt="Réparation dos" loading="lazy">
+                    <div id="carouselSlides" style="display:flex; transition:0.8s ease; will-change: transform;">
+                        <img src="IMG_0003.jpg" alt="1">
+                        <img src="IMG_0014.jpg" alt="2">
+                        <img src="IMG_0623.jpg" alt="3">
+                        <img src="reparation-ecran-apple-origine-oise.jpg" alt="4">
+                        <img src="IMG_99C3E9F7-EC3A-4DE7-91F2-5487D80F4980.jpg" alt="5">
+                        <img src="IMG_7098.jpg" alt="6">
+                        <img src="IMG_07770.jpg" alt="7">
+                        <img src="IMG_0620.jpg" alt="8">
                     </div>
                 </div>
                 <div id="google-reviews">
-                    <strong><i class="fas fa-star" style="color:#FFCC00"></i> Avis clients 5/5</strong>
-                    <div id="review-content">
+                    <strong><i class="fas fa-star" style="color:var(--pj-color)"></i> AVIS CLIENTS 5/5</strong>
+                    <div id="review-content" style="margin-top: 15px;">
                         <p id="review-text"></p>
-                        <p id="review-author"></p>
+                        <p id="review-author" style="font-weight:800; color:var(--text-dim)"></p>
                     </div>
-                    <a href="https://www.pagesjaunes.fr/pros/64604579" target="_blank" style="display:inline-block; margin-top:15px; color:white; min-height:48px; display:flex; align-items:center;">
+                    <a href="https://www.pagesjaunes.fr/pros/64604579" target="_blank" style="display:inline-block; margin-top:15px; color:white; min-height:48px; display:flex; align-items:center; text-decoration: underline;">
                         Voir tous les avis sur Google & PJ
                     </a>
                 </div>
@@ -382,27 +260,27 @@
     </section>
 
     <section id="services" class="content-section">
-        <h2 class="section-title">Nos expertises</h2>
+        <h2 class="hero-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Nos expertises</h2>
         <div class="services-grid">
-            <div class="service-card" style="border-top:4px solid var(--apple-blue);">
+            <div class="service-card card-apple">
                 <i class="fab fa-apple" style="color:var(--apple-blue); font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:var(--apple-blue);">Programme GAPP</span>
-                <h3>Pièces d'origine Apple</h3>
-                <p>Grâce au programme GAPP, nous installons des composants certifiés. iOS et True Tone préservés.</p>
+                <h3>Pièces Apple d'origine</h3>
+                <p>Composants certifiés via programme GAPP. iOS et True Tone 100% préservés.</p>
             </div>
-            <div class="service-card" style="border-top:4px solid var(--accent);">
+            <div class="service-card card-iphone-excl">
                 <i class="fas fa-shield-alt" style="color:var(--accent); font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:var(--accent);">Exclusivité iPhone</span>
                 <h3>Garantie casse 6 mois</h3>
-                <p>Jusqu'à 3 remplacements si l'écran se casse à nouveau. La pièce est offerte, seule la main-d'œuvre (70€) est due.</p>
+                <p>Dès l'iPhone X. Jusqu'à 3 remplacements. La pièce est offerte, seule la participation forfaitaire (70€) est due.</p>
             </div>
-            <div class="service-card" style="border-top:4px solid #FF9F00;">
+            <div class="service-card card-audio">
                 <i class="fas fa-microphone-alt" style="color:#FF9F00; font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:#FF9F00;">Audio & son</span>
                 <h3>Haut-parleurs & micros</h3>
-                <p>Nettoyage ou remplacement des modules audio. Idéal si l'on vous entend mal ou si le son est faible.</p>
+                <p>Nettoyage ou remplacement des modules audio. Idéal si l'on vous entend mal.</p>
             </div>
-            <div class="service-card" style="border-top:4px solid var(--android-green);">
+            <div class="service-card card-android">
                 <i class="fab fa-android" style="color:var(--android-green); font-size:2.5rem; margin-bottom:15px;"></i><br>
                 <span class="brand-label" style="color:var(--android-green);">Multimarques</span>
                 <h3>Samsung & Android</h3>
@@ -412,39 +290,38 @@
     </section>
 
     <section id="gammes" class="content-section">
-        <h2 class="section-title">Gammes d'écrans</h2>
+        <h2 class="hero-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Gammes d'écrans</h2>
         <div class="gammes-grid">
-            <div class="gamme-card" style="border-top:4px solid #4A5568;">
-                <h3>Économie</h3>
-                <p>Le meilleur compromis prix / usage. Affichage correct, tactile fluide : parfait pour un téléphone du quotidien.</p>
-                <strong style="color: var(--accent); display: block; margin-top: 10px;"><i class="fas fa-check"></i> Garantie Casse 6 mois incluse</strong>
+            <div class="gamme-card">
+                <h3>1. Économie</h3>
+                <p>Le meilleur prix quotidien.<br><strong>Garantie Casse (iPhone X et +)</strong></p>
+                <small style="color:var(--text-dim);">Valable uniquement sur modèles compatibles.</small>
             </div>
-            <div class="gamme-card" style="border-top:4px solid var(--accent);">
-                <h3>Soft OLED</h3>
-                <p>Écran de haute qualité avec couleurs vives, noirs profonds et tactile ultra fluide. Idéal pour le confort visuel.</p>
-                <strong style="color: var(--accent); display: block; margin-top: 10px;"><i class="fas fa-check"></i> Garantie Casse 6 mois incluse</strong>
+            <div class="gamme-card card-apple">
+                <h3>2. Soft OLED</h3>
+                <p>Couleurs éclatantes & noirs profonds.<br><strong>Garantie Casse (iPhone X et +)</strong></p>
+                <small style="color:var(--text-dim);">Valable uniquement sur modèles compatibles.</small>
             </div>
-            <div class="gamme-card" style="border-top:4px solid var(--apple-blue);">
-                <h3>Reconditionné</h3>
-                <p>Véritables écrans d'origine Apple recyclés. Fidélité d'affichage et toucher identiques au neuf.</p>
-                <strong style="color: var(--accent); display: block; margin-top: 10px;"><i class="fas fa-check"></i> Garantie Casse 6 mois incluse</strong>
+            <div class="gamme-card card-apple">
+                <h3>3. Reconditionné</h3>
+                <p>Vrai écran d'origine recyclé.<br><strong>Garantie Casse (iPhone X et +)</strong></p>
+                <small style="color:var(--text-dim);">Valable uniquement sur modèles compatibles.</small>
             </div>
-            <div class="gamme-card" style="border-top:4px solid #ffd700;">
-                <h3>Service Pack</h3>
-                <p>Pièces neuves 100% d'origine constructeur, telles que livrées aux centres agréés (Apple, Samsung...).</p>
-                <small style="color: #666; display: block; margin-top: 10px;">*Non éligible à la Garantie Casse</small>
+            <div class="gamme-card card-android">
+                <h3>4. Service Pack</h3>
+                <p>100% Neuf d'origine (Apple, Samsung...).<br><small style="color:var(--text-dim);">*Non éligible à la Garantie Casse.</small></p>
             </div>
         </div>
     </section>
 
     <section id="tarifs" class="content-section">
-        <h2 class="section-title">Nos tarifs</h2>
+        <h2 class="hero-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Nos tarifs</h2>
         <div class="table-container">
             <table class="price-table">
                 <tbody>
-                    <tr><td>Écran smartphone (selon modèle)</td><td class="price-val">Dès 69 €</td></tr>
+                    <tr><td>Écran iPhone 8 (sans Garantie Casse)</td><td class="price-val">Dès 59 €</td></tr>
+                    <tr><td>Écran iPhone (Gammes Garantie Casse dès iPhone X)</td><td class="price-val">Dès 79 €</td></tr>
                     <tr><td>Batterie haute capacité</td><td class="price-val">Dès 49 €</td></tr>
-                    <tr><td>Connecteur de charge</td><td class="price-val">Dès 50 €</td></tr>
                     <tr><td>Vitre arrière (iPhone)</td><td class="price-val">Dès 70 €</td></tr>
                     <tr><td>Diagnostic (si devis refusé)</td><td class="price-val">20 €</td></tr>
                 </tbody>
@@ -453,20 +330,18 @@
     </section>
 
     <section id="contact" class="content-section">
-        <h2 class="section-title">Contact & accès</h2>
-        <div class="contact-card">
-            <a href="tel:0771668364" style="color:var(--accent); font-size:2.5rem; font-weight:800; text-decoration:none; display:block; min-height:48px;">
-                07 71 66 83 64
-            </a>
-            <p class="contact-address">187 rue des Gaillards, 60700 Sacy-le-Grand (Oise)</p>
+        <h2 class="hero-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 40px;">Contact & Accès</h2>
+        <div style="background:var(--card-bg); padding:40px; border-radius:30px; text-align:center; border:1px solid var(--glass-border); backdrop-filter: blur(10px);">
+            <a href="tel:0771668364" style="color:var(--accent); font-size:3rem; font-weight:800; text-decoration:none; display: block;">07 71 66 83 64</a>
+            <p style="font-size:1.4rem; margin:15px 0">187 rue des Gaillards, 60700 Sacy-le-Grand</p>
             
-            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: 1.1rem; color: #fff; font-weight: bold; margin-bottom: 5px;"><i class="far fa-clock"></i> Ouvert du Lundi au Samedi de 9h à 18h30</p>
-                <p style="font-size: 1.2rem; color: var(--accent); font-weight: 800;">Appelez-moi juste avant de passer !</p>
+            <div style="background: var(--glass); padding: 25px; border-radius: 20px; border: 1px solid var(--glass-border); display: inline-block; margin-bottom: 30px;">
+                <p style="font-weight: 800; font-size: 1.2rem;">LUNDI AU SAMEDI : 9h00 - 18h30</p>
+                <p style="color: var(--accent); font-weight: 800; margin-top: 5px;">Appelez-moi juste avant de passer !</p>
             </div>
 
-            <div class="map-wrapper" style="width: 100%; height: 500px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); margin-top: 30px; display: block;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.241513222851!2d2.5489722765324393!3d49.32388707140226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e64906f2f0f001%3A0x6a1074e548238b6a!2s187%20Rue%20des%20Gaillards%2C%2060700%20Sacy-le-Grand!5e0!3m2!1sfr!2sfr!4v1709400000000!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div style="width: 100%; height: 500px; border-radius: 25px; overflow: hidden; border: 1px solid var(--glass-border);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.1121041935817!2d2.6277!3d49.3516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e636f3c0000001%3a0x0!2zMTg3IFJ1ZSBkZXMgR2FpbGxhcmRzLCA2MDcwMCBTYWN5LWxlLUdyYW5kLCBGcmFuY2U!5e0!3m2!1sfr!2sfr!4v1710000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -474,15 +349,15 @@
 
 <footer>
     <div class="socials">
-        <a href="https://facebook.com/kevintech.co/" target="_blank" class="social-btn" style="background:var(--fb-color); color:white;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/kevintech.co" target="_blank" class="social-btn" style="background:linear-gradient(45deg, #f09433 0%, #bc1888 100%); color:white;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/33771668364" target="_blank" class="social-btn" style="background:var(--wa-color); color:white;" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.pagesjaunes.fr/pros/64604579" target="_blank" class="social-btn" style="background:var(--pj-color); color:black; font-weight:900;" aria-label="Pages Jaunes">PJ</a>
+        <a href="https://facebook.com/kevintech.co/" target="_blank" class="social-btn fb-color" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/kevintech.co" target="_blank" class="social-btn inst-color" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/33771668364" target="_blank" class="social-btn wa-color" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.pagesjaunes.fr/pros/64604579" target="_blank" class="social-btn pj-color" aria-label="Pages Jaunes">PJ</a>
     </div>
-    <p>© 2026 KEVINTECH&CO à Sacy-le-Grand (Oise)</p>
-    <div class="footer-links">
-        <a class="footer-link" onclick="openModal('Legal')">Mentions légales</a>
-        <a class="footer-link" onclick="openModal('Cgs')">Conditions générales</a>
+    <p>© 2026 KEVINTECH&CO | Sacy-le-Grand (60)</p>
+    <div style="margin-top:20px; display:flex; justify-content:center; gap:20px">
+        <a style="color:var(--text-dim); text-decoration:underline; cursor:pointer" onclick="openModal('Legal')">Mentions légales</a>
+        <a style="color:var(--text-dim); text-decoration:underline; cursor:pointer" onclick="openModal('Cgs')">Conditions générales</a>
     </div>
 </footer>
 
@@ -501,30 +376,22 @@
 <div id="modalCgs" class="modal">
     <div class="modal-content">
         <span class="close-modal" onclick="closeModal('Cgs')">×</span>
-        <h3>Conditions générales de service (CGS)</h3>
+        <h3>Conditions générales & Garantie</h3>
         <p><strong>Article 1 - Diagnostic :</strong> Un forfait diagnostic de 20 € est facturé si l'appareil n'est pas réparable ou si le devis proposé est refusé.</p>
-        <p><strong>Article 2 - Garantie Casse 6 mois :</strong> Valable uniquement sur les écrans des gammes Éco, Soft OLED et Reconditionné (hors Service Pack / Pièces Originales). En cas de bris ou casse, la nouvelle pièce est offerte, seule la main-d'œuvre de 70 € reste à la charge du client. L'offre est strictement limitée à <strong>3 remplacements maximum</strong> par appareil. La garantie est immédiatement annulée si l'appareil est ouvert par un tiers après notre intervention.</p>
-        <p><strong>Article 3 - Vices cachés et Étanchéité :</strong> KEVINTECH&CO ne saurait être tenu responsable des pannes sous-jacentes liées au choc initial (ex: défaut de Face ID, carte mère, appareil photo) non déclarées ou découvertes lors de l'ouverture du téléphone. L'ouverture de l'appareil annule de fait sa certification d'étanchéité d'usine (IP68).</p>
-        <p><strong>Article 4 - Données personnelles :</strong> Le client est l'unique responsable de la sauvegarde de ses données (photos, contacts, mots de passe) avant le dépôt de l'appareil. L'atelier décline toute responsabilité en cas de perte partielle ou totale de données.</p>
-        <p><strong>Article 5 - Abandon de matériel :</strong> Tout appareil déposé et non réclamé ou non payé dans un délai de 6 mois après la date de dépôt sera considéré comme définitivement abandonné. Il sera alors détruit ou recyclé par nos soins sans aucun recours possible.</p>
+        <p><strong>Article 2 - Garantie Casse 6 mois :</strong> Exclusivement sur iPhone (dès l'iPhone X). Max 3 remplacements. Seule la participation forfaitaire de 70 € reste à la charge du client (hors modèles entrée de gamme).</p>
+        <p><strong>Article 3 - Vices cachés :</strong> KEVINTECH&CO ne saurait être tenu responsable des pannes sous-jacentes liées au choc initial (Face ID, carte mère...) non déclarées.</p>
+        <p><strong>Article 4 - Données :</strong> Le client est l'unique responsable de la sauvegarde de ses données avant le dépôt de l'appareil.</p>
     </div>
 </div>
 
 <script>
-function toggleMenu(){
-    const ul=document.querySelector('#mainNav ul');
-    if(ul) ul.classList.toggle('mobile-active');
-}
-
+function toggleMenu(){ document.querySelector('#mainNav ul').classList.toggle('mobile-active'); }
 function showSection(id){
     document.querySelectorAll('.content-section').forEach(s=>s.classList.remove('active'));
-    const target=document.getElementById(id);
-    if(target) target.classList.add('active');
-    const ul=document.querySelector('#mainNav ul');
-    if(ul) ul.classList.remove('mobile-active');
+    document.getElementById(id).classList.add('active');
+    document.querySelector('#mainNav ul').classList.remove('mobile-active');
     window.scrollTo({top:0,behavior:'smooth'});
 }
-
 let slideIdx=0;
 setInterval(()=>{
     const slides=document.getElementById('carouselSlides');
@@ -533,15 +400,14 @@ setInterval(()=>{
     slides.style.transform=`translateX(-${slideIdx*100}%)`;
 },5000);
 
-// VRAIS AVIS CLIENTS
 const reviews=[
-    {text:"Très réactif, essaye de trouver une solution avant de changer une pièce. Je recommande vivement.",author:"Laurence (Samsung A32)"},
-    {text:"Mon écran d’iPhone a été changé en 30 minutes. Travail irréprochable, je recommande les yeux fermés.",author:"Ophélie Sch"},
-    {text:"Changement de batterie et film hydrogel anti-espion faits en 25 minutes. Travail soigné !",author:"Melanie Leclercq"},
-    {text:"Changement de la vitre arrière de mon iPhone : travail soigné, rapide et prix correct. Un grand merci !",author:"Alice Ancelin"},
-    {text:"Changement d’écran sur iPhone 14 Pro Max, le travail a été fait avec soin, aucun problème depuis.",author:"Matis Pillot"},
-    {text:"Remplacement de châssis sur mon S10+ suite à une chute, j'ai de nouveau un téléphone comme neuf !",author:"Thibault Dos Santos"},
-    {text:"A l'écoute et réactif, j'ai mené mon 16 Pro Max ! Je recommande.",author:"Nico Zico"}
+    {text:"Très réactif, trouve une solution avant de changer une pièce. Je recommande vivement.",author:"Laurence (Samsung A32)"},
+    {text:"Mon écran d’iPhone a été changé en 30 minutes. Travail irréprochable.",author:"Ophélie Sch"},
+    {text:"Changement de batterie fait en 25 minutes. Travail soigné !",author:"Melanie Leclercq"},
+    {text:"A l'écoute et réactif sur mon 16 Pro Max ! Je recommande.",author:"Nico Zico"},
+    {text:"Changement de la vitre arrière de mon iPhone : travail soigné, rapide et prix correct.",author:"Alice Ancelin"},
+    {text:"Remplacement de châssis sur mon S10+ suite à une chute, de nouveau un téléphone comme neuf !",author:"Thibault Dos Santos"},
+    {text:"Très pro, je recommande fortement , cable management PC au top !",author:"Shakkur"}
 ];
 
 function displayReview(){
@@ -555,20 +421,11 @@ function displayReview(){
         if(container) container.style.opacity = 1;
     }, 500);
 }
-displayReview();
-setInterval(displayReview,5000);
+displayReview(); setInterval(displayReview,5000);
 
-function openModal(type){
-    const m=document.getElementById('modal'+type);
-    if(m) m.style.display='block';
-}
-function closeModal(type){
-    const m=document.getElementById('modal'+type);
-    if(m) m.style.display='none';
-}
-window.addEventListener('click',e=>{
-    if(e.target.classList.contains('modal')) e.target.style.display='none';
-});
+function openModal(type){ document.getElementById('modal'+type).style.display='block'; }
+function closeModal(type){ document.getElementById('modal'+type).style.display='none'; }
+window.addEventListener('click',e=>{ if(e.target.classList.contains('modal')) e.target.style.display='none'; });
 </script>
 </body>
 </html>
