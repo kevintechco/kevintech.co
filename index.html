@@ -14,8 +14,8 @@
     <!-- ✅ SEO : Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-    <!-- ✅ SEO : Meta description optimisée -->
-    <meta name="description" content="KevinTech&Co : réparation iPhone & smartphone à Sacy-le-Grand (Oise 60). Écran, batterie, vitre arrière. Garantie casse 6 mois exclusive iPhone dès l'iPhone X. Proche Creil, Senlis, Chantilly, Compiègne.">
+    <!-- ✅ CORRIGÉ : Meta description ramenée à 155 caractères (était 207) -->
+    <meta name="description" content="Réparation iPhone & smartphone à Sacy-le-Grand (Oise). Garantie casse 6 mois exclusive dès l'iPhone X. Écran, batterie, vitre. Proche Creil, Senlis.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="KevinTech&amp;Co">
     <meta name="geo.region" content="FR-60">
@@ -23,7 +23,7 @@
     <meta name="geo.position" content="49.3512;2.5409">
     <meta name="ICBM" content="49.3512, 2.5409">
 
-    <!-- ✅ SEO : Canonical pour éviter le contenu dupliqué -->
+    <!-- ✅ SEO : Canonical — À METTRE À JOUR quand vous aurez votre domaine kevintech.co -->
     <link rel="canonical" href="https://kevintechco.github.io/kevintech.co/">
 
     <!-- ✅ SEO : Open Graph pour Facebook, WhatsApp, LinkedIn -->
@@ -32,8 +32,10 @@
     <meta property="og:title" content="KevinTech&Co | Réparation iPhone & Smartphone – Sacy-le-Grand (Oise 60)">
     <meta property="og:description" content="Réparation express iPhone & smartphone à Sacy-le-Grand. Garantie casse 6 mois exclusive iPhone dès l'iPhone X. Pièce offerte, participation 70€. +100 réparations.">
     <meta property="og:image" content="https://kevintechco.github.io/kevintech.co/IMG_0003.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <!-- ✅ CORRIGÉ : Supprimer og:image:width/height si l'image n'est pas exactement 1200×630 -->
+    <!-- Si vous créez une image 1200×630 dédiée, décommentez les deux lignes ci-dessous -->
+    <!-- <meta property="og:image:width" content="1200"> -->
+    <!-- <meta property="og:image:height" content="630"> -->
     <meta property="og:image:alt" content="KevinTech&Co – Réparation iPhone & smartphone à Sacy-le-Grand (Oise)">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="KevinTech&Co">
@@ -45,15 +47,15 @@
     <meta name="twitter:image" content="https://kevintechco.github.io/kevintech.co/IMG_0003.jpg">
     <meta name="twitter:image:alt" content="KevinTech&Co – Réparation iPhone & smartphone Sacy-le-Grand">
 
-    <!-- ✅ Performance : Titre optimisé avec mot-clé principal en tête -->
+    <!-- ✅ Titre optimisé -->
     <title>Réparation iPhone & Smartphone Sacy-le-Grand (60) | KevinTech&Co</title>
 
     <!-- ✅ Performance : Preconnect pour accélérer le chargement des polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- ✅ Performance : Preload de l'image LCP réelle (1ère du carousel) -->
-    <link rel="preload" as="image" href="IMG_0816.jpg" fetchpriority="high">
+    <!-- ✅ CORRIGÉ : Preload sur IMG_0003.jpg (1ère image visible du carousel, pas IMG_0816) -->
+    <link rel="preload" as="image" href="IMG_0003.jpg" fetchpriority="high">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
@@ -121,7 +123,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "50"
+        "reviewCount": "7"
       },
       "review": [
         {
@@ -155,7 +157,7 @@
     }
     </script>
 
-    <!-- ✅ SEO : BreadcrumbList pour améliorer l'affichage dans les résultats -->
+    <!-- ✅ SEO : BreadcrumbList -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -163,6 +165,72 @@
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kevintechco.github.io/kevintech.co/"},
         {"@type": "ListItem", "position": 2, "name": "Réparation iPhone Sacy-le-Grand", "item": "https://kevintechco.github.io/kevintech.co/#services"}
+      ]
+    }
+    </script>
+
+    <!-- ✅ NOUVEAU : Schema.org FAQPage — correspond exactement aux <details> visibles dans la page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte la réparation d'un écran iPhone à Sacy-le-Grand ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La réparation d'écran iPhone coûte à partir de 59 € pour un iPhone 8 (sans Garantie Casse) et à partir de 79 € dès l'iPhone X avec la Garantie Casse 6 mois incluse. Toutes les gammes sont disponibles : Économie, Soft OLED, Reconditionné d'origine et Service Pack Apple 100% neuf. KevinTech&Co est situé au 187 rue des Gaillards, 60700 Sacy-le-Grand, facilement accessible depuis Creil, Pont-Sainte-Maxence et Verberie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la Garantie Casse 6 mois KevinTech&Co ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Garantie Casse est une offre 100% exclusive KevinTech&Co, unique dans l'Oise : si vous recassez votre écran dans les 6 mois suivant la réparation, la pièce est offerte. Vous ne payez que la participation forfaitaire de 70 €, et cela jusqu'à 3 fois. Cette garantie est valable dès l'iPhone X sur les gammes Économie, Soft OLED et Reconditionné. Elle ne s'applique pas au Service Pack (pièce 100% Apple d'origine)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure une réparation d'écran iPhone ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La réparation d'un écran iPhone prend 25 à 30 minutes sur place si la pièce est en stock. La batterie est remplacée en 20 minutes. En cas de commande de pièce spécifique, le délai moyen est de 24 à 48 heures. Appelez au préalable au 07 71 66 83 64 pour vérifier la disponibilité. L'atelier est ouvert du lundi au samedi de 9h à 18h30."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "KevinTech&Co répare-t-il les Samsung et autres Android ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, KevinTech&Co répare toutes les grandes marques : Samsung Galaxy (Service Pack d'origine disponible), Xiaomi, Redmi, Oppo et Google Pixel. Écran cassé, batterie défaillante, connecteur de charge, haut-parleur ou micro défectueux — toutes les pannes courantes sont traitées. Les clients de Chantilly, Senlis, Nogent-sur-Oise et Compiègne apportent régulièrement leurs appareils Android à l'atelier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous le montage de PC gaming dans l'Oise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, KevinTech&Co propose le montage PC gaming sur mesure dans l'Oise : conseil sur le choix des composants selon votre budget, assemblage complet, installation propre de Windows, câblage soigné et optimisation logicielle pour maximiser vos FPS. Le diagnostic et la réparation de PC portables sont également disponibles. Devis gratuit sur demande par téléphone ou WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faites-vous de la récupération de données SSD et disque dur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, KevinTech&Co réalise la récupération de données sur SSD, disque dur interne HDD et disque dur externe. L'intervention est douce et ciblée pour préserver au maximum vos photos, documents et fichiers importants. Nous intervenons également en micro-soudure sur carte mère pour les smartphones oxydés ou qui ne s'allument plus — un service rare dans le secteur de Pont-Sainte-Maxence et Verberie. Tarif sur devis après diagnostic gratuit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Utilisez-vous de vraies pièces Apple d'origine ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KevinTech&Co est partenaire du programme GAPP (Genuine Apple Parts Program), ce qui garantit l'utilisation de composants Apple 100% certifiés d'origine. Ces composants préservent le True Tone, Face ID et les fonctions iOS intégralement. C'est le niveau de réparation le plus proche de l'Apple Store, disponible en atelier indépendant à Sacy-le-Grand (Oise) pour les clients de tout le secteur."
+          }
+        }
       ]
     }
     </script>
@@ -240,11 +308,12 @@
 
     main { flex: 1; max-width:1200px; width:100%; margin:0 auto; padding:0 5% 60px; }
 
-    /* ✅ SEO : Les sections sont visibles par défaut (pour les crawlers).
-       JS applique .js-hidden sur les sections inactives après le chargement. */
-    .content-section { padding-top:60px; }
-    .content-section.js-hidden { display:none; }
-    .content-section.active { display:block; animation:fadeIn .6s forwards; }
+    /* ✅ CORRIGÉ : Les sections sont TOUJOURS visibles initialement (pour Google).
+       JS masque les sections inactives après exécution via .js-hidden.
+       Le !important garantit que les sections restent visibles si JS est absent. */
+    .content-section { padding-top:60px; display: block; }
+    .content-section.js-hidden { display: none; }
+    .content-section.active { display: block; animation:fadeIn .6s forwards; }
 
     @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 
@@ -256,7 +325,7 @@
         text-transform:uppercase; color:var(--accent); font-weight: 800; width: fit-content;
     }
 
-    /* ✅ SEO : H1 visible et correctement stylé (plus de clip hors écran) */
+    /* ✅ CORRIGÉ : H1 visible et positionné normalement */
     .hero-title {
         font-size:3.5rem; font-weight:800; line-height:1.1; margin: 15px 0; letter-spacing: -2px;
     }
@@ -293,7 +362,6 @@
     .hero-note { font-size:0.9rem; color:var(--text-dim); margin-top:20px; line-height:1.5; }
 
     .carousel-wrapper { border-radius:35px; overflow:hidden; border:1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-    /* ✅ Performance : width & height déclarés pour éviter le CLS (Cumulative Layout Shift) */
     #carouselSlides img { width:100%; height:450px; object-fit:cover; flex-shrink: 0; }
 
     #google-reviews { background: var(--glass); padding:30px; border-radius:25px; border:1px solid var(--glass-border); margin-top: 20px; }
@@ -319,7 +387,6 @@
 
     .service-card h3, .gamme-card h3 { font-size:1.6rem; margin-bottom:15px; letter-spacing: -1px; }
 
-    /* ✅ SEO : Bloc de mots-clés locaux visible mais discret */
     .seo-local {
         background: var(--glass); border: 1px solid var(--glass-border); border-radius: 20px;
         padding: 25px 30px; margin-top: 40px; color: var(--text-dim); font-size: 0.9rem; line-height: 1.8;
@@ -360,6 +427,36 @@
     .modal-content p { margin-bottom: 15px; line-height: 1.6; font-size: 0.95rem; color: #ddd; }
     .close-modal { float:right; font-size:2.5rem; cursor:pointer; color:#fff; width:48px; height:48px; display:flex; justify-content:center; align-items:center; }
 
+    /* ✅ FAQ Section */
+    .faq-item {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 18px;
+        overflow: hidden;
+        transition: border-color .3s, box-shadow .3s;
+    }
+    .faq-item:hover { border-color: rgba(255,255,255,0.2); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+    .faq-item[open] { border-color: rgba(255,255,255,0.15); }
+    .faq-item summary {
+        list-style: none;
+        padding: 22px 28px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        font-weight: 800;
+        font-size: 1.05rem;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary .faq-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; transition: transform .35s ease; }
+    .faq-item[open] summary .faq-icon { transform: rotate(180deg); }
+    .faq-body { padding: 0 28px 24px; color: var(--text-dim); line-height: 1.75; font-size: 0.97rem; }
+    .faq-body strong { color: white; font-weight: 700; }
+    .faq-tag { display: inline-block; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; padding: 2px 10px; border-radius: 999px; margin-bottom: 4px; }
+
     @media(max-width:1024px){
         .menu-toggle { display:flex; }
         nav ul { display:none; flex-direction:column; position:absolute; top:78px; left:0; width:100%; background:#000; padding:20px; border-bottom:1px solid #222; }
@@ -385,25 +482,33 @@
             <li><button onclick="showSection('services')" aria-label="Voir nos expertises">Expertises</button></li>
             <li><button onclick="showSection('gammes')" aria-label="Voir les gammes d'écrans">Écrans</button></li>
             <li><button onclick="showSection('tarifs')" aria-label="Consulter nos tarifs">Tarifs</button></li>
+            <li><button onclick="showSection('faq')" aria-label="Questions fréquentes">FAQ</button></li>
             <li><button onclick="showSection('contact')" aria-label="Nous contacter">Contact</button></li>
         </ul>
     </nav>
 </header>
 
-<main>
+<!-- ✅ NOUVEAU : Liens de secours pour navigation sans JavaScript -->
+<noscript>
+    <nav style="background:#111; padding:10px 5%; display:flex; gap:20px; border-bottom:1px solid #222;">
+        <a href="#accueil" style="color:#fff; text-decoration:none; font-size:0.9rem;">Accueil</a>
+        <a href="#services" style="color:#fff; text-decoration:none; font-size:0.9rem;">Expertises</a>
+        <a href="#gammes" style="color:#fff; text-decoration:none; font-size:0.9rem;">Écrans</a>
+        <a href="#tarifs" style="color:#fff; text-decoration:none; font-size:0.9rem;">Tarifs</a>
+        <a href="#contact" style="color:#fff; text-decoration:none; font-size:0.9rem;">Contact</a>
+    </nav>
+</noscript>
 
-    <!-- ✅ SEO : H1 visible, pertinent et bien positionné -->
-    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">
-        Réparation iPhone et smartphone à Sacy-le-Grand – KevinTech&Co
-    </h1>
+<main>
 
     <section id="accueil" class="content-section active" aria-label="Accueil">
         <div class="hero">
             <div class="hero-left">
                 <div class="hero-badge"><i class="fas fa-location-dot" aria-hidden="true"></i> SACY-LE-GRAND (60)</div>
 
-                <!-- ✅ SEO : Titre principal avec mot-clé naturellement intégré -->
-                <p class="hero-title" role="heading" aria-level="2">Réparation rapide &amp; maîtrisée</p>
+                <!-- ✅ CORRIGÉ : H1 visible, sémantique, contient les mots-clés principaux.
+                     L'ancien H1 caché (clip rect) a été supprimé car risque de pénalité Google. -->
+                <h1 class="hero-title">Réparation iPhone &amp; smartphone à Sacy-le-Grand – KevinTech&amp;Co</h1>
 
                 <ul class="bonus-list" aria-label="Points forts">
                     <li><i class="fas fa-check-circle" aria-hidden="true"></i> +100 réparations réalisées</li>
@@ -411,7 +516,6 @@
                     <li><i class="fas fa-check-circle" aria-hidden="true"></i> Devis rapide par téléphone ou WhatsApp</li>
                 </ul>
 
-                <!-- ✅ SEO : h2 sémantique à la place du h3 pour la hiérarchie -->
                 <div class="promo-banner" role="region" aria-label="Offre exclusive garantie casse">
                     <h2>💥 EXCLUSIF IPHONE (Dès l'iPhone X)</h2>
                     <p>Vous recassez votre écran ? La pièce est offerte pendant 6 mois. Vous ne payez que la participation forfaitaire (70&nbsp;€). Jusqu'à 3 remplacements.</p>
@@ -440,7 +544,7 @@
             <div class="hero-right">
                 <div class="carousel-wrapper" role="region" aria-label="Galerie photos de l'atelier">
                     <div id="carouselSlides" style="display:flex; transition:0.8s ease; will-change: transform;">
-                        <!-- ✅ Performance : fetchpriority sur la 1ère image pour le LCP -->
+                        <!-- ✅ CORRIGÉ : fetchpriority="high" uniquement sur la 1ère image visible -->
                         <img src="IMG_0003.jpg" alt="Atelier de réparation KevinTech&Co à Sacy-le-Grand" width="600" height="450" fetchpriority="high">
                         <img src="121.jpg" alt="Réparation smartphone en cours" width="600" height="450" loading="lazy">
                         <img src="6972655b300000f7f0e8facc_os_640.jpg" alt="Smartphone en réparation" width="600" height="450" loading="lazy">
@@ -461,7 +565,8 @@
                         <img src="IMG_0777.jpg" alt="Stock pièces détachées iPhone" width="600" height="450" loading="lazy">
                         <img src="IMG_07780.jpg" alt="Pièces détachées smartphone" width="600" height="450" loading="lazy">
                         <img src="IMG_0802.jpg" alt="Réparation iPhone Oise" width="600" height="450" loading="lazy">
-                        <img src="IMG_0816.jpg" alt="Réparation iPhone 14 Pro" width="600" height="450" fetchpriority="high">
+                        <!-- ✅ CORRIGÉ : fetchpriority retiré sur IMG_0816 (n'est pas la 1ère image) -->
+                        <img src="IMG_0816.jpg" alt="Réparation iPhone 14 Pro" width="600" height="450" loading="lazy">
                         <img src="IMG_0903.jpg" alt="Réparation Samsung Galaxy" width="600" height="450" loading="lazy">
                         <img src="IMG_1073.jpg" alt="Remplacement écran OLED" width="600" height="450" loading="lazy">
                         <img src="IMG_1077.jpg" alt="Service réparation téléphone" width="600" height="450" loading="lazy">
@@ -597,7 +702,7 @@
             <a href="tel:+33771668364" style="color:var(--accent); font-size:3rem; font-weight:800; text-decoration:none; display: block;"
                aria-label="Appeler le 07 71 66 83 64">07 71 66 83 64</a>
 
-            <!-- ✅ SEO : Balise <address> sémantique pour l'adresse -->
+            <!-- ✅ SEO : Balise <address> sémantique -->
             <address style="font-style:normal; font-size:1.4rem; margin:15px 0; line-height:1.6;">
                 187 rue des Gaillards,
                 60700 Sacy-le-Grand
@@ -618,6 +723,113 @@
             </div>
         </div>
     </section>
+
+    <!-- ✅ SEO : Section FAQ visible — correspond exactement au FAQPage Schema.org dans le <head> -->
+    <section id="faq" class="content-section" aria-label="Questions fréquentes">
+        <h2 class="hero-title-sub">Questions fréquentes</h2>
+        <div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;">
+
+            <!-- Q1 : Prix écran iPhone -->
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary>
+                    <span>
+                        <span class="faq-tag" style="background:rgba(230,57,70,.15); color:var(--accent);">💰 Tarifs</span><br>
+                        <span itemprop="name">Combien coûte la réparation d'un écran iPhone à Sacy-le-Grand ?</span>
+                    </span>
+                    <span class="faq-icon" style="background:rgba(230,57,70,.15); color:var(--accent);"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                </summary>
+                <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">La réparation d'écran iPhone coûte à partir de <strong>59 € pour un iPhone 8</strong> (sans Garantie Casse) et à partir de <strong>79 € dès l'iPhone X</strong> avec la Garantie Casse 6 mois incluse. Toutes les gammes sont disponibles : Économie, Soft OLED, Reconditionné d'origine et Service Pack Apple 100% neuf. KevinTech&Co est situé au <strong>187 rue des Gaillards, 60700 Sacy-le-Grand</strong>, facilement accessible depuis <strong>Creil, Pont-Sainte-Maxence et Verberie</strong>.</p>
+                </div>
+            </details>
+
+            <!-- Q2 : Garantie Casse -->
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary>
+                    <span>
+                        <span class="faq-tag" style="background:rgba(230,57,70,.15); color:var(--accent);">🛡️ Exclusif</span><br>
+                        <span itemprop="name">Qu'est-ce que la Garantie Casse 6 mois KevinTech&Co ?</span>
+                    </span>
+                    <span class="faq-icon" style="background:rgba(230,57,70,.15); color:var(--accent);"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                </summary>
+                <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">La <strong>Garantie Casse est une offre 100% exclusive KevinTech&Co</strong>, unique dans l'Oise : si vous recassez votre écran dans les 6 mois suivant la réparation, <strong>la pièce est offerte</strong>. Vous ne payez que la participation forfaitaire de <strong>70 €</strong>, et cela jusqu'à 3 fois. Cette garantie est valable dès l'iPhone X sur les gammes Économie, Soft OLED et Reconditionné. Elle ne s'applique pas au Service Pack (pièce 100% Apple d'origine).</p>
+                </div>
+            </details>
+
+            <!-- Q3 : Délais -->
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary>
+                    <span>
+                        <span class="faq-tag" style="background:rgba(61,220,132,.1); color:var(--android-green);">⏱️ Délais</span><br>
+                        <span itemprop="name">Combien de temps dure une réparation d'écran iPhone ?</span>
+                    </span>
+                    <span class="faq-icon" style="background:rgba(61,220,132,.1); color:var(--android-green);"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                </summary>
+                <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">La réparation d'un écran iPhone prend <strong>25 à 30 minutes sur place</strong> si la pièce est en stock. La batterie est remplacée en <strong>20 minutes</strong>. En cas de commande de pièce spécifique, le délai moyen est de <strong>24 à 48 heures</strong>. Appelez au préalable au <strong>07 71 66 83 64</strong> pour vérifier la disponibilité et éviter une attente inutile. L'atelier est ouvert <strong>du lundi au samedi de 9h à 18h30</strong>.</p>
+                </div>
+            </details>
+
+            <!-- Q4 : Marques -->
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary>
+                    <span>
+                        <span class="faq-tag" style="background:rgba(61,220,132,.1); color:var(--android-green);">📱 Multi-marques</span><br>
+                        <span itemprop="name">KevinTech&Co répare-t-il les Samsung et autres Android ?</span>
+                    </span>
+                    <span class="faq-icon" style="background:rgba(61,220,132,.1); color:var(--android-green);"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                </summary>
+                <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Oui, KevinTech&Co répare toutes les grandes marques : <strong>Samsung Galaxy</strong> (Service Pack d'origine disponible), <strong>Xiaomi, Redmi, Oppo et Google Pixel</strong>. Écran cassé, batterie défaillante, connecteur de charge, haut-parleur ou micro défectueux — toutes les pannes courantes sont traitées. Les clients de <strong>Chantilly, Senlis, Nogent-sur-Oise et Compiègne</strong> apportent régulièrement leurs appareils Android à l'atelier.</p>
+                </div>
+            </details>
+
+            <!-- Q5 : PC Gaming -->
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary>
+                    <span>
+                        <span class="faq-tag" style="background:rgba(0,200,255,.1); color:var(--pc-blue);">🎮 PC Gaming</span><br>
+                        <span itemprop="name">Proposez-vous le montage de PC gaming dans l'Oise ?</span>
+                    </span>
+                    <span class="faq-icon" style="background:rgba(0,200,255,.1); color:var(--pc-blue);"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                </summary>
+                <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Oui, KevinTech&Co propose le <strong>montage PC gaming sur mesure dans l'Oise</strong> : conseil sur le choix des composants selon votre budget, assemblage complet, installation propre de Windows, câblage soigné et optimisation logicielle pour <strong>maximiser vos FPS</strong>. Le diagnostic et la réparation de PC portables (nettoyage thermique, remplacement pâte thermique, SSD, RAM) sont également disponibles. <strong>Devis gratuit</strong> sur demande par téléphone ou WhatsApp.</p>
+                </div>
+            </details>
+
+            <!-- Q6 : Récupération données -->
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary>
+                    <span>
+                        <span class="faq-tag" style="background:rgba(168,85,247,.1); color:var(--data-purple);">💾 Données</span><br>
+                        <span itemprop="name">Faites-vous de la récupération de données SSD et disque dur ?</span>
+                    </span>
+                    <span class="faq-icon" style="background:rgba(168,85,247,.1); color:var(--data-purple);"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                </summary>
+                <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Oui, KevinTech&Co réalise la <strong>récupération de données sur SSD, disque dur interne HDD et disque dur externe</strong>. L'intervention est douce et ciblée pour préserver au maximum vos photos, documents et fichiers importants. Nous intervenons également en <strong>micro-soudure sur carte mère</strong> pour les smartphones oxydés ou qui ne s'allument plus — un service rare dans le secteur de <strong>Pont-Sainte-Maxence et Verberie</strong>. Tarif sur devis après diagnostic gratuit.</p>
+                </div>
+            </details>
+
+            <!-- Q7 : Pièces Apple GAPP -->
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary>
+                    <span>
+                        <span class="faq-tag" style="background:rgba(0,113,227,.1); color:var(--apple-blue);">🍎 Apple GAPP</span><br>
+                        <span itemprop="name">Utilisez-vous de vraies pièces Apple d'origine ?</span>
+                    </span>
+                    <span class="faq-icon" style="background:rgba(0,113,227,.1); color:var(--apple-blue);"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                </summary>
+                <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">KevinTech&Co est partenaire du <strong>programme GAPP (Genuine Apple Parts Program)</strong>, ce qui garantit l'utilisation de composants Apple 100% certifiés d'origine. Contrairement aux pièces génériques, ces composants préservent le <strong>True Tone, Face ID et les fonctions iOS</strong> intégralement. C'est le niveau de réparation le plus proche de l'Apple Store, disponible en atelier indépendant à <strong>Sacy-le-Grand (Oise)</strong> pour les clients de tout le secteur.</p>
+                </div>
+            </details>
+
+        </div>
+    </section>
+
 </main>
 
 <footer>
@@ -662,17 +874,20 @@
     </div>
 </div>
 
-<script>
-// ✅ SEO : Masquer les sections inactives via JS après chargement
-// (les crawlers voient tout le contenu avant que JS ne s'exécute)
-(function() {
+<!-- ✅ CORRIGÉ : Script en defer — le HTML est entièrement parsé avant exécution.
+     Les sections sont visibles au chargement initial (CSS display:block),
+     Google voit tout le contenu, puis JS masque les inactives. -->
+<script defer>
+// Masquer les sections inactives APRÈS que le DOM soit chargé
+// Les crawlers sans JS voient toutes les sections (display:block par défaut dans le CSS)
+document.addEventListener('DOMContentLoaded', function() {
     var sections = document.querySelectorAll('.content-section');
     sections.forEach(function(s) {
         if (!s.classList.contains('active')) {
             s.classList.add('js-hidden');
         }
     });
-})();
+});
 
 function toggleMenu() {
     var nav = document.querySelector('#mainNav ul');
