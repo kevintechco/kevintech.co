@@ -1367,6 +1367,71 @@
       /* Footer bottom */
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: .6rem; }
     }
+    /* ═══ POURQUOI NOUS CHOISIR ═══ */
+    .pourquoi { padding: 4.5rem 0; }
+    .pourquoi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+    .pourquoi-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+      transition: all .25s;
+    }
+    .pourquoi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--orange); }
+    .pourquoi-emoji { font-size: 2rem; margin-bottom: .9rem; display: block; }
+    .pourquoi-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: .5rem; }
+    .pourquoi-card p { font-size: .85rem; color: var(--gray-500); line-height: 1.6; }
+    /* Tarif modèles */
+    .tarif-modeles {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .tarif-modeles-header {
+      background: var(--navy);
+      padding: 1rem 1.4rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .tarif-modeles-header h3 { font-family: var(--font-display); font-size: .95rem; font-weight: 700; color: var(--white); }
+    .tarif-table { width: 100%; border-collapse: collapse; }
+    .tarif-table th { background: var(--gray-50); padding: .7rem 1.2rem; text-align: left; font-size: .78rem; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid var(--gray-200); }
+    .tarif-table td { padding: .75rem 1.2rem; font-size: .88rem; border-bottom: 1px solid var(--gray-100); }
+    .tarif-table tr:last-child td { border-bottom: none; }
+    .tarif-table tr:hover td { background: var(--gray-50); }
+    .tarif-table .model { font-weight: 600; color: var(--dark); }
+    .tarif-table .eco { color: var(--gray-700); }
+    .tarif-table .premium { color: var(--orange); font-weight: 700; }
+    .tarif-wa-cta {
+      background: var(--orange-pale);
+      border: 1px solid rgba(255,94,14,.2);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .tarif-wa-cta p { font-size: .9rem; color: var(--gray-700); font-weight: 500; }
+    @media (max-width: 900px) {
+      .pourquoi-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .pourquoi-grid { grid-template-columns: 1fr 1fr; gap: .8rem; }
+      .pourquoi-card { padding: 1.2rem 1rem; }
+      .tarif-table th, .tarif-table td { padding: .6rem .8rem; font-size: .82rem; }
+      .tarif-wa-cta { flex-direction: column; }
+      .tarif-wa-cta .btn { width: 100%; justify-content: center; }
+    }
   </style>
 </head>
 
@@ -1429,19 +1494,22 @@
         Artisan local certifié GAPP – Sacy-le-Grand (Oise)
       </div>
       <h1 id="hero-h1">
-        Votre smartphone réparé<br>
-        <em>en 30 minutes</em>,<br>
-        avec garantie casse.
+        Réparation iPhone &amp; Smartphone<br>
+        <em>en 30 minutes</em><br>
+        dans l'Oise
       </h1>
       <p class="hero-desc">
-        Réparation iPhone, Samsung & Android à Sacy-le-Grand. Pièces Apple d'origine via programme GAPP. Garantie exclusive contre la casse pendant <strong style="color:#fff">6 mois</strong> sur tous les écrans iPhone (dès l'iPhone X).
+        Écran remplacé + <strong style="color:#fff">Garantie casse 6 mois</strong> : pièce offerte, seulement 70 € de participation, jusqu'à 3 fois. Atelier indépendant à Sacy-le-Grand — devis immédiat par WhatsApp.
       </p>
       <div class="hero-btns">
-        <a href="tel:+33771668364" class="btn btn-primary">
+        <a href="https://wa.me/33771668364" class="btn" style="background:#25D366;color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.4);border-radius:8px;padding:.85rem 1.6rem;font-weight:700;font-size:1rem;display:inline-flex;align-items:center;gap:.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Devis gratuit WhatsApp
+        </a>
+        <a href="tel:+33771668364" class="btn btn-outline">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           Appeler maintenant
         </a>
-        <a href="#tarifs" class="btn btn-outline">Voir les tarifs</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -1455,8 +1523,8 @@
         </div>
         <div class="hero-stat-sep"></div>
         <div class="hero-stat">
-          <span class="hero-stat-num">5/5</span>
-          <span class="hero-stat-label">Avis clients<br>Google Maps</span>
+          <span class="hero-stat-num">18</span>
+          <span class="hero-stat-label">Avis 5/5<br>Google Maps</span>
         </div>
       </div>
     </div>
@@ -1486,6 +1554,38 @@
     </div>
   </div>
 </div>
+
+<!-- ═══ POURQUOI NOUS CHOISIR ═══ -->
+<section class="pourquoi" aria-labelledby="pourquoi-title">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-tag">Pourquoi nous choisir</div>
+      <h2 class="section-title" id="pourquoi-title">Ce qui nous différencie vraiment</h2>
+    </div>
+    <div class="pourquoi-grid">
+      <div class="pourquoi-card reveal">
+        <span class="pourquoi-emoji">⏱️</span>
+        <h3>Réparation express</h3>
+        <p>25 à 30 min sur place si la pièce est en stock. Pas besoin de revenir le lendemain.</p>
+      </div>
+      <div class="pourquoi-card reveal">
+        <span class="pourquoi-emoji">🛡️</span>
+        <h3>Garantie casse unique</h3>
+        <p>6 mois, pièce offerte, seulement 70 € de participation. Jusqu'à 3 remplacements. Exclusif KevinTech&Co.</p>
+      </div>
+      <div class="pourquoi-card reveal">
+        <span class="pourquoi-emoji">💬</span>
+        <h3>Devis immédiat</h3>
+        <p>Réponse rapide par WhatsApp. Devis gratuit, sans engagement, en quelques minutes.</p>
+      </div>
+      <div class="pourquoi-card reveal">
+        <span class="pourquoi-emoji">🔧</span>
+        <h3>Atelier indépendant</h3>
+        <p>Pas de franchise. Vous parlez directement à Kevin, du devis à la remise en main propre.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ SERVICES ═══ -->
 <section id="services" class="services" aria-labelledby="services-title">
@@ -1612,6 +1712,37 @@
       <div class="section-tag">Tarifs transparents</div>
       <h2 class="section-title" id="tarifs-title">Des prix clairs, sans mauvaise surprise</h2>
       <p class="section-subtitle">Tous nos tarifs sont affichés. Le devis est toujours gratuit. Vous n'êtes engagé qu'après validation.</p>
+    </div>
+
+    <div class="tarif-modeles reveal">
+      <div class="tarif-modeles-header">
+        <span>📱</span>
+        <h3>Tarifs écrans iPhone par modèle — 2026</h3>
+      </div>
+      <table class="tarif-table" aria-label="Tarifs remplacement écran iPhone par modèle">
+        <thead>
+          <tr>
+            <th>Modèle</th>
+            <th>Gamme Économie</th>
+            <th>Avec Garantie Casse ✓</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="model">iPhone 11 / 12</td><td class="eco">Dès 79 €</td><td class="premium">Dès 99 €</td></tr>
+          <tr><td class="model">iPhone 13 / 13 Pro</td><td class="eco">Dès 99 €</td><td class="premium">Dès 129 €</td></tr>
+          <tr><td class="model">iPhone 14 / 14 Pro</td><td class="eco">Dès 109 €</td><td class="premium">Dès 139 €</td></tr>
+          <tr><td class="model">iPhone 15 / 15 Pro</td><td class="eco">Dès 119 €</td><td class="premium">Dès 149 €</td></tr>
+          <tr><td class="model">Autres modèles</td><td colspan="2" style="color:var(--gray-500);font-style:italic;">Sur devis — réponse immédiate par WhatsApp</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tarif-wa-cta reveal">
+      <p>💬 Vous ne trouvez pas votre modèle ? Demandez le prix pour votre appareil — réponse en quelques minutes.</p>
+      <a href="https://wa.me/33771668364" class="btn" style="background:#25D366;color:#fff;border-radius:8px;padding:.75rem 1.4rem;font-weight:700;white-space:nowrap;display:inline-flex;align-items:center;gap:.45rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Demander le prix pour mon modèle
+      </a>
     </div>
 
     <div class="tarifs-grid">
@@ -1851,13 +1982,13 @@
         <div class="section-tag">Qui suis-je ?</div>
         <h2 class="section-title" id="about-title">Kevin, votre technicien<br>de proximité dans l'Oise</h2>
         <p>
-          Je m'appelle Kevin et j'ai fondé KevinTech&Co pour proposer une alternative locale, honnête et transparente aux grandes enseignes de réparation.
+          Salut, je m'appelle Kevin. Passionné d'informatique depuis plus de 10 ans, j'ai créé KevinTech&Co pour proposer un service rapide, honnête et local dans le sud de l'Oise.
         </p>
         <p>
-          Passionné de high-tech depuis toujours, je me suis spécialisé dans la réparation de smartphones et PC pour offrir un service de qualité proche de chez vous, à Sacy-le-Grand, dans l'Oise. Chaque réparation est réalisée avec soin, les bonnes pièces, et dans le respect de votre appareil.
+          Ici, pas de grande chaîne : vous parlez directement au technicien. Du devis à la remise en main propre, c'est moi qui m'occupe de tout. Chaque réparation est soignée avec les bonnes pièces, dans le respect de votre appareil et de votre budget.
         </p>
         <p>
-          Mon atelier est indépendant — ce n'est pas une franchise. Vous avez affaire directement à moi, du devis à la remise en main propre. Partenaire officiel du programme GAPP (pièces Apple d'origine), je suis en mesure de réparer votre iPhone en préservant toutes ses fonctions natives.
+          Atelier indépendant certifié GAPP — j'ai accès aux pièces Apple d'origine, ce qui signifie que votre True Tone, Face ID et calibrage couleur sont 100% préservés après réparation.
         </p>
         <ul class="about-list">
           <li>Partenaire certifié programme GAPP (Apple)</li>
@@ -1866,8 +1997,9 @@
           <li>Devis gratuit, sans engagement</li>
           <li>Lundi au samedi, 9h00 – 18h30</li>
         </ul>
-        <a href="tel:+33771668364" class="btn btn-primary" style="margin-top:.5rem">
-          Prendre contact
+        <a href="https://wa.me/33771668364" class="btn" style="margin-top:.5rem;background:#25D366;color:#fff;border-radius:8px;padding:.85rem 1.6rem;font-weight:700;display:inline-flex;align-items:center;gap:.5rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Me contacter sur WhatsApp
         </a>
       </div>
     </div>
