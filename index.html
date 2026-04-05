@@ -27,6 +27,10 @@
   <meta name="twitter:description" content="Réparation rapide iPhone, Samsung & PC à Sacy-le-Grand (Oise). Garantie casse 6 mois exclusive.">
   <meta name="twitter:image" content="atelier-reparation-smartphone-kevintech-sacy-le-grand.jpg">
 
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231D6EF5'/><text y='.9em' font-size='65' x='50%' dominant-baseline='middle' text-anchor='middle'>🔧</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231D6EF5'/><text y='.9em' font-size='65' x='50%' dominant-baseline='middle' text-anchor='middle'>🔧</text></svg>">
+
   <!-- ═══ FONTS ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,9 +44,9 @@
        CSS VARIABLES & RESET
     ═══════════════════════════════════════════ */
     :root {
-      --orange: #FF5E0E;
-      --orange-light: #FF7A35;
-      --orange-pale: #FFF0E8;
+      --orange: #1D6EF5;
+      --orange-light: #4589FF;
+      --orange-pale: #EBF2FF;
       --navy: #0D1B2A;
       --navy-mid: #1A2E45;
       --dark: #111827;
@@ -122,12 +126,12 @@
     .btn-primary {
       background: var(--orange);
       color: var(--white);
-      box-shadow: 0 4px 14px rgba(255,94,14,.35);
+      box-shadow: 0 4px 14px rgba(29,110,245,.35);
     }
     .btn-primary:hover {
       background: var(--orange-light);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255,94,14,.45);
+      box-shadow: 0 6px 20px rgba(29,110,245,.45);
     }
     .btn-outline {
       background: transparent;
@@ -296,7 +300,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(13,27,42,.7) 0%, rgba(255,94,14,.15) 100%);
+      background: linear-gradient(135deg, rgba(13,27,42,.7) 0%, rgba(29,110,245,.15) 100%);
     }
     .hero-content {
       position: relative;
@@ -308,9 +312,9 @@
       display: inline-flex;
       align-items: center;
       gap: .4rem;
-      background: rgba(255,94,14,.2);
-      border: 1px solid rgba(255,94,14,.5);
-      color: #FFBB99;
+      background: rgba(29,110,245,.2);
+      border: 1px solid rgba(29,110,245,.5);
+      color: #99C4FF;
       font-size: .8rem;
       font-weight: 600;
       letter-spacing: .06em;
@@ -495,9 +499,9 @@
       display: inline-flex;
       align-items: center;
       gap: .4rem;
-      background: rgba(255,94,14,.2);
-      border: 1px solid rgba(255,94,14,.4);
-      color: #FFB088;
+      background: rgba(29,110,245,.2);
+      border: 1px solid rgba(29,110,245,.4);
+      color: #88B4FF;
       font-size: .75rem;
       font-weight: 700;
       letter-spacing: .08em;
@@ -545,7 +549,7 @@
       padding: 2rem 1.8rem;
       text-align: center;
       min-width: 160px;
-      box-shadow: 0 8px 32px rgba(255,94,14,.4);
+      box-shadow: 0 8px 32px rgba(29,110,245,.4);
     }
     .garantie-price-box .price-label {
       font-size: .75rem;
@@ -598,7 +602,7 @@
     }
     .ecran-card.featured {
       border-color: var(--orange);
-      box-shadow: 0 4px 24px rgba(255,94,14,.15);
+      box-shadow: 0 4px 24px rgba(29,110,245,.15);
     }
     .ecran-card.featured::before {
       content: '⭐ Populaire';
@@ -759,7 +763,7 @@
     .temoignages { padding: 5rem 0; background: var(--gray-50); }
     .temoignages-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       margin-top: 3rem;
     }
@@ -919,8 +923,8 @@
       transition: all .2s;
     }
     .zone-tag:hover {
-      background: rgba(255,94,14,.25);
-      border-color: rgba(255,94,14,.5);
+      background: rgba(29,110,245,.25);
+      border-color: rgba(29,110,245,.5);
       color: var(--white);
     }
     .zone-tag.primary {
@@ -951,7 +955,7 @@
     .faq-aside p { color: var(--gray-500); line-height: 1.7; margin-bottom: 1.5rem; }
     .faq-contact-card {
       background: var(--orange-pale);
-      border: 1px solid rgba(255,94,14,.2);
+      border: 1px solid rgba(29,110,245,.2);
       border-radius: var(--radius);
       padding: 1.5rem;
     }
@@ -1314,7 +1318,7 @@
       .gallery-item.large { grid-column: span 2; }
 
       /* Témoignages */
-      .temoignages-grid { grid-template-columns: 1fr; }
+      .temoignages-grid { grid-template-columns: 1fr 1fr; }
 
       /* About */
       .about-list li { font-size: .85rem; }
@@ -1411,7 +1415,7 @@
     .tarif-table .premium { color: var(--orange); font-weight: 700; }
     .tarif-wa-cta {
       background: var(--orange-pale);
-      border: 1px solid rgba(255,94,14,.2);
+      border: 1px solid rgba(29,110,245,.2);
       border-radius: var(--radius);
       padding: 1.2rem 1.4rem;
       display: flex;
@@ -1431,6 +1435,231 @@
       .tarif-table th, .tarif-table td { padding: .6rem .8rem; font-size: .82rem; }
       .tarif-wa-cta { flex-direction: column; }
       .tarif-wa-cta .btn { width: 100%; justify-content: center; }
+    }
+    /* ═══ DARK MODE ═══ */
+    [data-theme="dark"] {
+      --white: #0F1117;
+      --gray-900: #F1F5F9;
+      --gray-700: #CBD5E1;
+      --gray-500: #94A3B8;
+      --gray-200: #1E2535;
+      --gray-100: #161C2D;
+      --gray-50: #111827;
+      --dark: #F8FAFC;
+      --navy: #060B14;
+      --navy-mid: #0D1525;
+      --orange-pale: #0D1A3A;
+    }
+    [data-theme="dark"] .site-header { background: #0F1117; border-color: #1E2535; }
+    [data-theme="dark"] .service-card,
+    [data-theme="dark"] .ecran-card,
+    [data-theme="dark"] .tarif-card,
+    [data-theme="dark"] .temoignage-card,
+    [data-theme="dark"] .faq-item,
+    [data-theme="dark"] .pourquoi-card { background: #161C2D; border-color: #1E2535; }
+    [data-theme="dark"] .tarif-card-header,
+    [data-theme="dark"] .tarif-modeles-header { background: #0D1525; }
+    [data-theme="dark"] .tarif-table th { background: #0F1117; }
+    [data-theme="dark"] .temoignages,
+    [data-theme="dark"] .ecrans,
+    [data-theme="dark"] .contact { background: #0D1525; }
+    [data-theme="dark"] .nav-logo { color: #F8FAFC; }
+    [data-theme="dark"] .nav-links a { color: #CBD5E1; }
+    [data-theme="dark"] .mobile-menu { background: #0F1117; border-color: #1E2535; }
+    [data-theme="dark"] .mobile-menu a { color: #CBD5E1; border-color: #1E2535; }
+    [data-theme="dark"] .faq-contact-card { background: #0D1A3A; border-color: rgba(29,110,245,.25); }
+    [data-theme="dark"] .about-badge-float { background: #161C2D; }
+    [data-theme="dark"] .tarif-wa-cta { background: #0D1A3A; }
+    [data-theme="dark"] .tarif-note { background: #0D1525 !important; }
+    [data-theme="dark"] .map-embed { filter: invert(0.9) hue-rotate(180deg); }
+
+    /* Dark mode toggle button */
+    .dark-toggle {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+      background: var(--gray-100);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .dark-toggle:hover { background: var(--gray-200); }
+
+    /* ═══ GAPP SECTION ═══ */
+    .gapp-section { padding: 5rem 0; background: var(--gray-50); }
+    .gapp-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .gapp-content .section-title { margin-bottom: 1rem; }
+    .gapp-content p { color: var(--gray-500); line-height: 1.8; font-size: .97rem; margin-bottom: 1rem; }
+    .gapp-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .gapp-col {
+      border-radius: var(--radius);
+      padding: 1.2rem;
+    }
+    .gapp-col.bad { background: #FEF2F2; border: 1px solid #FECACA; }
+    .gapp-col.good { background: #EFF6FF; border: 1px solid #BFDBFE; }
+    [data-theme="dark"] .gapp-col.bad { background: #3B1414; border-color: #7F1D1D; }
+    [data-theme="dark"] .gapp-col.good { background: #0D1A3A; border-color: #1E3A6E; }
+    .gapp-col-title {
+      font-family: var(--font-display);
+      font-size: .85rem;
+      font-weight: 700;
+      margin-bottom: .7rem;
+    }
+    .gapp-col.bad .gapp-col-title { color: #DC2626; }
+    .gapp-col.good .gapp-col-title { color: #1D4ED8; }
+    .gapp-col ul { display: flex; flex-direction: column; gap: .4rem; }
+    .gapp-col ul li {
+      font-size: .82rem;
+      color: var(--gray-700);
+      display: flex; align-items: flex-start; gap: .4rem;
+    }
+    .gapp-badge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .gapp-logo-box {
+      background: var(--white);
+      border: 2px solid var(--orange);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      max-width: 240px;
+      width: 100%;
+    }
+    .gapp-logo-box .gapp-icon { font-size: 3rem; margin-bottom: .8rem; display: block; }
+    .gapp-logo-box h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--orange); margin-bottom: .3rem; }
+    .gapp-logo-box p { font-size: .8rem; color: var(--gray-500); line-height: 1.5; }
+    .gapp-features { display: flex; flex-direction: column; gap: .6rem; width: 100%; max-width: 240px; }
+    .gapp-feature {
+      display: flex; align-items: center; gap: .6rem;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: .6rem .9rem;
+      font-size: .82rem;
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+
+    /* ═══ BLOG / CONSEILS ═══ */
+    .blog { padding: 5rem 0; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .blog-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all .25s;
+      display: flex; flex-direction: column;
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--orange); }
+    .blog-card-emoji {
+      background: var(--orange-pale);
+      padding: 1.8rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .blog-card-body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-tag {
+      display: inline-block;
+      background: var(--orange-pale);
+      color: var(--orange);
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: .2rem .6rem;
+      border-radius: 4px;
+      margin-bottom: .7rem;
+    }
+    .blog-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: .6rem;
+      line-height: 1.3;
+    }
+    .blog-card p { font-size: .85rem; color: var(--gray-500); line-height: 1.6; flex: 1; }
+    .blog-card-footer {
+      padding: 1rem 1.4rem;
+      border-top: 1px solid var(--gray-100);
+      font-size: .78rem;
+      color: var(--gray-500);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .blog-read-more {
+      color: var(--orange);
+      font-weight: 600;
+      font-size: .8rem;
+      cursor: pointer;
+      background: none; border: none;
+      font-family: var(--font-body);
+    }
+    .blog-article-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.6);
+      z-index: 8888;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2rem 1rem;
+      overflow-y: auto;
+      backdrop-filter: blur(4px);
+    }
+    .blog-article-overlay.open { display: flex; }
+    .blog-article-box {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      max-width: 640px;
+      width: 100%;
+      position: relative;
+      margin: auto;
+    }
+    .blog-article-box h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 1.2rem; }
+    .blog-article-box h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--dark); margin: 1.2rem 0 .5rem; }
+    .blog-article-box p, .blog-article-box li { font-size: .92rem; color: var(--gray-700); line-height: 1.8; margin-bottom: .6rem; }
+    .blog-article-box ul { padding-left: 1.2rem; }
+    .blog-article-box .article-tag { margin-bottom: 1rem; display: inline-block; }
+    .blog-close {
+      position: absolute; top: 1rem; right: 1rem;
+      width: 32px; height: 32px; border-radius: 50%;
+      border: none; background: var(--gray-100);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: var(--gray-700);
+    }
+
+    @media (max-width: 900px) {
+      .gapp-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .gapp-badge-wrap { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .gapp-compare { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-article-box { padding: 1.5rem 1.2rem; }
     }
   </style>
 </head>
@@ -1453,6 +1682,7 @@
       </ul>
 
       <div class="nav-ctas">
+        <button class="dark-toggle" id="darkToggle" aria-label="Basculer mode sombre" title="Mode sombre">🌙</button>
         <a href="https://wa.me/33771668364" class="nav-wa" aria-label="Contacter par WhatsApp">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp
@@ -1548,8 +1778,12 @@
         <span>Réparation express 25–30 min</span>
       </div>
       <div class="trust-item">
+        <span class="trust-icon">🎮</span>
+        <span>Consoles PS5 · Xbox · Switch</span>
+      </div>
+      <div class="trust-item">
         <span class="trust-icon">⭐</span>
-        <span>Avis 5/5 sur Google Maps</span>
+        <span>18 avis 5/5 sur Google Maps</span>
       </div>
     </div>
   </div>
@@ -1593,7 +1827,7 @@
     <header class="services-header reveal">
       <div class="section-tag">Nos expertises</div>
       <h2 class="section-title" id="services-title">On répare ce qui compte pour vous</h2>
-      <p class="section-subtitle">Smartphone, tablette, PC gaming — réparation précise avec les bonnes pièces et les bons outils. Devis gratuit par téléphone ou WhatsApp.</p>
+      <p class="section-subtitle">Smartphone, PC gaming, consoles — réparation précise avec les bonnes pièces et les bons outils. Devis gratuit par téléphone ou WhatsApp.</p>
     </header>
 
     <div class="services-grid">
@@ -1627,9 +1861,15 @@
       </article>
       <article class="service-card reveal">
         <div class="service-icon">🎮</div>
-        <h3>Réparation Nintendo Switch</h3>
-        <p>Remplacement de joystick Joy-Con (drift), réparation écran, connecteur de charge et autres pannes sur Nintendo Switch et Switch Lite.</p>
-        <span class="service-badge">Consoles</span>
+        <h3>Consoles — Nettoyage & Maintenance</h3>
+        <p>Nettoyage complet intérieur (poussières, ventilateur). Remplacement métal liquide Sony d'origine sur PS5, pâte thermique (Thermal Kryonaut…) sur PS4 et Xbox. Résultat : console plus silencieuse, températures maîtrisées. Résultat : console plus silencieuse, température maîtrisée.</p>
+        <span class="service-badge">PS5 · PS4 · Xbox</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon">🕹️</div>
+        <h3>Joysticks & Manettes</h3>
+        <p>Remplacement de joystick sur Joy-Con Nintendo Switch (drift), DualSense PS5, DualShock PS4, manette Xbox. Sony, Nintendo, Microsoft — toutes marques prises en charge.</p>
+        <span class="service-badge">Switch · PS5 · Xbox</span>
       </article>
       <article class="service-card reveal">
         <div class="service-icon">💾</div>
@@ -1637,6 +1877,55 @@
         <p>Récupération douce de vos fichiers, photos et documents sur SSD, HDD interne ou disque dur externe. Intervention respectueuse de vos données.</p>
         <span class="service-badge">Sur devis</span>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION GAPP ═══ -->
+<section class="gapp-section" aria-labelledby="gapp-title">
+  <div class="container">
+    <div class="gapp-inner">
+      <div class="gapp-content reveal">
+        <div class="section-tag">Programme GAPP</div>
+        <h2 class="section-title" id="gapp-title">Pièce compatible ou pièce Apple d'origine ?<br>La différence est énorme.</h2>
+        <p>Beaucoup de réparateurs utilisent des pièces <strong>"compatibles"</strong> — moins chères, mais fabriquées par des tiers sans certification Apple. Le résultat : couleurs décalées, tactile moins réactif, True Tone et Face ID désactivés, et une durée de vie souvent bien moindre.</p>
+        <p>En tant que partenaire du <strong>programme GAPP (Genuine Apple Parts Programme)</strong>, j'ai accès aux pièces Apple authentiques. Votre iPhone est réparé exactement comme Apple le ferait — sans compromis sur la qualité.</p>
+        <div class="gapp-compare">
+          <div class="gapp-col bad">
+            <div class="gapp-col-title">❌ Pièce compatible</div>
+            <ul>
+              <li>☹ True Tone désactivé</li>
+              <li>☹ Couleurs moins fidèles</li>
+              <li>☹ Tactile moins réactif</li>
+              <li>☹ Face ID peut bugger</li>
+              <li>☹ Durée de vie incertaine</li>
+            </ul>
+          </div>
+          <div class="gapp-col good">
+            <div class="gapp-col-title">✅ Pièce Apple GAPP</div>
+            <ul>
+              <li>✓ True Tone préservé</li>
+              <li>✓ Couleurs calibrées d'origine</li>
+              <li>✓ Tactile identique au neuf</li>
+              <li>✓ Face ID 100% fonctionnel</li>
+              <li>✓ Qualité Apple garantie</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="gapp-badge-wrap reveal">
+        <div class="gapp-logo-box">
+          <span class="gapp-icon">🍎</span>
+          <h3>Certifié GAPP</h3>
+          <p>Genuine Apple Parts Programme — pièces d'origine Apple pour une réparation sans compromis</p>
+        </div>
+        <div class="gapp-features">
+          <div class="gapp-feature">✓ True Tone & Face ID préservés</div>
+          <div class="gapp-feature">✓ Calibrage couleur d'usine</div>
+          <div class="gapp-feature">✓ iOS natif non altéré</div>
+          <div class="gapp-feature">✓ Garantie sur la pièce</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1817,7 +2106,7 @@
 <section class="gallery" aria-label="Galerie photos de l'atelier KevinTech&Co">
   <div class="container">
     <div class="gallery-header reveal">
-      <div class="section-tag" style="background:rgba(255,94,14,.15);color:#FFB088;">Notre atelier en images</div>
+      <div class="section-tag" style="background:rgba(29,110,245,.15);color:#88B4FF;">Notre atelier en images</div>
       <h2 class="section-title" id="gallery-title">Des réparations soignées, des résultats visibles</h2>
       <p class="section-subtitle">Chaque réparation est réalisée avec précision, dans un atelier propre et organisé, avec les bons outils.</p>
     </div>
@@ -1881,7 +2170,6 @@
 </section>
 
 <!-- ═══ TÉMOIGNAGES ═══ -->
-<!-- ⚠️ À REMPLACER par de vrais avis clients issus de Google ou Pages Jaunes -->
 <section class="temoignages" aria-labelledby="temoignages-title">
   <div class="container">
     <div class="reveal" style="text-align:center;">
@@ -2010,7 +2298,7 @@
 <section class="zones" id="zones" aria-labelledby="zones-title">
   <div class="container">
     <div class="reveal">
-      <div class="section-tag" style="background:rgba(255,94,14,.2);color:#FFB088;">Zone d'intervention</div>
+      <div class="section-tag" style="background:rgba(29,110,245,.2);color:#88B4FF;">Zone d'intervention</div>
       <h2 class="section-title" id="zones-title">Réparation dans tout le sud de l'Oise</h2>
       <p class="section-subtitle">Vous habitez dans la région ? Apportez votre smartphone ou PC — la réparation se fait sur place à l'atelier.</p>
     </div>
@@ -2033,7 +2321,7 @@
     </div>
     <!-- SEO text (visible mais discret) -->
     <p class="zones-seo-text reveal">
-      KevinTech&Co assure la réparation d'iPhone, Samsung, Xiaomi et PC gaming à Sacy-le-Grand (60700) et dans tout le secteur du sud de l'Oise (département 60). Nos clients viennent régulièrement de Creil, Senlis, Chantilly, Compiègne, Verberie, Pont-Sainte-Maxence, Nogent-sur-Oise, Liancourt, Clermont, Gouvieux, Lamorlaye, Montataire et Villers-Saint-Paul pour bénéficier d'une réparation rapide et transparente. Réparation iPhone 13, 14, 15, 16 — Réparation Samsung Galaxy — Réparation Xiaomi — Montage PC gaming sur mesure dans l'Oise.
+      KevinTech&Co assure la réparation d'iPhone, Samsung, Xiaomi et PC gaming à Sacy-le-Grand (60700) et dans tout le secteur du sud de l'Oise (département 60). Nos clients viennent régulièrement de Creil, Senlis, Chantilly, Compiègne, Verberie, Pont-Sainte-Maxence, Nogent-sur-Oise, Liancourt, Clermont, Gouvieux, Lamorlaye, Montataire et Villers-Saint-Paul pour bénéficier d'une réparation rapide et transparente. Réparation iPhone 13, 14, 15, 16 — Réparation Samsung Galaxy — Réparation Xiaomi — Montage PC gaming sur mesure dans l'Oise. Nettoyage console PS5, PS4, Xbox, changement pâte thermique et métal liquide. Remplacement joystick Joy-Con Nintendo Switch, DualSense PS5, manette Xbox dans l'Oise.
     </p>
   </div>
 </section>
@@ -2138,10 +2426,157 @@
             </div>
           </div>
         </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            Vous faites le nettoyage et le métal liquide sur PS5 ?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Oui. La PS5 utilise du <strong>métal liquide Sony d'origine</strong> entre le processeur et le refroidisseur — pas une pâte thermique classique. Avec le temps, ce métal liquide se dégrade et perd en efficacité. Je remplace le métal liquide PS5 avec des produits adaptés (Conductonaut, Thermal Grizzly…) pour retrouver des températures d'origine. Pour la PS4 et Xbox, j'applique une <strong>pâte thermique haute performance</strong> (Thermal Kryonaut…). Dans tous les cas, le ventilateur et l'intérieur sont nettoyés en profondeur.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            Quelles manettes et joysticks réparez-vous ?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Je remplace les joysticks sur <strong>Joy-Con Nintendo Switch</strong> (problème de drift très courant), <strong>DualSense PS5</strong>, <strong>DualShock PS4</strong> et <strong>manettes Xbox</strong> (Series X/S, One). Toutes marques prises en charge : Sony, Nintendo, Microsoft. Contactez-moi par WhatsApp avec le modèle exact pour un devis rapide.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            Ma PS5 est bruyante ou chauffe beaucoup, que faire ?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              C'est souvent le signe que le <strong>ventilateur est encrassé</strong> et/ou que le <strong>métal liquide Sony d'origine s'est dégradé</strong>. Contrairement aux autres consoles, la PS5 utilise du métal liquide (et non une pâte classique) — sa dégradation provoque surchauffe et bruit. Un nettoyage complet + remplacement du métal liquide règle le problème dans la quasi-totalité des cas. N'attendez pas trop — une surchauffe prolongée peut endommager le processeur. Envoyez-moi un message WhatsApp pour évaluer.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ═══ BLOG / CONSEILS ═══ -->
+<section class="blog" aria-labelledby="blog-title">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-tag">Conseils & Astuces</div>
+      <h2 class="section-title" id="blog-title">On vous aide avant même la réparation</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Quelques conseils pratiques pour prendre soin de vos appareils et éviter les mauvaises surprises.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card reveal">
+        <div class="blog-card-emoji">📱</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">iPhone</span>
+          <h3>Comment sauvegarder son iPhone avant une réparation ?</h3>
+          <p>Avant de confier votre iPhone pour une réparation d'écran ou de batterie, une sauvegarde évite toute perte de données. Voici les étapes en 3 minutes.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span>⏱ 3 min de lecture</span>
+          <button class="blog-read-more" onclick="openArticle('iphone-backup')">Lire →</button>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-card-emoji">🔋</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Samsung & Android</span>
+          <h3>3 signes que la batterie de votre Samsung est en fin de vie</h3>
+          <p>Téléphone qui s'éteint à 30%, qui gonfle légèrement, autonomie divisée par deux... votre batterie vous envoie des signaux. Apprenez à les reconnaître.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span>⏱ 4 min de lecture</span>
+          <button class="blog-read-more" onclick="openArticle('batterie-samsung')">Lire →</button>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-card-emoji">🎮</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Consoles</span>
+          <h3>PS5 bruyante : métal liquide ou poussières ? Comment savoir ?</h3>
+          <p>Votre PS5 fait du bruit en jouant ? Ce n'est pas toujours une panne grave. On vous explique la différence et quand consulter un technicien.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span>⏱ 5 min de lecture</span>
+          <button class="blog-read-more" onclick="openArticle('ps5-bruit')">Lire →</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Articles complets (modals) -->
+<div class="blog-article-overlay" id="article-iphone-backup" onclick="if(event.target===this)closeArticle('iphone-backup')">
+  <div class="blog-article-box">
+    <button class="blog-close" onclick="closeArticle('iphone-backup')">✕</button>
+    <span class="blog-tag article-tag">iPhone</span>
+    <h2>Comment sauvegarder son iPhone avant une réparation ?</h2>
+    <p>Avant de confier votre iPhone à un technicien, même pour une simple réparation d'écran, il est fortement recommandé d'effectuer une sauvegarde complète. Voici comment faire simplement.</p>
+    <h3>Option 1 — Sauvegarde iCloud (la plus simple)</h3>
+    <ul>
+      <li>Allez dans <strong>Réglages → votre prénom → iCloud → Sauvegarde iCloud</strong></li>
+      <li>Activez la sauvegarde iCloud si ce n'est pas déjà fait</li>
+      <li>Appuyez sur <strong>"Sauvegarder maintenant"</strong></li>
+      <li>Attendez la fin (gardez votre iPhone connecté au Wi-Fi et branché)</li>
+    </ul>
+    <h3>Option 2 — Sauvegarde via Mac ou PC</h3>
+    <ul>
+      <li>Branchez votre iPhone à votre ordinateur via USB</li>
+      <li>Ouvrez <strong>Finder (Mac)</strong> ou <strong>iTunes (Windows)</strong></li>
+      <li>Cliquez sur votre iPhone et choisissez <strong>"Sauvegarder maintenant"</strong></li>
+    </ul>
+    <h3>Que sauvegarde-t-on ?</h3>
+    <p>Contacts, photos, messages, applications, réglages et mots de passe. Vos données sont en sécurité même si l'iPhone doit être réinitialisé pendant la réparation.</p>
+    <p style="margin-top:1.2rem;padding:.8rem;background:var(--orange-pale);border-radius:8px;font-size:.85rem;">💬 Une question ? Contactez Kevin sur WhatsApp avant de vous déplacer.</p>
+  </div>
+</div>
+
+<div class="blog-article-overlay" id="article-batterie-samsung" onclick="if(event.target===this)closeArticle('batterie-samsung')">
+  <div class="blog-article-box">
+    <button class="blog-close" onclick="closeArticle('batterie-samsung')">✕</button>
+    <span class="blog-tag article-tag">Samsung & Android</span>
+    <h2>3 signes que la batterie de votre Samsung est en fin de vie</h2>
+    <p>Une batterie Li-ion a une durée de vie limitée — en général 500 à 800 cycles de charge. Après ça, ses performances chutent. Voici les 3 signaux d'alarme à surveiller.</p>
+    <h3>1. Le téléphone s'éteint avant d'atteindre 0%</h3>
+    <p>Si votre Samsung s'éteint à 20%, 30% ou même 40% de batterie affichée, c'est le signe le plus clair d'une batterie fatiguée. Ses cellules ne peuvent plus fournir l'énergie nécessaire aux pics de charge du processeur.</p>
+    <h3>2. L'autonomie a chuté de moitié</h3>
+    <p>Vous teniez une journée et demie, maintenant vous cherchez une prise dès midi ? Une batterie dégradée ne retient plus qu'une fraction de sa capacité d'origine. C'est souvent réparable en 30 à 45 minutes.</p>
+    <h3>3. Le dos du téléphone se bombe légèrement</h3>
+    <p>C'est le signe le plus urgent. Une batterie qui gonfle dégage des gaz internes — elle peut devenir dangereuse si elle continue. Amenez votre téléphone chez un technicien rapidement.</p>
+    <p style="margin-top:1.2rem;padding:.8rem;background:var(--orange-pale);border-radius:8px;font-size:.85rem;">🔋 Remplacement batterie Samsung dès 49 € chez KevinTech&Co — appelez ou WhatsApp pour un devis immédiat.</p>
+  </div>
+</div>
+
+<div class="blog-article-overlay" id="article-ps5-bruit" onclick="if(event.target===this)closeArticle('ps5-bruit')">
+  <div class="blog-article-box">
+    <button class="blog-close" onclick="closeArticle('ps5-bruit')">✕</button>
+    <span class="blog-tag article-tag">Consoles</span>
+    <h2>PS5 bruyante : métal liquide ou poussières ? Comment savoir ?</h2>
+    <p>Votre PS5 fait plus de bruit qu'avant en jouant ? Deux coupables sont possibles : les poussières accumulées ou le métal liquide dégradé. Voici comment les distinguer.</p>
+    <h3>Le bruit de ventilateur — souvent des poussières</h3>
+    <p>Si vous entendez un ronronnement fort et continu, surtout après quelques mois sans nettoyage, c'est probablement le ventilateur encrassé. Les poussières l'obligent à tourner à plein régime pour évacuer la chaleur. Un nettoyage complet règle généralement le problème.</p>
+    <h3>La surchauffe persistante — souvent le métal liquide</h3>
+    <p>Sony utilise du <strong>métal liquide</strong> entre le processeur et le système de refroidissement de la PS5 — et non une pâte thermique classique. Avec le temps (18 à 36 mois d'utilisation intensive), ce métal liquide peut se dégrader et perdre en efficacité thermique. La console surchauffe, le ventilateur s'emballe, et parfois la PS5 s'éteint pour se protéger.</p>
+    <h3>Comment distinguer les deux ?</h3>
+    <ul>
+      <li><strong>Bruit fort mais températures normales</strong> → probablement des poussières</li>
+      <li><strong>Températures élevées même après nettoyage</strong> → métal liquide à remplacer</li>
+      <li><strong>Extinction automatique en jeu</strong> → intervention urgente conseillée</li>
+    </ul>
+    <p style="margin-top:1.2rem;padding:.8rem;background:var(--orange-pale);border-radius:8px;font-size:.85rem;">🎮 Nettoyage + remplacement métal liquide PS5 chez KevinTech&Co — envoyez un message WhatsApp pour évaluer votre situation.</p>
+  </div>
+</div>
 
 <!-- ═══ CONTACT ═══ -->
 <section id="contact" class="contact" aria-labelledby="contact-title">
@@ -2216,7 +2651,7 @@
   <div class="container">
     <!-- SEO local text -->
     <p class="footer-seo-text">
-      KevinTech&Co – Réparation iPhone, Samsung, Android et PC gaming à Sacy-le-Grand (60700), dans l'Oise (département 60). Intervention sur Creil, Senlis, Chantilly, Compiègne, Verberie, Pont-Sainte-Maxence, Nogent-sur-Oise, Liancourt, Clermont, Gouvieux, Lamorlaye, Montataire et alentours. Remplacement d'écran iPhone 12, 13, 14, 15, 16. Réparation Samsung Galaxy. Récupération de données SSD et HDD. Montage PC gaming sur mesure dans l'Oise.
+      KevinTech&Co – Réparation iPhone, Samsung, Android et PC gaming à Sacy-le-Grand (60700), dans l'Oise (département 60). Intervention sur Creil, Senlis, Chantilly, Compiègne, Verberie, Pont-Sainte-Maxence, Nogent-sur-Oise, Liancourt, Clermont, Gouvieux, Lamorlaye, Montataire et alentours. Remplacement d'écran iPhone 12, 13, 14, 15, 16. Réparation Samsung Galaxy. Récupération de données SSD et HDD. Montage PC gaming sur mesure dans l'Oise. Nettoyage console PS5, PS4, Xbox, changement pâte thermique et métal liquide. Remplacement joystick Joy-Con Nintendo Switch, DualSense PS5, manette Xbox dans l'Oise.
     </p>
 
     <div class="footer-inner">
@@ -2370,8 +2805,8 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Remplacement batterie smartphone",
-          "description": "Remplacement de batterie haute capacité sur iPhone et Android"
+          "name": "Nettoyage console PS5 PS4 Xbox pâte thermique métal liquide",
+          "description": "Nettoyage intérieur, remplacement pâte thermique et métal liquide (Thermal Kryonaut, Conductonaut) sur PS5, PS4, Xbox. Remplacement joystick Joy-Con Switch, DualSense PS5, DualShock PS4, manette Xbox."
         },
         "price": "49",
         "priceCurrency": "EUR"
@@ -2482,8 +2917,41 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
+      document.querySelectorAll('.blog-article-overlay.open').forEach(m => m.classList.remove('open'));
     }
   });
+
+  // Dark mode
+  const darkToggle = document.getElementById('darkToggle');
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    darkToggle.textContent = '☀️';
+  }
+  darkToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+      darkToggle.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      darkToggle.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+  // Blog articles
+  function openArticle(id) {
+    document.getElementById('article-' + id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeArticle(id) {
+    document.getElementById('article-' + id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  window.openArticle = openArticle;
+  window.closeArticle = closeArticle;
 </script>
 </body>
 </html>
