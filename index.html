@@ -2,19 +2,21 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="google-site-verification" content="mYVMb-k-viooLtXP7iaCVfkIMk8ArTVIM-oGSxacJ6g" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ═══ SEO TITLE & META ═══ -->
   <title>Réparation iPhone & Smartphone à Sacy-le-Grand (Oise 60) | KevinTech&Co – Tarifs transparents</title>
-  <meta name="description" content="Réparation rapide iPhone, Samsung & PC à Sacy-le-Grand (60). Écrans dès 59€, garantie casse 6 mois exclusive, pièces Apple d'origine GAPP. Intervention Creil, Senlis, Chantilly, Compiègne et tout l'Oise. ☎ 07 71 66 83 64">
+  <meta name="description" content="Réparation rapide iPhone, Samsung & PC à Sacy-le-Grand (60). Écrans dès 59€, garantie casse 6 mois exclusive, Genuine Apple Parts Programme GAPP. Intervention Creil, Senlis, Chantilly, Compiègne et tout l'Oise. ☎ 07 71 66 83 64">
   <meta name="keywords" content="réparation iphone sacy-le-grand, réparation smartphone oise, réparation samsung creil, réparation écran iphone senlis, reparateur telephone oise, kevintech">
   <meta name="robots" content="index, follow">
   <meta name="author" content="KevinTech&Co">
+  <link rel="sitemap" href="sitemap.xml">
   <link rel="canonical" href="https://kevintechco.github.io/kevintech.co/">
 
   <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:title" content="KevinTech&Co | Réparation iPhone & Smartphone – Sacy-le-Grand (Oise)">
-  <meta property="og:description" content="Réparation rapide iPhone, Samsung & PC gaming à Sacy-le-Grand. Garantie casse 6 mois exclusive. Pièces Apple d'origine GAPP. Creil, Senlis, Compiègne et tout le 60.">
+  <meta property="og:description" content="Réparation rapide iPhone, Samsung & PC gaming à Sacy-le-Grand. Garantie casse 6 mois exclusive. Genuine Apple Parts Programme GAPP. Creil, Senlis, Compiègne et tout le 60.">
   <meta property="og:image" content="atelier-reparation-smartphone-kevintech-sacy-le-grand.jpg">
   <meta property="og:url" content="https://kevintechco.github.io/kevintech.co/">
   <meta property="og:type" content="website">
@@ -1246,7 +1248,8 @@
     @media (max-width: 900px) {
       /* Nav */
       .nav-links { display: none; }
-      .nav-ctas { display: none; }
+      .nav-ctas { display: flex; }
+      .nav-ctas .nav-wa, .nav-ctas .nav-phone { display: none; }
       .nav-social { display: none; }
       .nav-burger { display: flex; }
 
@@ -1436,44 +1439,143 @@
       .tarif-wa-cta { flex-direction: column; }
       .tarif-wa-cta .btn { width: 100%; justify-content: center; }
     }
-    /* ═══ DARK MODE ═══ */
+    /* ═══ DARK MODE — COMPLET ═══ */
+    html { transition: background-color .25s ease; }
+    body, .site-header, .service-card, .ecran-card, .tarif-card, .temoignage-card,
+    .faq-item, .pourquoi-card, .blog-card, .gapp-logo-box, .gapp-feature,
+    .tarif-modeles, .modal-box, .blog-article-box { transition: background-color .25s ease, border-color .25s ease, color .15s ease; }
+
     [data-theme="dark"] {
-      --white: #0F1117;
+      --white: #111827;
       --gray-900: #F1F5F9;
       --gray-700: #CBD5E1;
       --gray-500: #94A3B8;
-      --gray-200: #1E2535;
-      --gray-100: #161C2D;
-      --gray-50: #111827;
+      --gray-200: #1E293B;
+      --gray-100: #172033;
+      --gray-50: #0F1729;
       --dark: #F8FAFC;
       --navy: #060B14;
-      --navy-mid: #0D1525;
+      --navy-mid: #0A1020;
       --orange-pale: #0D1A3A;
     }
-    [data-theme="dark"] .site-header { background: #0F1117; border-color: #1E2535; }
+    [data-theme="dark"] body { background: #0B0F1A; color: #E2E8F0; }
+
+    /* ── Nav ── */
+    [data-theme="dark"] .site-header { background: #111827; border-color: #1E293B; }
+    [data-theme="dark"] .nav-logo { color: #F8FAFC; }
+    [data-theme="dark"] .nav-links a { color: #CBD5E1; }
+    [data-theme="dark"] .dark-toggle { background: #1E293B; border-color: #334155; }
+    [data-theme="dark"] .mobile-menu { background: #111827; border-color: #1E293B; }
+    [data-theme="dark"] .mobile-menu a { color: #CBD5E1; border-color: #1E293B; }
+
+    /* ── Sections fond ── */
+    [data-theme="dark"] .pourquoi,
+    [data-theme="dark"] .services,
+    [data-theme="dark"] .tarifs,
+    [data-theme="dark"] .about,
+    [data-theme="dark"] .faq,
+    [data-theme="dark"] .blog,
+    [data-theme="dark"] .gallery { background: #0B0F1A; }
+    [data-theme="dark"] .ecrans,
+    [data-theme="dark"] .temoignages,
+    [data-theme="dark"] .contact,
+    [data-theme="dark"] .gapp-section { background: #0F1729; }
+
+    /* ── Cartes ── */
     [data-theme="dark"] .service-card,
     [data-theme="dark"] .ecran-card,
     [data-theme="dark"] .tarif-card,
     [data-theme="dark"] .temoignage-card,
     [data-theme="dark"] .faq-item,
-    [data-theme="dark"] .pourquoi-card { background: #161C2D; border-color: #1E2535; }
+    [data-theme="dark"] .pourquoi-card,
+    [data-theme="dark"] .blog-card,
+    [data-theme="dark"] .tarif-modeles,
+    [data-theme="dark"] .gapp-logo-box,
+    [data-theme="dark"] .gapp-feature,
+    [data-theme="dark"] .about-badge-float { background: #172033; border-color: #1E293B; }
     [data-theme="dark"] .tarif-card-header,
-    [data-theme="dark"] .tarif-modeles-header { background: #0D1525; }
-    [data-theme="dark"] .tarif-table th { background: #0F1117; }
-    [data-theme="dark"] .temoignages,
-    [data-theme="dark"] .ecrans,
-    [data-theme="dark"] .contact { background: #0D1525; }
-    [data-theme="dark"] .nav-logo { color: #F8FAFC; }
-    [data-theme="dark"] .nav-links a { color: #CBD5E1; }
-    [data-theme="dark"] .mobile-menu { background: #0F1117; border-color: #1E2535; }
-    [data-theme="dark"] .mobile-menu a { color: #CBD5E1; border-color: #1E2535; }
-    [data-theme="dark"] .faq-contact-card { background: #0D1A3A; border-color: rgba(29,110,245,.25); }
-    [data-theme="dark"] .about-badge-float { background: #161C2D; }
-    [data-theme="dark"] .tarif-wa-cta { background: #0D1A3A; }
-    [data-theme="dark"] .tarif-note { background: #0D1525 !important; }
-    [data-theme="dark"] .map-embed { filter: invert(0.9) hue-rotate(180deg); }
+    [data-theme="dark"] .tarif-modeles-header { background: #0F1729; }
+    [data-theme="dark"] .tarif-table th { background: #0B0F1A; color: #64748B; }
+    [data-theme="dark"] .tarif-table td { color: #CBD5E1; border-color: #1E293B; }
+    [data-theme="dark"] .tarif-table .model { color: #F1F5F9; }
+    [data-theme="dark"] .tarif-table tr:hover td { background: #1E293B; }
+    [data-theme="dark"] .tarif-row { border-color: #1E293B; }
+    [data-theme="dark"] .tarif-row:hover { background: #1E293B; }
+    [data-theme="dark"] .tarif-label { color: #CBD5E1; }
+    [data-theme="dark"] .tarif-price { color: #F1F5F9; }
+    [data-theme="dark"] .tarif-note { background: #0F1729 !important; color: #94A3B8 !important; }
+    [data-theme="dark"] .tarif-wa-cta { background: #0D1A3A; border-color: rgba(29,110,245,.3); }
+    [data-theme="dark"] .tarif-wa-cta p { color: #CBD5E1; }
 
-    /* Dark mode toggle button */
+    /* ── Textes titres ── */
+    [data-theme="dark"] .section-title { color: #F8FAFC; }
+    [data-theme="dark"] .section-subtitle { color: #94A3B8; }
+    [data-theme="dark"] .section-tag { background: #0D1A3A; }
+    [data-theme="dark"] .service-card h3,
+    [data-theme="dark"] .pourquoi-card h3,
+    [data-theme="dark"] .ecran-card h3,
+    [data-theme="dark"] .blog-card h3,
+    [data-theme="dark"] .faq-q { color: #F1F5F9; }
+    [data-theme="dark"] .service-card p,
+    [data-theme="dark"] .pourquoi-card p,
+    [data-theme="dark"] .ecran-card p,
+    [data-theme="dark"] .blog-card p,
+    [data-theme="dark"] .temoignage-text { color: #94A3B8; }
+    [data-theme="dark"] .author-name { color: #F1F5F9; }
+    [data-theme="dark"] .author-source { color: #64748B; }
+
+    /* ── FAQ ── */
+    [data-theme="dark"] .faq-q:hover { background: #1E293B; }
+    [data-theme="dark"] .faq-a-inner { color: #94A3B8; border-color: #1E293B; }
+    [data-theme="dark"] .faq-icon { background: #1E293B; color: #94A3B8; }
+    [data-theme="dark"] .faq-contact-card { background: #0D1A3A; border-color: rgba(29,110,245,.25); }
+    [data-theme="dark"] .faq-contact-card p { color: #94A3B8; }
+
+    /* ── Blog ── */
+    [data-theme="dark"] .blog-card-emoji { background: #0D1A3A; }
+    [data-theme="dark"] .blog-card-footer { border-color: #1E293B; color: #64748B; }
+    [data-theme="dark"] .blog-article-box { background: #111827; }
+    [data-theme="dark"] .blog-article-box h2,
+    [data-theme="dark"] .blog-article-box h3 { color: #F1F5F9; }
+    [data-theme="dark"] .blog-article-box p,
+    [data-theme="dark"] .blog-article-box li { color: #94A3B8; }
+    [data-theme="dark"] .blog-close { background: #1E293B; color: #94A3B8; }
+
+    /* ── GAPP ── */
+    [data-theme="dark"] .gapp-col.bad { background: #2D1515; border-color: #7F1D1D; }
+    [data-theme="dark"] .gapp-col.good { background: #0D1A3A; border-color: #1E3A6E; }
+    [data-theme="dark"] .gapp-col li { color: #94A3B8; }
+    [data-theme="dark"] .gapp-logo-box h3 { color: var(--orange); }
+    [data-theme="dark"] .gapp-logo-box p,
+    [data-theme="dark"] .gapp-feature { color: #CBD5E1; }
+
+    /* ── Écrans ── */
+    [data-theme="dark"] .ecran-garantie { background: #0D2615; color: #34D399; }
+    [data-theme="dark"] .ecran-no-garantie { background: #1E293B; color: #64748B; }
+
+    /* ── About ── */
+    [data-theme="dark"] .about-content p { color: #94A3B8; }
+    [data-theme="dark"] .about-list li { color: #CBD5E1; }
+    [data-theme="dark"] .about-badge-float .badge-text { color: #CBD5E1; }
+    [data-theme="dark"] .about-badge-float .badge-num { color: var(--orange); }
+
+    /* ── Contact ── */
+    [data-theme="dark"] .contact-detail-icon { background: #0D1A3A; }
+    [data-theme="dark"] .contact-detail-text strong { color: #64748B; }
+    [data-theme="dark"] .contact-detail-text span { color: #E2E8F0; }
+    [data-theme="dark"] .map-embed { filter: invert(0.88) hue-rotate(180deg) brightness(0.9); }
+
+    /* ── Footer ── */
+    [data-theme="dark"] footer { background: #060B14; }
+    [data-theme="dark"] .footer-seo-text { color: rgba(255,255,255,.15); }
+
+    /* ── Modals ── */
+    [data-theme="dark"] .modal-box { background: #111827; }
+    [data-theme="dark"] .modal-box h3 { color: #F1F5F9; }
+    [data-theme="dark"] .modal-box p { color: #94A3B8; }
+    [data-theme="dark"] .modal-close { background: #1E293B; color: #94A3B8; }
+
+    /* Dark toggle */
     .dark-toggle {
       width: 36px; height: 36px;
       border-radius: 8px;
@@ -1482,7 +1584,6 @@
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       font-size: 1rem;
-      transition: background .2s;
       flex-shrink: 0;
     }
     .dark-toggle:hover { background: var(--gray-200); }
@@ -1561,7 +1662,7 @@
     .blog { padding: 5rem 0; }
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 3rem;
     }
@@ -1721,7 +1822,7 @@
     <div class="hero-content">
       <div class="hero-badge">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        Artisan local certifié GAPP – Sacy-le-Grand (Oise)
+        Labellisé QualiRépar · Genuine Apple Parts GAPP – Sacy-le-Grand (Oise)
       </div>
       <h1 id="hero-h1">
         Réparation iPhone &amp; Smartphone<br>
@@ -1756,6 +1857,11 @@
           <span class="hero-stat-num">18</span>
           <span class="hero-stat-label">Avis 5/5<br>Google Maps</span>
         </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">🏅</span>
+          <span class="hero-stat-label">Labellisé<br>QualiRépar</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1767,7 +1873,7 @@
     <div class="trust-bar-inner">
       <div class="trust-item">
         <span class="trust-icon">🔒</span>
-        <span>Pièces Apple d'origine — Programme GAPP</span>
+        <span>Genuine Apple Parts via programme GAPP</span>
       </div>
       <div class="trust-item">
         <span class="trust-icon">🛡️</span>
@@ -1780,6 +1886,14 @@
       <div class="trust-item">
         <span class="trust-icon">🎮</span>
         <span>Consoles PS5 · Xbox · Switch</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span>
+        <span>Hydrogel sur mesure · SS-890C Pro Max</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🌱</span>
+        <span>Label QualiRépar — bientôt</span>
       </div>
       <div class="trust-item">
         <span class="trust-icon">⭐</span>
@@ -1817,6 +1931,11 @@
         <h3>Atelier indépendant</h3>
         <p>Pas de franchise. Vous parlez directement à Kevin, du devis à la remise en main propre.</p>
       </div>
+      <div class="pourquoi-card reveal">
+        <span class="pourquoi-emoji">🏅</span>
+        <h3>Labellisé QualiRépar</h3>
+        <p>Label officiel français. Vos réparations éligibles ouvrent droit au <strong>Bonus Réparation</strong> — jusqu'à 45 € remboursés par l'État.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1833,9 +1952,9 @@
     <div class="services-grid">
       <article class="service-card reveal">
         <div class="service-icon">🍎</div>
-        <h3>iPhone — Pièces Apple d'origine</h3>
-        <p>Partenaire du programme GAPP. Vos fonctions True Tone, Face ID et calibrage couleur sont 100% préservés après la réparation.</p>
-        <span class="service-badge">Certifié GAPP</span>
+        <h3>iPhone — Genuine Apple Parts</h3>
+        <p>Participant au programme GAPP. Vos fonctions True Tone, Face ID et calibrage couleur sont 100% préservés après la réparation.</p>
+        <span class="service-badge">Genuine Apple Parts</span>
       </article>
       <article class="service-card reveal">
         <div class="service-icon">📱</div>
@@ -1862,7 +1981,7 @@
       <article class="service-card reveal">
         <div class="service-icon">🎮</div>
         <h3>Consoles — Nettoyage & Maintenance</h3>
-        <p>Nettoyage complet intérieur (poussières, ventilateur). Remplacement métal liquide Sony d'origine sur PS5, pâte thermique (Thermal Kryonaut…) sur PS4 et Xbox. Résultat : console plus silencieuse, températures maîtrisées. Résultat : console plus silencieuse, température maîtrisée.</p>
+        <p>Nettoyage complet intérieur (poussières, ventilateur). Remplacement métal liquide Sony d'origine sur PS5, pâte thermique (Thermal Kryonaut…) sur PS4 et Xbox. Résultat : console plus silencieuse, températures maîtrisées.</p>
         <span class="service-badge">PS5 · PS4 · Xbox</span>
       </article>
       <article class="service-card reveal">
@@ -1877,6 +1996,19 @@
         <p>Récupération douce de vos fichiers, photos et documents sur SSD, HDD interne ou disque dur externe. Intervention respectueuse de vos données.</p>
         <span class="service-badge">Sur devis</span>
       </article>
+      <article class="service-card reveal">
+        <div class="service-icon">🛡️</div>
+        <h3>Pose d'hydrogel sur mesure</h3>
+        <p>Machine professionnelle <strong>Sunshine SS-890C Pro Max</strong> — découpe automatique de film hydrogel au millimètre près pour <strong>n'importe quel modèle</strong> (iPhone, Samsung, Xiaomi, iPad, tablette, montre connectée…). Film auto-cicatrisant, sans bulles, parfait sur écrans incurvés. Plusieurs types : standard, anti-lumière bleue, anti-espion, gaming anti-traces.</p>
+        <span class="service-badge">Tous modèles & tablettes</span>
+      </article>
+      <article      <article class="service-card reveal" style="border: 2px dashed #F59E0B;">
+        <div class="service-icon">🏅</div>
+        <h3>Label QualiRépar</h3>
+        <p style="font-weight:700;color:#D97706;font-size:.85rem;margin-bottom:.6rem;">⏳ Labellisation en cours — audit pas encore réalisé</p>
+        <p>Une fois labellisé, vous pourrez bénéficier du <strong>Bonus Réparation</strong> : jusqu'à <strong>45 € remboursés par l'État</strong>, déduits directement sur votre facture. Zéro démarche, zéro avance de frais.</p>
+        <span class="service-badge" style="background:#FEF3C7;color:#D97706;border:1px solid #FDE68A;">⏳ Pas encore officiel</span>
+      </article>
     </div>
   </div>
 </section>
@@ -1886,10 +2018,10 @@
   <div class="container">
     <div class="gapp-inner">
       <div class="gapp-content reveal">
-        <div class="section-tag">Programme GAPP</div>
-        <h2 class="section-title" id="gapp-title">Pièce compatible ou pièce Apple d'origine ?<br>La différence est énorme.</h2>
+        <div class="section-tag">Genuine Apple Parts</div>
+        <h2 class="section-title" id="gapp-title">Pièce compatible ou Genuine Apple Part ?<br>La différence est énorme.</h2>
         <p>Beaucoup de réparateurs utilisent des pièces <strong>"compatibles"</strong> — moins chères, mais fabriquées par des tiers sans certification Apple. Le résultat : couleurs décalées, tactile moins réactif, True Tone et Face ID désactivés, et une durée de vie souvent bien moindre.</p>
-        <p>En tant que partenaire du <strong>programme GAPP (Genuine Apple Parts Programme)</strong>, j'ai accès aux pièces Apple authentiques. Votre iPhone est réparé exactement comme Apple le ferait — sans compromis sur la qualité.</p>
+        <p>Participant au <strong>programme GAPP (Genuine Apple Parts Programme)</strong> depuis novembre 2025, j'ai accès aux Genuine Apple Parts. KevinTech&Co n'est pas un Apple Authorized Service Provider (AASP), mais peut réparer votre iPhone avec des Genuine Apple Parts. Votre iPhone est réparé exactement comme Apple le ferait — sans compromis sur la qualité.</p>
         <div class="gapp-compare">
           <div class="gapp-col bad">
             <div class="gapp-col-title">❌ Pièce compatible</div>
@@ -1916,8 +2048,8 @@
       <div class="gapp-badge-wrap reveal">
         <div class="gapp-logo-box">
           <span class="gapp-icon">🍎</span>
-          <h3>Certifié GAPP</h3>
-          <p>Genuine Apple Parts Programme — pièces d'origine Apple pour une réparation sans compromis</p>
+          <h3>Genuine Apple Parts</h3>
+          <p>Accord GAPP signé le 3 novembre 2025 — accès aux Genuine Apple Parts pour une réparation sans compromis</p>
         </div>
         <div class="gapp-features">
           <div class="gapp-feature">✓ True Tone & Face ID préservés</div>
@@ -2276,10 +2408,10 @@
           Ici, pas de grande chaîne : vous parlez directement au technicien. Du devis à la remise en main propre, c'est moi qui m'occupe de tout. Chaque réparation est soignée avec les bonnes pièces, dans le respect de votre appareil et de votre budget.
         </p>
         <p>
-          Atelier indépendant certifié GAPP — j'ai accès aux pièces Apple d'origine, ce qui signifie que votre True Tone, Face ID et calibrage couleur sont 100% préservés après réparation.
+          Participant au programme GAPP depuis novembre 2025 — j'ai accès aux Genuine Apple Parts, ce qui signifie que votre True Tone, Face ID et calibrage couleur sont 100% préservés après réparation.
         </p>
         <ul class="about-list">
-          <li>Partenaire certifié programme GAPP (Apple)</li>
+          <li>Participant au programme GAPP (Genuine Apple Parts)</li>
           <li>Transparent sur les prix et les pièces utilisées</li>
           <li>Atelier local indépendant, pas de franchise</li>
           <li>Devis gratuit, sans engagement</li>
@@ -2304,7 +2436,7 @@
     </div>
     <div class="zones-grid reveal">
       <span class="zone-tag primary">📍 Sacy-le-Grand</span>
-      <span class="zone-tag">Creil</span>
+      <a href="reparation-iphone-creil.html" class="zone-tag" style="color:var(--orange);border-color:var(--orange);font-weight:600;">📍 Creil → page dédiée</a>
       <span class="zone-tag">Senlis</span>
       <span class="zone-tag">Chantilly</span>
       <span class="zone-tag">Compiègne</span>
@@ -2381,12 +2513,12 @@
 
         <div class="faq-item" role="listitem">
           <button class="faq-q" aria-expanded="false">
-            Qu'est-ce que le programme GAPP (pièces Apple d'origine) ?
+            Qu'est-ce que le programme GAPP (Genuine Apple Parts) ?
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-a" role="region">
             <div class="faq-a-inner">
-              Le programme GAPP (Genuine Apple Parts Programme) permet à des techniciens indépendants d'accéder aux pièces Apple d'origine. Résultat : votre <strong>True Tone</strong>, votre <strong>Face ID</strong> et le <strong>calibrage des couleurs</strong> sont entièrement préservés après la réparation, exactement comme chez Apple.
+              Le programme GAPP (Genuine Apple Parts Programme) permet à des techniciens indépendants d'acheter des Genuine Apple Parts via un distributeur agréé. KevinTech&Co participe à ce programme depuis novembre 2025. Résultat : votre <strong>True Tone</strong>, votre <strong>Face ID</strong> et le <strong>calibrage des couleurs</strong> sont entièrement préservés après la réparation. Note : KevinTech&Co n'est pas un Apple Authorized Service Provider (AASP).
             </div>
           </div>
         </div>
@@ -2462,6 +2594,30 @@
             </div>
           </div>
         </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            C'est quoi le film hydrogel et pourquoi c'est mieux qu'une vitre trempée ?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Le film hydrogel est une protection d'écran <strong>flexible et auto-cicatrisante</strong> — les micro-rayures du quotidien disparaissent d'elles-mêmes avec la chaleur du téléphone. Contrairement aux vitres trempées, il <strong>ne se casse pas</strong>, épouse parfaitement les bords incurvés, et ne laisse aucun bord blanc visible. Je le découpe au millimètre près avec ma machine <strong>Sunshine SS-890C Pro Max</strong> — résultat parfait sur n'importe quel modèle, même les plus récents. Plusieurs types disponibles : standard, anti-lumière bleue, anti-espion, gaming anti-traces.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            C'est quoi le label QualiRépar et le Bonus Réparation de 25 € ?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Le <strong>label QualiRépar</strong> est un label officiel de l'État français qui certifie la qualité et le sérieux d'un réparateur. Une fois labellisé, le réparateur peut appliquer le <strong>Bonus Réparation</strong> directement sur la facture du client — jusqu'à <strong>45 € de remise automatique</strong> sur les réparations éligibles (écran cassé, batterie…). Zéro démarche pour le client : la remise est déduite directement. KevinTech&Co est <strong>en cours d'obtention</strong> de ce label — audit en cours !
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2510,6 +2666,54 @@
         <div class="blog-card-footer">
           <span>⏱ 5 min de lecture</span>
           <button class="blog-read-more" onclick="openArticle('ps5-bruit')">Lire →</button>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-card-emoji">🔋</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">iPhone</span>
+          <h3>Comment préserver la batterie de son iPhone le plus longtemps possible ?</h3>
+          <p>Charge nocturne, chargeur rapide, décharge complète… beaucoup de mauvaises habitudes abîment la batterie sans qu'on le sache. Les bons gestes pour durer plus longtemps.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span>⏱ 4 min de lecture</span>
+          <button class="blog-read-more" onclick="openArticle('batterie-iphone')">Lire →</button>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-card-emoji">💧</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Urgence</span>
+          <h3>Téléphone tombé dans l'eau : que faire dans les 5 premières minutes ?</h3>
+          <p>Les 5 premières minutes sont décisives. Voici les bons gestes à faire immédiatement — et surtout les erreurs à ne JAMAIS commettre pour ne pas aggraver les dégâts.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span>⏱ 3 min de lecture</span>
+          <button class="blog-read-more" onclick="openArticle('telephone-eau')">Lire →</button>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-card-emoji">🐢</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">iPhone</span>
+          <h3>Pourquoi mon iPhone ralentit avec le temps — et comment y remédier ?</h3>
+          <p>Batterie fatiguée, stockage plein, iOS mal optimisé... Votre iPhone n'est pas "mort" — il a juste besoin d'un peu d'attention. Les vraies causes et les vraies solutions.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span>⏱ 5 min de lecture</span>
+          <button class="blog-read-more" onclick="openArticle('iphone-lent')">Lire →</button>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-card-emoji">📺</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Écrans</span>
+          <h3>Comment choisir son écran de remplacement : Économie, Soft OLED, Reconditionné ou Service Pack ?</h3>
+          <p>4 gammes disponibles, des prix très différents, et des différences qui ne sautent pas aux yeux. On vous explique tout pour choisir selon votre budget et votre usage.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span>⏱ 4 min de lecture</span>
+          <button class="blog-read-more" onclick="openArticle('choisir-ecran')">Lire →</button>
         </div>
       </article>
     </div>
@@ -2575,6 +2779,105 @@
       <li><strong>Extinction automatique en jeu</strong> → intervention urgente conseillée</li>
     </ul>
     <p style="margin-top:1.2rem;padding:.8rem;background:var(--orange-pale);border-radius:8px;font-size:.85rem;">🎮 Nettoyage + remplacement métal liquide PS5 chez KevinTech&Co — envoyez un message WhatsApp pour évaluer votre situation.</p>
+  </div>
+</div>
+
+<div class="blog-article-overlay" id="article-batterie-iphone" onclick="if(event.target===this)closeArticle('batterie-iphone')">
+  <div class="blog-article-box">
+    <button class="blog-close" onclick="closeArticle('batterie-iphone')">✕</button>
+    <span class="blog-tag article-tag">iPhone</span>
+    <h2>Comment préserver la batterie de son iPhone le plus longtemps possible ?</h2>
+    <p>La batterie d'un iPhone est conçue pour conserver 80% de sa capacité après 500 cycles de charge. Mais de mauvaises habitudes peuvent la dégrader bien plus vite. Voici comment l'entretenir.</p>
+    <h3>1. Évitez la charge nocturne complète</h3>
+    <p>Laisser votre iPhone branché toute la nuit à 100% stresse la batterie. Utilisez la fonction <strong>"Charge optimisée"</strong> dans Réglages → Batterie → Santé de la batterie — l'iPhone apprend vos habitudes et ne finit la charge qu'avant votre réveil.</p>
+    <h3>2. Restez entre 20% et 80%</h3>
+    <p>Les batteries Li-ion souffrent aux extrêmes. Évitez de descendre en dessous de 20% et de rester longtemps à 100%. La zone idéale pour prolonger la durée de vie : <strong>entre 30% et 80%</strong>.</p>
+    <h3>3. Évitez la chaleur</h3>
+    <p>La chaleur est le pire ennemi d'une batterie. Ne laissez pas votre iPhone en plein soleil, dans une voiture en été, ou posé sur un appareil qui chauffe. Au-dessus de 35°C, la dégradation est accélérée.</p>
+    <h3>4. Méfiez-vous des chargeurs non certifiés</h3>
+    <p>Les chargeurs bon marché non certifiés MFi peuvent délivrer une tension instable et abîmer la batterie sur le long terme. Privilégiez les chargeurs Apple ou certifiés MFi.</p>
+    <h3>5. Le chargeur rapide : avec modération</h3>
+    <p>La charge rapide est pratique mais génère de la chaleur. Pour une utilisation quotidienne, le chargeur 5W d'origine chauffe moins et préserve mieux la batterie sur la durée.</p>
+    <p style="margin-top:1.2rem;padding:.8rem;background:var(--orange-pale);border-radius:8px;font-size:.85rem;">🔋 Votre batterie est en dessous de 80% de santé ? Remplacement rapide chez KevinTech&Co dès 49 € — appelez ou WhatsApp pour un devis.</p>
+  </div>
+</div>
+
+<div class="blog-article-overlay" id="article-telephone-eau" onclick="if(event.target===this)closeArticle('telephone-eau')">
+  <div class="blog-article-box">
+    <button class="blog-close" onclick="closeArticle('telephone-eau')">✕</button>
+    <span class="blog-tag article-tag" style="background:#DBEAFE;color:#1D4ED8;">Urgence</span>
+    <h2>Téléphone tombé dans l'eau : que faire dans les 5 premières minutes ?</h2>
+    <p>Même les smartphones "résistants à l'eau" (IP67, IP68) ne sont pas étanches à 100% — surtout s'ils ont déjà été réparés ou si leur joint est usé. Voici les bons réflexes.</p>
+    <h3>✅ Ce qu'il faut faire immédiatement</h3>
+    <ul>
+      <li><strong>Sortez-le de l'eau immédiatement</strong> — chaque seconde compte</li>
+      <li><strong>Éteignez-le</strong> sans attendre — ne vérifiez pas s'il fonctionne encore</li>
+      <li><strong>Retirez la coque, la carte SIM</strong> et essuyez doucement l'extérieur</li>
+      <li><strong>Posez-le à plat</strong> dans une pièce sèche, de préférence devant un ventilateur (air ambiant, pas chaud)</li>
+      <li><strong>Attendez minimum 24 à 48h</strong> avant de le rallumer</li>
+    </ul>
+    <h3>❌ Ce qu'il ne faut JAMAIS faire</h3>
+    <ul>
+      <li>🚫 <strong>Ne le rallumez pas</strong> pour "vérifier" — c'est ce qui provoque les courts-circuits</li>
+      <li>🚫 <strong>Ne le mettez pas au four, ni au micro-ondes</strong> — le plastique et les composants fondent</li>
+      <li>🚫 <strong>Ne secouez pas violemment</strong> — l'eau s'infiltre plus profondément</li>
+      <li>🚫 <strong>Le riz ne sert à rien</strong> — c'est un mythe. Il n'absorbe pas l'humidité à l'intérieur de l'appareil</li>
+      <li>🚫 <strong>Ne branchez pas le chargeur</strong> — court-circuit immédiat</li>
+    </ul>
+    <h3>Et si ça ne s'allume plus ?</h3>
+    <p>Ne tentez pas de le réparer vous-même. Un technicien peut nettoyer la carte mère à l'alcool isopropylique, identifier les composants oxydés et tenter une récupération — même après plusieurs jours. Plus vous intervenez vite, plus les chances de récupération sont élevées.</p>
+    <p style="margin-top:1.2rem;padding:.8rem;background:#DBEAFE;border-radius:8px;font-size:.85rem;">💧 Téléphone tombé dans l'eau ? Apportez-le le plus vite possible chez KevinTech&Co — appelez ou WhatsApp pour évaluer la situation.</p>
+  </div>
+</div>
+
+<div class="blog-article-overlay" id="article-iphone-lent" onclick="if(event.target===this)closeArticle('iphone-lent')">
+  <div class="blog-article-box">
+    <button class="blog-close" onclick="closeArticle('iphone-lent')">✕</button>
+    <span class="blog-tag article-tag">iPhone</span>
+    <h2>Pourquoi mon iPhone ralentit avec le temps — et comment y remédier ?</h2>
+    <p>Votre iPhone était rapide à la sortie de la boîte, et maintenant il rame au moindre geste ? C'est normal — mais pas une fatalité. Voici les vraies causes et ce que vous pouvez faire.</p>
+    <h3>1. La batterie — cause n°1 souvent ignorée</h3>
+    <p>Depuis iOS 11, Apple a introduit la gestion des performances dynamiques : quand la batterie est usée (en dessous de 80% de santé), l'iPhone <strong>réduit automatiquement ses performances</strong> pour éviter les extinctions inopinées. Résultat : il ralentit. Vérifiez votre santé de batterie dans <strong>Réglages → Batterie → Santé de la batterie</strong>. En dessous de 80%, un remplacement suffit souvent à retrouver un iPhone comme neuf.</p>
+    <h3>2. Le stockage plein</h3>
+    <p>iOS a besoin d'espace libre pour fonctionner correctement — pour les mises à jour, la mémoire virtuelle, les fichiers temporaires. Si votre stockage est à plus de <strong>90% de sa capacité</strong>, les ralentissements sont inévitables. Supprimez les apps inutilisées, videz les albums "récemment supprimés" et déchargez les photos sur iCloud ou un Mac.</p>
+    <h3>3. iOS trop récent pour votre modèle</h3>
+    <p>Apple pousse des mises à jour iOS optimisées pour ses derniers modèles. Sur un iPhone plus ancien (iPhone X, XR, 11…), certaines versions d'iOS peuvent être plus lourdes que la version précédente. Avant de mettre à jour, vérifiez les retours d'expérience des utilisateurs avec le même modèle.</p>
+    <h3>4. Les apps en arrière-plan</h3>
+    <p>Contrairement aux idées reçues, <strong>forcer la fermeture des apps ne sert à rien</strong> — iOS les gèle automatiquement. En revanche, certaines apps consomment de la batterie et du CPU en arrière-plan (réseaux sociaux, GPS…). Vérifiez dans <strong>Réglages → Général → Actualisation en arrière-plan</strong> et désactivez ce qui n'est pas nécessaire.</p>
+    <h3>5. La solution ultime : réinitialisation des réglages</h3>
+    <p>Sans perdre vos données, vous pouvez réinitialiser tous les réglages système dans <strong>Réglages → Général → Transférer ou réinitialiser → Réinitialiser tous les réglages</strong>. Cela remet à zéro les préférences réseau, d'affichage et autres sans toucher à vos photos ou apps. Souvent très efficace après plusieurs années d'utilisation.</p>
+    <p style="margin-top:1.2rem;padding:.8rem;background:var(--orange-pale);border-radius:8px;font-size:.85rem;">🔋 Batterie en dessous de 80% ? Un remplacement chez KevinTech&Co (dès 49 €) peut redonner une seconde jeunesse à votre iPhone — appelez ou WhatsApp.</p>
+  </div>
+</div>
+
+<div class="blog-article-overlay" id="article-choisir-ecran" onclick="if(event.target===this)closeArticle('choisir-ecran')">
+  <div class="blog-article-box">
+    <button class="blog-close" onclick="closeArticle('choisir-ecran')">✕</button>
+    <span class="blog-tag article-tag">Écrans</span>
+    <h2>Comment choisir son écran de remplacement : les 4 gammes expliquées</h2>
+    <p>Quand on fait réparer son écran iPhone, on est souvent confronté à plusieurs options avec des prix très différents. Voici ce qui se cache derrière chaque gamme proposée chez KevinTech&Co.</p>
+
+    <h3>1. Gamme Économie — Le meilleur prix</h3>
+    <p>Ce sont des écrans <strong>compatibles de bonne qualité</strong>, fabriqués par des tiers mais assemblés selon des standards corrects. L'affichage est bon au quotidien — luminosité, couleurs, tactile fonctionnent bien. C'est la gamme idéale si votre iPhone a déjà quelques années ou si vous cherchez à maîtriser votre budget. <strong>Éligible à la Garantie Casse 6 mois.</strong></p>
+    <p style="background:var(--orange-pale);padding:.5rem .8rem;border-radius:6px;font-size:.85rem;">📌 À savoir : True Tone et calibrage couleur ne seront pas préservés avec cette gamme.</p>
+
+    <h3>2. Gamme Soft OLED — Le meilleur rapport qualité/prix</h3>
+    <p>Des écrans <strong>OLED flexibles</strong> avec des couleurs éclatantes, des noirs profonds et une excellente réactivité tactile. Très proche visuellement de l'original, à un prix plus accessible qu'un écran neuf d'origine. C'est la gamme la plus populaire — le bon compromis pour ceux qui utilisent beaucoup leur téléphone. <strong>Éligible à la Garantie Casse 6 mois.</strong></p>
+
+    <h3>3. Gamme Reconditionné — L'original recyclé</h3>
+    <p>Il s'agit d'un <strong>véritable écran Apple d'origine</strong>, récupéré sur un iPhone hors service, reconditionné et revérifié. Vous retrouvez exactement les mêmes caractéristiques que votre écran d'origine : True Tone, calibrage couleur, réactivité tactile identique. C'est aussi le choix le plus écologique — donner une seconde vie à un composant existant. <strong>Éligible à la Garantie Casse 6 mois.</strong></p>
+
+    <h3>4. Gamme Service Pack — Le 100% neuf d'origine</h3>
+    <p>L'écran <strong>neuf Apple d'origine</strong>, issu directement du programme GAPP (Genuine Apple Parts). Identique à ce qu'Apple installe en usine : True Tone, Face ID, calibrage couleur — tout est parfaitement préservé. C'est la gamme premium, au prix le plus élevé. <strong>Non éligible à la Garantie Casse</strong> (le coût de la pièce étant déjà maximal).</p>
+
+    <h3>Récapitulatif rapide</h3>
+    <ul>
+      <li><strong>Budget serré / iPhone âgé</strong> → Gamme Économie</li>
+      <li><strong>Usage intensif / bon compromis</strong> → Soft OLED ⭐ recommandé</li>
+      <li><strong>Qualité originale + écologie</strong> → Reconditionné</li>
+      <li><strong>Exigence maximale / iPhone récent</strong> → Service Pack</li>
+    </ul>
+    <p style="margin-top:1.2rem;padding:.8rem;background:var(--orange-pale);border-radius:8px;font-size:.85rem;">💬 Vous hésitez entre deux gammes ? Envoyez un message WhatsApp avec votre modèle — je vous conseille la meilleure option selon votre situation.</p>
   </div>
 </div>
 
@@ -2747,7 +3050,7 @@
   "@type": "LocalBusiness",
   "@id": "https://kevintechco.github.io/kevintech.co/",
   "name": "KevinTech&Co",
-  "description": "Réparation iPhone, Samsung, Android et PC gaming à Sacy-le-Grand (Oise 60). Pièces Apple d'origine GAPP. Garantie casse exclusive 6 mois. Écrans, batteries, connecteurs. Intervention Creil, Senlis, Chantilly, Compiègne.",
+  "description": "Réparation iPhone, Samsung, Android et PC gaming à Sacy-le-Grand (Oise 60). Genuine Apple Parts Programme GAPP. Garantie casse exclusive 6 mois. Écrans, batteries, connecteurs. Intervention Creil, Senlis, Chantilly, Compiègne.",
   "url": "https://kevintechco.github.io/kevintech.co/",
   "image": "atelier-reparation-smartphone-kevintech-sacy-le-grand.jpg",
   "telephone": "+33771668364",
