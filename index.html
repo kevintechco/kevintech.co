@@ -38,43 +38,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 
-  <!-- ═══ PRELOAD HERO IMAGE ═══ -->
-  <link rel="preload" as="image" href="atelier-reparation-smartphone-kevintech-sacy-le-grand.jpg" fetchpriority="high">
-
   <style>
     /* ═══════════════════════════════════════════
        CSS VARIABLES & RESET
     ═══════════════════════════════════════════ */
     :root {
-      --orange: #1D6EF5;
-      --orange-light: #4589FF;
-      --orange-pale: #EBF2FF;
-      --navy: #0D1B2A;
-      --navy-mid: #1A2E45;
-      --dark: #111827;
-      --gray-900: #1F2937;
-      --gray-700: #374151;
-      --gray-500: #6B7280;
-      --gray-200: #E5E7EB;
-      --gray-100: #F3F4F6;
-      --gray-50: #F9FAFB;
+      --orange: #0A6CFF;
+      --orange-light: #3D8BFF;
+      --orange-pale: #EEF4FF;
+      --navy: #06080D;
+      --navy-mid: #11151C;
+      --dark: #06080D;
+      --gray-900: #1D1D1F;
+      --gray-700: #424248;
+      --gray-500: #86868B;
+      --gray-200: #E3E3E6;
+      --gray-100: #F2F2F4;
+      --gray-50: #FBFBFD;
       --white: #FFFFFF;
       --font-display: 'Syne', sans-serif;
       --font-body: 'DM Sans', sans-serif;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
-      --shadow-md: 0 4px 16px rgba(0,0,0,.10);
-      --shadow-lg: 0 10px 40px rgba(0,0,0,.14);
-      --radius: 12px;
-      --radius-lg: 20px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 24px rgba(0,0,0,.06);
+      --shadow-lg: 0 12px 48px rgba(0,0,0,.10);
+      --radius: 14px;
+      --radius-lg: 22px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     body {
       font-family: var(--font-body);
       color: var(--gray-900);
       background: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
+      letter-spacing: -0.011em;
     }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; text-decoration: none; }
@@ -276,106 +274,109 @@
     }
 
     /* ═══════════════════════════════════════════
-       HERO
+       HERO — épuré, clair
     ═══════════════════════════════════════════ */
     .hero {
       position: relative;
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
+      padding: 7rem 0 5rem;
+      background: var(--white);
       overflow: hidden;
     }
-    .hero-bg {
+    .hero::before {
+      content: '';
       position: absolute;
-      inset: 0;
-      background-image: url('atelier-reparation-smartphone-kevintech-sacy-le-grand.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: brightness(.35);
-      transform: scale(1.04);
-      animation: zoomBg 12s ease-out forwards;
+      top: -30%;
+      right: -10%;
+      width: 55%;
+      height: 130%;
+      background: radial-gradient(ellipse at center, rgba(10,108,255,.07) 0%, transparent 65%);
+      pointer-events: none;
     }
-    @keyframes zoomBg {
-      from { transform: scale(1.08); }
-      to   { transform: scale(1.00); }
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(13,27,42,.7) 0%, rgba(29,110,245,.15) 100%);
-    }
+    .hero-bg, #hero-shader, .hero-overlay { display: none; }
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 680px;
-      padding: 4rem 0;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
     }
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: .4rem;
-      background: rgba(29,110,245,.2);
-      border: 1px solid rgba(29,110,245,.5);
-      color: #99C4FF;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      padding: .35rem .9rem;
+      gap: .45rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      color: var(--gray-700);
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      padding: .4rem .9rem;
       border-radius: 100px;
-      margin-bottom: 1.4rem;
-      backdrop-filter: blur(8px);
+      margin-bottom: 2rem;
     }
+    .hero-badge svg { color: var(--orange); }
     .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
       font-weight: 800;
-      color: var(--white);
-      line-height: 1.12;
-      margin-bottom: 1.2rem;
+      color: var(--gray-900);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
     }
     .hero h1 em {
       font-style: normal;
       color: var(--orange);
     }
     .hero-desc {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,.8);
-      line-height: 1.7;
-      margin-bottom: 2rem;
-      max-width: 520px;
+      font-size: 1.18rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      margin: 0 auto 2.5rem;
+      max-width: 560px;
+      letter-spacing: -0.01em;
     }
+    .hero-desc strong { color: var(--gray-900); font-weight: 600; }
     .hero-btns {
       display: flex;
       flex-wrap: wrap;
       gap: .8rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 4rem;
+      justify-content: center;
     }
     .hero-stats {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 0;
+      justify-content: center;
+      border-top: 1px solid var(--gray-200);
+      padding-top: 2.5rem;
     }
     .hero-stat {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: .6rem;
+      gap: .2rem;
+      padding: 0 2.5rem;
     }
     .hero-stat-num {
       font-family: var(--font-display);
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: 800;
-      color: var(--orange);
+      color: var(--gray-900);
+      letter-spacing: -0.02em;
     }
     .hero-stat-label {
-      font-size: .8rem;
-      color: rgba(255,255,255,.7);
-      line-height: 1.3;
+      font-size: .82rem;
+      color: var(--gray-500);
+      line-height: 1.35;
+      text-align: center;
     }
     .hero-stat-sep {
       width: 1px;
-      height: 36px;
-      background: rgba(255,255,255,.2);
+      align-self: stretch;
+      background: var(--gray-200);
     }
 
     /* ═══════════════════════════════════════════
@@ -1816,30 +1817,27 @@
 
 <!-- ═══ HERO ═══ -->
 <section id="accueil" class="hero" aria-labelledby="hero-h1">
-  <div class="hero-bg" role="img" aria-label="Atelier de réparation KevinTech&Co à Sacy-le-Grand"></div>
-  <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        Labellisé QualiRépar · Genuine Apple Parts GAPP – Sacy-le-Grand (Oise)
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Genuine Apple Parts · Programme GAPP · Sacy-le-Grand (Oise)
       </div>
       <h1 id="hero-h1">
-        Réparation iPhone &amp; Smartphone<br>
-        <em>en 30 minutes</em><br>
-        dans l'Oise
+        Votre smartphone réparé<br>
+        <em>en 30 minutes</em>.
       </h1>
       <p class="hero-desc">
-        Écran remplacé + <strong style="color:#fff">Garantie casse 6 mois</strong> : pièce offerte, seulement 70 € de participation, jusqu'à 3 fois. Atelier indépendant à Sacy-le-Grand — devis immédiat par WhatsApp.
+        Réparation iPhone, Samsung et consoles à Sacy-le-Grand. <strong>Garantie casse 6 mois</strong> exclusive, pièces d'origine, devis gratuit immédiat.
       </p>
       <div class="hero-btns">
-        <a href="https://wa.me/33771668364" class="btn" style="background:#25D366;color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.4);border-radius:8px;padding:.85rem 1.6rem;font-weight:700;font-size:1rem;display:inline-flex;align-items:center;gap:.5rem;">
+        <a href="https://wa.me/33771668364" class="btn" style="background:#25D366;color:#fff;box-shadow:0 4px 14px rgba(37,211,102,.3);border-radius:10px;padding:.9rem 1.7rem;font-weight:600;font-size:1rem;display:inline-flex;align-items:center;gap:.5rem;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Devis gratuit WhatsApp
         </a>
         <a href="tel:+33771668364" class="btn btn-outline">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          Appeler maintenant
+          07 71 66 83 64
         </a>
       </div>
       <div class="hero-stats">
@@ -1849,18 +1847,13 @@
         </div>
         <div class="hero-stat-sep"></div>
         <div class="hero-stat">
-          <span class="hero-stat-num">25'</span>
-          <span class="hero-stat-label">Délai moyen<br>si pièce en stock</span>
+          <span class="hero-stat-num">30 min</span>
+          <span class="hero-stat-label">Délai moyen<br>en atelier</span>
         </div>
         <div class="hero-stat-sep"></div>
         <div class="hero-stat">
-          <span class="hero-stat-num">18</span>
-          <span class="hero-stat-label">Avis 5/5<br>Google Maps</span>
-        </div>
-        <div class="hero-stat-sep"></div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">🏅</span>
-          <span class="hero-stat-label">Labellisé<br>QualiRépar</span>
+          <span class="hero-stat-num">28</span>
+          <span class="hero-stat-label">Avis 5/5<br>sur Google</span>
         </div>
       </div>
     </div>
@@ -1893,11 +1886,11 @@
       </div>
       <div class="trust-item">
         <span class="trust-icon">🌱</span>
-        <span>Label QualiRépar — bientôt</span>
+        <span>⏳ QualiRépar — audit en cours</span>
       </div>
       <div class="trust-item">
         <span class="trust-icon">⭐</span>
-        <span>18 avis 5/5 sur Google Maps</span>
+        <span>28 avis 5/5 sur Google Maps</span>
       </div>
     </div>
   </div>
@@ -1933,7 +1926,8 @@
       </div>
       <div class="pourquoi-card reveal">
         <span class="pourquoi-emoji">🏅</span>
-        <h3>Labellisé QualiRépar</h3>
+        <h3>Label QualiRépar</h3>
+        <div style="margin:-.4rem 0 .6rem;"><span style="display:inline-block;font-size:.7rem;background:#F59E0B;color:#fff;padding:.25rem .6rem;border-radius:4px;font-weight:600;letter-spacing:.02em;">⏳ Labellisation en cours</span></div>
         <p>Label officiel français. Vos réparations éligibles ouvrent droit au <strong>Bonus Réparation</strong> — jusqu'à 45 € remboursés par l'État.</p>
       </div>
     </div>
@@ -1984,11 +1978,11 @@
         <p>Nettoyage complet intérieur (poussières, ventilateur). Remplacement métal liquide Sony d'origine sur PS5, pâte thermique (Thermal Kryonaut…) sur PS4 et Xbox. Résultat : console plus silencieuse, températures maîtrisées.</p>
         <span class="service-badge">PS5 · PS4 · Xbox</span>
       </article>
-      <article class="service-card reveal">
+      <article class="service-card reveal" style="border-top:3px solid #1D6EF5;">
         <div class="service-icon">🕹️</div>
-        <h3>Joysticks & Manettes</h3>
-        <p>Remplacement de joystick sur Joy-Con Nintendo Switch (drift), DualSense PS5, DualShock PS4, manette Xbox. Sony, Nintendo, Microsoft — toutes marques prises en charge.</p>
-        <span class="service-badge">Switch · PS5 · Xbox</span>
+        <h3>Joysticks PS5 Gulikit TMR <span style="font-size:.65rem;background:#1D6EF5;color:#fff;padding:.18rem .5rem;border-radius:4px;margin-left:.3rem;vertical-align:middle;font-weight:700;">Zéro drift</span></h3>
+        <p>Remplacement des joysticks DualSense PS5 par la <strong>technologie Gulikit TMR sans contact</strong> — fin du drift, garanti définitif. Deux versions : <strong>NS51 TMR</strong> (65 €, joueurs occasionnels) ou <strong>720° TMR Pro</strong> (80 €, tension réglable + compatible DualSense Edge). Aussi Joy-Con Switch, DualShock PS4, manettes Xbox.</p>
+        <span class="service-badge">DualSense · Switch · Xbox</span>
       </article>
       <article class="service-card reveal">
         <div class="service-icon">💾</div>
@@ -2068,19 +2062,26 @@
     <div>
       <div class="garantie-tag">⚡ Exclusivité KevinTech&Co</div>
       <h2 id="garantie-title">Garantie Casse <span>6 mois</span><br>sur votre écran iPhone</h2>
-      <p>Vous recassez votre écran dans les 6 mois ? Aucun problème. La pièce vous est offerte — vous ne payez que la participation forfaitaire. Disponible jusqu'à 3 remplacements. Un filet de sécurité unique dans l'Oise.</p>
+      <p>Vous recassez votre écran dans les 6 mois ? Aucun problème. La pièce vous est offerte — vous ne payez que la participation forfaitaire, selon le modèle. Disponible jusqu'à 3 remplacements. Un filet de sécurité unique dans l'Oise.</p>
       <div class="garantie-pills">
         <span class="garantie-pill">✓ Dès l'iPhone X</span>
         <span class="garantie-pill">✓ Jusqu'à 3 remplacements</span>
         <span class="garantie-pill">✓ Pièce offerte</span>
-        <span class="garantie-pill">✓ iPhone 14, 15, 16 inclus</span>
+        <span class="garantie-pill">✓ iPhone 17 inclus</span>
       </div>
     </div>
-    <div class="garantie-price-box" aria-label="Participation forfaitaire garantie casse : 70 euros seulement">
-      <div class="price-label">Participation forfaitaire</div>
-      <div class="price-value">70€</div>
-      <div class="price-sub">seulement</div>
-      <div class="price-free">🎁 Pièce offerte</div>
+    <div class="garantie-prices" aria-label="Participation forfaitaire selon le modèle d'iPhone">
+      <div class="garantie-price-tier" style="background:#1D6EF5;color:#fff;border-radius:12px;padding:1.2rem 1.4rem;margin-bottom:.7rem;text-align:center;">
+        <div style="font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.85;">iPhone X → 14</div>
+        <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:800;line-height:1;margin:.3rem 0;">70 €</div>
+        <div style="font-size:.78rem;opacity:.85;">participation forfaitaire</div>
+      </div>
+      <div class="garantie-price-tier" style="background:#0C44B0;color:#fff;border-radius:12px;padding:1.2rem 1.4rem;text-align:center;">
+        <div style="font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.85;">iPhone 15 · 16 · 17</div>
+        <div style="font-family:var(--font-display);font-size:2.4rem;font-weight:800;line-height:1;margin:.3rem 0;">100 €</div>
+        <div style="font-size:.78rem;opacity:.85;">participation forfaitaire</div>
+      </div>
+      <div style="text-align:center;margin-top:.8rem;font-size:.78rem;color:rgba(255,255,255,.7);">🎁 Pièce 100% offerte dans les 2 cas</div>
     </div>
   </div>
 </div>
@@ -2306,7 +2307,7 @@
   <div class="container">
     <div class="reveal" style="text-align:center;">
       <div class="section-tag">Ce que disent nos clients</div>
-      <h2 class="section-title" id="temoignages-title">18 avis 5/5 sur Google Maps</h2>
+      <h2 class="section-title" id="temoignages-title">28 avis 5/5 sur Google Maps</h2>
       <p class="section-subtitle" style="margin:0 auto;">Des clients de Creil, Senlis, Chantilly, Compiègne et alentours témoignent de leur expérience chez KevinTech&Co.</p>
     </div>
 
@@ -2578,7 +2579,10 @@
           </button>
           <div class="faq-a" role="region">
             <div class="faq-a-inner">
-              Je remplace les joysticks sur <strong>Joy-Con Nintendo Switch</strong> (problème de drift très courant), <strong>DualSense PS5</strong>, <strong>DualShock PS4</strong> et <strong>manettes Xbox</strong> (Series X/S, One). Toutes marques prises en charge : Sony, Nintendo, Microsoft. Contactez-moi par WhatsApp avec le modèle exact pour un devis rapide.
+              Je remplace les joysticks PS5 DualSense avec la <strong>technologie Gulikit TMR sans contact</strong> — fin du drift garantie définitivement. Deux versions disponibles :<br><br>
+              • <strong>NS51 TMR — 65 € (2 joysticks posés)</strong> : technologie TMR sans contact, calibration incluse, idéal joueurs occasionnels.<br><br>
+              • <strong>720° TMR Pro — 80 € (2 joysticks posés)</strong> : version recommandée pour joueurs exigeants. Inclut tension réglable à l'infini (souple pour RPG, ferme pour FPS), 3 paires de capuchons (3 hauteurs), compatible <strong>DualSense Edge</strong>.<br><br>
+              Aussi pris en charge : <strong>Joy-Con Nintendo Switch</strong>, <strong>DualShock PS4</strong>, <strong>manettes Xbox</strong> (Series X/S, One). Manettes SCUF et tierces non prises en charge. Contactez-moi par WhatsApp avec votre modèle exact pour un devis rapide.
             </div>
           </div>
         </div>
@@ -3009,7 +3013,7 @@
       <span>© 2026 KevinTech&Co – SIRET 940 964 414 00012 – Sacy-le-Grand (Oise 60)</span>
       <div class="footer-legal">
         <button onclick="document.getElementById('modal-legal').classList.add('open')">Mentions légales</button>
-        <button onclick="document.getElementById('modal-cgs').classList.add('open')">Garantie & CGS</button>
+        <button onclick="document.getElementById('modal-cgs').classList.add('open')">Conditions Générales (CGV)</button>
       </div>
     </div>
   </div>
@@ -3022,24 +3026,110 @@
 
 <!-- ═══ MODALS ═══ -->
 <div class="modal-overlay" id="modal-legal" role="dialog" aria-modal="true" aria-labelledby="modal-legal-title" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="modal-box">
+  <div class="modal-box" style="max-width:760px;max-height:88vh;overflow-y:auto;">
     <button class="modal-close" onclick="document.getElementById('modal-legal').classList.remove('open')" aria-label="Fermer">✕</button>
     <h3 id="modal-legal-title">Mentions légales</h3>
-    <p><strong>Éditeur :</strong> KevinTech&Co (micro-entreprise).</p>
-    <p><strong>Siège social :</strong> 187 rue des Gaillards, 60700 Sacy-le-Grand (Oise).</p>
-    <p><strong>SIRET :</strong> 940 964 414 00012.</p>
-    <p><strong>Directeur de publication :</strong> M. Leclercq.</p>
+    <p style="font-size:.8rem;color:var(--gray-500);font-style:italic;margin-bottom:1.2rem;">Conformément aux dispositions de l'article 6 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'Économie Numérique.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .5rem;">1 — Éditeur du site</h4>
+    <p>Le présent site internet est édité et exploité par <strong>KevinTech&Co</strong>, Entreprise Individuelle (EI), dirigée par <strong>Monsieur Kevin Leclercq</strong>.</p>
+    <p><strong>Siège social :</strong> 187 rue des Gaillards, 60700 Sacy-le-Grand – France</p>
+    <p><strong>Numéro d'identification :</strong> SIRET 940 964 414 00012 (RCS / RM Compiègne)</p>
+    <p><strong>Directeur de la publication :</strong> M. Kevin Leclercq, en sa qualité de représentant légal.</p>
+    <p><strong>Courrier électronique :</strong> kevintech.co@gmail.com</p>
+    <p><strong>Téléphone :</strong> 07 71 66 83 64</p>
+    <p><strong>Activité sectorielle :</strong> Maintenance, diagnostic, micro-soldering et réparation d'équipements de communication, de terminaux informatiques et d'appareils électroniques grand public.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .5rem;">2 — Prestataire d'hébergement</h4>
+    <p>Le site internet est hébergé par <strong>GitHub, Inc.</strong>, ayant son siège social au 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107 – États-Unis. Service dédié : GitHub Pages.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .5rem;">3 — Couverture d'assurance professionnelle</h4>
+    <p>L'exploitant est titulaire d'une police d'<strong>Assurance Responsabilité Civile Professionnelle (RC Pro)</strong> souscrite auprès de la compagnie <strong>MACIF</strong>, au nom de M. Kevin Leclercq EI (KevinTech&Co). Garantie : couverture des préjudices matériels, immatériels consécutifs et corporels survenant exclusivement dans l'exercice de l'activité de réparation d'appareils électroniques, informatiques et de téléphonie mobile.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .5rem;">4 — Propriété intellectuelle et droits de reproduction</h4>
+    <p>L'intégralité des contenus textuels, visuels, logos, architectures et codes sources du présent site constitue une œuvre de l'esprit protégée par les dispositions du Code de la propriété intellectuelle. Toute reproduction, extraction substantielle, représentation ou diffusion publique, intégrale ou partielle, par quelque procédé que ce soit, effectuée sans l'autorisation écrite préalable et expresse de KevinTech&Co est strictement prohibée.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .5rem;">5 — Traitement des données à caractère personnel (RGPD)</h4>
+    <p><strong>Finalités :</strong> Les données recueillies (nom, prénom, coordonnées, historique de maintenance) font l'objet d'un traitement aux seules fins d'exécution des prestations contractuelles, de gestion de la facturation et du recouvrement.</p>
+    <p><strong>Licéité :</strong> Article 6.1.b du RGPD et respect des obligations comptables.</p>
+    <p><strong>Conservation :</strong> Données de facturation conservées 5 ans à compter de la clôture de l'exercice comptable. Données de contact supprimées au terme de 3 ans sans interaction.</p>
+    <p><strong>Droits des personnes :</strong> Accès, rectification, effacement, limitation et opposition. Exercice par courriel à <strong>kevintech.co@gmail.com</strong>. Possibilité d'introduire une réclamation auprès de la CNIL (www.cnil.fr).</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .5rem;">6 — Traceurs et cookies</h4>
+    <p>Le site met en œuvre des cookies techniques strictement requis pour l'optimisation de l'expérience de navigation. Aucun mécanisme de ciblage comportemental ou publicitaire n'est déployé.</p>
   </div>
 </div>
 
 <div class="modal-overlay" id="modal-cgs" role="dialog" aria-modal="true" aria-labelledby="modal-cgs-title" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="modal-box">
+  <div class="modal-box" style="max-width:760px;max-height:88vh;overflow-y:auto;">
     <button class="modal-close" onclick="document.getElementById('modal-cgs').classList.remove('open')" aria-label="Fermer">✕</button>
-    <h3 id="modal-cgs-title">Conditions Générales & Garantie</h3>
-    <p><strong>Article 1 – Expertise :</strong> Forfait fixe de 30 € si l'appareil est non réparable ou si le devis est refusé.</p>
-    <p><strong>Article 2 – Garantie Casse 6 mois :</strong> Exclusivement iPhone dès l'iPhone X. Pièce offerte, participation forfaitaire de 70 € due. Limité à 3 remplacements. Non applicable aux gammes Service Pack.</p>
-    <p><strong>Article 3 – Responsabilité :</strong> KevinTech&Co décline toute responsabilité pour les vices cachés ou pannes résultant du choc initial.</p>
-    <p><strong>Article 4 – Données :</strong> Le client est l'unique responsable de la sauvegarde de ses données avant toute intervention.</p>
+    <h3 id="modal-cgs-title">Conditions Générales de Vente (CGV)</h3>
+    <p style="font-size:.8rem;color:var(--gray-500);font-style:italic;margin-bottom:1.2rem;">Applicables à l'ensemble des prestations de diagnostic, expertise, micro-soudures, maintenance et réparation commercialisées par KevinTech&Co.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 1 — Champ d'application</h4>
+    <p>Les présentes CGV s'appliquent à l'ensemble des services de diagnostic, expertise technique, micro-soudures, maintenance logicielle et réparation de matériels électroniques (téléphones mobiles, tablettes, consoles, parcs informatiques). Tout dépôt de matériel, signature d'un bon de prise en charge ou versement d'un acompte emporte acceptation immédiate et irrévocable des présentes clauses.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 2 — Formation du contrat (Procédure de devis)</h4>
+    <p>L'engagement contractuel est formalisé exclusivement par la validation d'un devis émis par KevinTech&Co. Le contrat est réputé conclu dès réception du devis dûment régularisé (signature manuscrite, électronique ou accord exprès), accompagné le cas échéant du paiement de l'acompte. Aucun travail correctif additionnel non mentionné au devis ne sera initié sans avenant écrit signé.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 3 — Forfait de prise en charge et d'expertise (30 €)</h4>
+    <p>Un <strong>forfait fixe de 30 € TTC</strong> est exigible de plein droit dans les cas suivants : (a) l'appareil est techniquement déclaré non réparable suite à l'expertise (micro-fissure du PCB multicouche, court-circuit interne, oxydation généralisée…) ; (b) le client refuse le devis de réparation ou n'y donne pas suite. La restitution de l'appareil est subordonnée au règlement préalable de ce forfait.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 4 — Structure tarifaire et statut fiscal</h4>
+    <p>Les prix sont fixés de manière ferme et définitive sur le devis accepté, exprimés en euros TTC.</p>
+    <p><strong>TVA non applicable</strong>, en vertu des dispositions de l'<strong>article 293 B du Code Général des Impôts</strong> (Entrepreneur Individuel soumis au régime fiscal de la micro-entreprise).</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 5 — Délais d'exécution et force majeure</h4>
+    <p>Les délais mentionnés sont purement indicatifs. KevinTech&Co s'engage à déployer ses meilleurs efforts. Les retards résultant d'une rupture de stock fournisseur, retards de transport ou force majeure (article 1218 du Code civil) n'ouvrent droit à aucune résolution, indemnisation ou pénalité de retard.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 6 — Garanties légales</h4>
+    <p>KevinTech&Co assume la garantie légale de conformité (articles L. 217-3 du Code de la consommation, pour les consommateurs) et la garantie des vices cachés (articles 1641 du Code civil), afférentes aux seules pièces détachées intégrées. La garantie est strictement circonscrite au remplacement de la pièce défectueuse, à l'exclusion de tout préjudice périphérique.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 7 — Garantie commerciale "Casse Écran" 6 mois</h4>
+    <p><strong>Périmètre matériel strict :</strong> Bloc écran d'iPhone uniquement, à compter de l'<strong>iPhone X et supérieurs</strong>. Sont exclus les écrans Samsung Service Pack, tablettes, consoles et ordinateurs.</p>
+    <p><strong>Barème de participation main-d'œuvre :</strong></p>
+    <ul style="list-style:disc;padding-left:1.5rem;margin:.5rem 0;">
+      <li><strong>70 € TTC</strong> pour les gammes iPhone X jusqu'à iPhone 14 (modèles base, Mini, Plus, Pro, Pro Max)</li>
+      <li><strong>100 € TTC</strong> pour les gammes iPhone 15, 16, 17 (base, Plus, Pro, Pro Max)</li>
+    </ul>
+    <p><strong>Indissociabilité :</strong> La pièce n'est jamais remise seule. L'application de la garantie implique obligatoirement le montage par KevinTech&Co et le paiement du forfait.</p>
+    <p><strong>Plafond :</strong> Maximum absolu de <strong>3 remplacements successifs</strong> par appareil. Toute modification tierce, tentative d'ouverture par un tiers ou dommage par liquide (oxydation) entraîne déchéance immédiate de la garantie.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 8 — Acompte et irréversibilité des commandes</h4>
+    <p>Les sommes versées préalablement constituent un <strong>acompte (non des arrhes)</strong>. Le contrat devient irrévocable. Les commandes de pièces auprès des fournisseurs étant non annulables, l'opération devient définitive.</p>
+    <p><strong>L'acompte est intégralement conservé</strong> en cas de : rétractation après signature du devis ; découverte d'un état initial non déclaré (carte mère incurvée, micro-soudures préalables destructrices, oxydation interne…) ; refus du client de s'acquitter du solde ou d'effectuer le retrait. Remboursement uniquement si KevinTech&Co se trouve dans l'impossibilité technique imputable à lui-même et qu'aucune pièce n'a été commandée.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 9 — Abandon de matériel et frais de garde</h4>
+    <p>Tout appareil doit être retiré dans un délai impératif de <strong>30 jours calendaires</strong> à compter de la notification de mise à disposition. Les rapports d'envoi (SMS délivré, accusé courriel) font foi.</p>
+    <p>À compter du <strong>31e jour</strong>, des frais d'entreposage de <strong>2 € TTC par jour calendaire</strong> sont automatiquement appliqués.</p>
+    <p>À l'expiration de <strong>60 jours</strong> consécutifs, l'inertie du client constitue une <strong>présomption irréfragable d'abandon</strong> (article 2276 du Code civil). KevinTech&Co est dès lors juridiquement investi du droit de disposer pleinement du matériel (recyclage, destruction, revalorisation), sans aucune indemnité due au client déchu de ses droits.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 10 — Limitations de responsabilité technique</h4>
+    <p>KevinTech&Co est tenu à une <strong>obligation de moyens renforcée</strong>. Sur un appareil déjà lourdement altéré (chocs, torsion, oxydation), les opérations techniques légitimes peuvent révéler ou aggraver une panne latente. KevinTech&Co ne saurait être tenu responsable si l'appareil ne redémarre pas suite à l'analyse d'un vice caché préexistant.</p>
+    <p><strong>Matériels modifiés :</strong> Aucune responsabilité quant aux pannes survenant lors du démontage d'appareils ayant fait l'objet d'une tentative d'ouverture, réparation de fortune ou modification (jailbreak, root) par le client ou un tiers non agréé.</p>
+    <p><strong>Consoles & PC :</strong> KevinTech&Co décline toute responsabilité en cas de suspension/bannissement de comptes (PSN, Xbox Live, Nintendo Online) ou défaut d'activation OS (Windows, macOS, Linux).</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 11 — Données personnelles & sauvegarde</h4>
+    <p>Les opérations techniques comportent un risque permanent et imprévisible de perte de données. <strong>KevinTech&Co n'assume aucune obligation de sauvegarde</strong> et décline toute responsabilité en cas de perte, altération, effacement ou corruption de données, fichiers, photos, applications ou sauvegardes de jeux. <strong>Il appartient exclusivement au client d'effectuer une sauvegarde intégrale préalable.</strong></p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 12 — Droit de rétractation</h4>
+    <p>En application de l'<strong>article L. 221-28 du Code de la consommation</strong>, le droit de rétractation ne peut être exercé pour les prestations pleinement exécutées avant la fin du délai légal de 14 jours, ou dont l'exécution a commencé après accord exprès du consommateur et renoncement à ce droit. Pour toute intervention immédiate à la demande du client, ce dernier renonce expressément à ce droit.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 13 — Paiement & droit de rétention</h4>
+    <p>Le paiement intégral, déduction faite de l'acompte, est exigible au comptant lors de la restitution. Modes acceptés : espèces (dans les plafonds légaux), CB via terminal sécurisé, virement bancaire.</p>
+    <p>En cas de virement, KevinTech&Co exerce un <strong>droit de rétention légal</strong> sur le matériel (article 2286 du Code civil) jusqu'à inscription définitive du montant sur son compte.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 14 — Médiation de la consommation</h4>
+    <p>En cas de litige, le client adresse en priorité une réclamation écrite au service client. À défaut de résolution amiable sous 30 jours, le client consommateur peut saisir gratuitement le médiateur :</p>
+    <p><strong>CM2C — Centre de la Médiation de la Consommation des Conciliateurs de Justice</strong><br>
+    49 rue de Ponthieu — 75008 Paris<br>
+    <a href="https://www.cm2c.net" target="_blank" rel="noopener" style="color:var(--orange);">www.cm2c.net</a></p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 15 — Droit applicable et compétence juridictionnelle</h4>
+    <p>Les présentes CGV sont régies par le <strong>droit français</strong>. Pour tout litige avec un client professionnel, compétence exclusive est donnée aux tribunaux du ressort du siège social de KevinTech&Co. Pour les consommateurs particuliers, les règles légales de compétence territoriale s'appliquent.</p>
+
+    <h4 style="font-family:var(--font-display);font-size:.92rem;font-weight:700;color:var(--dark);margin:1.2rem 0 .4rem;">Article 16 — Acceptation globale</h4>
+    <p>La signature du devis, validation électronique, versement d'acompte ou dépôt physique du matériel emporte consentement parfait, acceptation formelle, irrévocable et indivisible de l'intégralité des présentes CGV.</p>
   </div>
 </div>
 
@@ -3054,7 +3144,7 @@
   "url": "https://kevintechco.github.io/kevintech.co/",
   "image": "atelier-reparation-smartphone-kevintech-sacy-le-grand.jpg",
   "telephone": "+33771668364",
-  "email": "",
+  "email": "kevintech.co@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "187 rue des Gaillards",
@@ -3256,5 +3346,6 @@
   window.openArticle = openArticle;
   window.closeArticle = closeArticle;
 </script>
+
 </body>
 </html>
