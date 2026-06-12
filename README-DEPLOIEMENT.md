@@ -15,7 +15,7 @@
 3. Les photos `.jpg` existantes restent à la racine : tous les chemins du nouveau site pointent dessus. ✅
 
 ## 3. Juste après la mise en ligne (15 minutes)
-1. **GA4** : créer la propriété sur analytics.google.com → copier l'ID `G-XXXXXXX` → faire un chercher/remplacer global de `G-XXXXXXXXXX` dans les 22 `index.html` (VS Code : Ctrl+Maj+H).
+1. **GA4** : déjà intégré (`G-N97440SHCQ`) dans les 22 pages — rien à faire. Vérifie juste dans GA4 > Temps réel que ta visite apparaît après acceptation des cookies.
 2. **Search Console** : Sitemaps → soumettre `sitemap.xml` (remplace l'ancien). Puis Inspection d'URL sur la home → « Demander l'indexation ».
 3. **Tester** : ouvrir 3 pages au hasard sur mobile, vérifier le menu burger, le bandeau cookies (Refuser/Accepter), un lien ville → service.
 4. **Rich Results Test** (search.google.com/test/rich-results) sur la home et /reparation-ecran-iphone/.
