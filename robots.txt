@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kevintechco.github.io/kevintech.co/sitemap.xml
